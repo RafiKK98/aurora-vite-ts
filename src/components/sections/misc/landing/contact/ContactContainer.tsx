@@ -1,0 +1,102 @@
+import { Avatar, Container, Grid, Link, Paper, Typography } from '@mui/material';
+import IconifyIcon from 'components/base/IconifyIcon';
+import Mapbox from 'components/base/Mapbox';
+import ContactForm from './ContactForm';
+
+interface CardItem {
+  id: number;
+  icon: string;
+  title: string;
+  isLink?: boolean;
+  href?: string;
+  content: string;
+}
+
+const contactCardItems: CardItem[] = [
+  {
+    id: 1,
+    icon: 'mdi:phone-in-talk-outline',
+    title: 'Phone Number',
+    isLink: true,
+    href: 'tel:55512345678901',
+    content: '(555) 123-4567-8901',
+  },
+  {
+    id: 2,
+    icon: 'mdi:email-outline',
+    title: 'Email Address',
+    isLink: true,
+    href: 'mailto:hello@randommail.com',
+    content: 'hello@randommail.com',
+  },
+  {
+    id: 3,
+    icon: 'mdi:location-on-outline',
+    title: 'Location',
+    content: '123 Sunnyvale Park, Springfield, IL, USA',
+  },
+];
+
+const ContactContainer = () => {
+  return (
+    <div>
+      <Grid container spacing={2} mb={2} mt={2}>
+        {contactCardItems.map((item) => (
+          <Grid key={item.id} size={{ xs: 12, sm: 4 }}>
+            <Paper
+              variant="elevation"
+              elevation={0}
+              background={1}
+              sx={{
+                p: { xs: 2, sm: 3 },
+                height: 1,
+                textAlign: 'center',
+              }}
+            >
+              <Avatar
+                sx={{
+                  width: 32,
+                  height: 32,
+                  borderRadius: 2,
+                  bgcolor: 'primary.lighter',
+                  mb: 2,
+                  mx: 'auto',
+                }}
+              >
+                <IconifyIcon icon={item.icon} fontSize={16} sx={{ color: 'primary.main' }} />
+              </Avatar>
+
+              <Typography variant="subtitle2" sx={{ fontWeight: 600, mb: 1 }}>
+                {item.title}
+              </Typography>
+              <Typography
+                component={item.isLink ? Link : 'p'}
+                href={item.href}
+                variant="caption"
+                color="textSecondary"
+                sx={{ display: 'block', mx: 'auto', width: 'max-content' }}
+              >
+                {item.content}
+              </Typography>
+            </Paper>
+          </Grid>
+        ))}
+      </Grid>
+
+      <Mapbox
+        sx={{ bgcolor: 'background.elevation1', borderRadius: 2, mb: 6 }}
+        options={{
+          center: [-118.4782382, 34.1917607],
+          zoom: 14,
+          scrollZoom: false,
+        }}
+      />
+
+      <Container maxWidth={false} sx={{ maxWidth: 440, pb: 2 }} disableGutters>
+        <ContactForm />
+      </Container>
+    </div>
+  );
+};
+
+export default ContactContainer;
