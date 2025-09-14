@@ -47,6 +47,7 @@ const Resume = () => {
           defaultFiles={resume.map((image) => image.file)}
           error={errors.documents?.resume?.message}
           previewType="thumbnail"
+          sx={{ height: 60 }}
         />
         <Stack gap={1}>
           <Box sx={{ flexShrink: 0 }}>

@@ -24,6 +24,7 @@ interface FileDropZoneProps extends DropzoneOptions {
   defaultFiles?: File[];
   previewType?: 'list' | 'thumbnail';
   sx?: BoxProps['sx'];
+  icon?: string;
 }
 
 const FileDropZone = ({
@@ -32,6 +33,7 @@ const FileDropZone = ({
   onRemove,
   defaultFiles,
   previewType = 'list',
+  icon = 'material-symbols:add-photo-alternate-outline-rounded',
   sx,
   ...rest
 }: FileDropZoneProps) => {
@@ -112,7 +114,7 @@ const FileDropZone = ({
           }}
         >
           <IconifyIcon
-            icon="material-symbols:add-photo-alternate-outline-rounded"
+            icon={icon}
             sx={{
               fontSize: { xs: 40, sm: 20 },
               color: 'text.primary',

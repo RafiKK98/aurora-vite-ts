@@ -3,7 +3,7 @@ import Stack from '@mui/material/Stack';
 
 const ActionBtns = () => {
   return (
-    <Stack justifyContent="space-between" gap={2} sx={{ mt: 3 }}>
+    <Stack justifyContent="space-between" gap={2} sx={{ mt: 'auto' }}>
       <Button color="neutral">Cancel</Button>
       <Stack gap={1}>
         <Button variant="soft" color="neutral">

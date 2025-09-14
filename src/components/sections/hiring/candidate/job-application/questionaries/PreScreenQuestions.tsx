@@ -59,7 +59,7 @@ const PreScreenQuestions = () => {
                 }}
                 {...field}
               >
-                <FormControlLabel value="independent" control={<Radio />} label="Indepndently" />
+                <FormControlLabel value="independent" control={<Radio />} label="Independently" />
                 <FormControlLabel
                   value="collaborative"
                   control={<Radio />}

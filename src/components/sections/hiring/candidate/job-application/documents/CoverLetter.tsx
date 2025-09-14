@@ -46,6 +46,7 @@ const CoverLetter = () => {
           defaultFiles={coverLetter.map((letter) => letter.file)}
           error={errors.documents?.coverLetter?.message}
           previewType="thumbnail"
+          sx={{ height: 60 }}
         />
         <Stack gap={1}>
           <Box sx={{ flexShrink: 0 }}>

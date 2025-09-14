@@ -20,25 +20,26 @@ const JobApplication = () => {
     reset();
   };
   return (
-    <Box sx={{ px: { xs: 3, md: 5 }, py: 5 }}>
-      <Container maxWidth="sm" disableGutters>
-        <Typography variant="h4" sx={{ mb: 4 }}>
-          Job Application
-        </Typography>
-        <FormProvider {...methods}>
-          <Stack
-            component="form"
-            id="jobApplicationFrom"
-            onSubmit={handleSubmit(onSubmit)}
-            direction="column"
-            gap={2}
-          >
-            <PersonalInformation />
-            <Documents />
-            <Questionaries />
-            <ActionBtns />
-          </Stack>
-        </FormProvider>
+    <Box sx={{ height: 1, px: { xs: 3, md: 5 }, py: 5 }}>
+      <Container maxWidth="sm" disableGutters sx={{ height: 1 }}>
+        <Stack direction="column" gap={4} height={1}>
+          <Typography variant="h4">Job Application</Typography>
+          <FormProvider {...methods}>
+            <Stack
+              component="form"
+              id="jobApplicationFrom"
+              onSubmit={handleSubmit(onSubmit)}
+              direction="column"
+              gap={2}
+              height={1}
+            >
+              <PersonalInformation />
+              <Documents />
+              <Questionaries />
+              <ActionBtns />
+            </Stack>
+          </FormProvider>
+        </Stack>
       </Container>
     </Box>
   );
