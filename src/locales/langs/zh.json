@@ -88,5 +88,14 @@
   "landing_contact": "联系",
   "landing_404": "404",
   "landing_comingSoon": "即将推出",
-  "landing_maintenance": "维护"
+  "landing_maintenance": "维护",
+  "hiring": "招聘",
+  "candidate": "候选人",
+  "job_opening": "职位空缺",
+  "pipeline": "管道",
+  "new_opening": "新的职位空缺",
+  "candidate_details": "候选人详情",
+  "job_list": "作业列表",
+  "job_details": "职位详情",
+  "job_application": "工作申请"
 }

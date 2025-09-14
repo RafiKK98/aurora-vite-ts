@@ -1,4 +1,4 @@
-import { MenuItem, SxProps } from '@mui/material';
+import { MenuItem, SelectProps, SxProps } from '@mui/material';
 import StyledFormControl from 'components/styled/StyledFormControl';
 import StyledTextField from 'components/styled/StyledTextField';
 
@@ -8,6 +8,7 @@ interface DashboardSelectMenuProps {
     label: string;
   }[];
   defaultValue?: string | number;
+  size?: SelectProps['size'];
   onChange?: (value: string | number) => void;
   sx?: SxProps;
 }
@@ -30,6 +31,7 @@ const DashboardSelectMenu = ({
   options = defaultOptions,
   onChange,
   defaultValue,
+  size = 'small',
   sx,
 }: DashboardSelectMenuProps) => {
   const handleChange = (value: string | number) => {
@@ -42,7 +44,7 @@ const DashboardSelectMenu = ({
       <StyledTextField
         select
         defaultValue={defaultValue}
-        size="small"
+        size={size}
         onChange={({ target: { value } }) => handleChange(value as string)}
       >
         {options.map((option) => (

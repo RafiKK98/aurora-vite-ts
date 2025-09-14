@@ -88,5 +88,14 @@
   "landing_contact": "संपर्क",
   "landing_404": "४०४",
   "landing_comingSoon": "जल्द आ रहा है",
-  "landing_maintenance": "रखरखाव"
+  "landing_maintenance": "रखरखाव",
+  "hiring": "नियुक्तियाँ",
+  "candidate": "उम्मीदवार",
+  "job_opening": "नौकरी की उद्घाटन",
+  "pipeline": "पाइपलाइन",
+  "new_opening": "नई नौकरी का उद्घाटन",
+  "candidate_details": "उम्मीदवार विवरण",
+  "job_list": "नौकरी सूची",
+  "job_details": "नौकरी का विवरण",
+  "job_application": "नौकरी के लिए आवेदन"
 }

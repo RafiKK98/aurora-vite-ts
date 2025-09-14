@@ -88,5 +88,14 @@
   "landing_contact": "اتصال",
   "landing_404": "٤٠٤",
   "landing_comingSoon": "قريباً",
-  "landing_maintenance": "صيانة"
+  "landing_maintenance": "صيانة",
+  "hiring": "التوظيف",
+  "candidate": "مُرَشَّح",
+  "job_opening": "فرصة عمل",
+  "pipeline": "خط الأنابيب",
+  "new_opening": "افتتاح جديد",
+  "candidate_details": "تفاصيل المرشح",
+  "job_list": "قائمة الوظائف",
+  "job_details": "تفاصيل الوظيفة",
+  "job_application": "طلب وظيفة"
 }

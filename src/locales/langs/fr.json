@@ -88,5 +88,14 @@
   "landing_contact": "Contact",
   "landing_404": "404",
   "landing_comingSoon": "Bientôt disponible",
-  "landing_maintenance": "Entretien"
+  "landing_maintenance": "Entretien",
+  "hiring": "Embauche",
+  "candidate": "Candidat",
+  "job_opening": "Offre d'emploi",
+  "pipeline": "Pipeline",
+  "new_opening": "Nouvelle offre d'emploi",
+  "candidate_details": "Détails du candidat",
+  "job_list": "Liste des emplois",
+  "job_details": "Détails du poste",
+  "job_application": "Demande d'emploi"
 }

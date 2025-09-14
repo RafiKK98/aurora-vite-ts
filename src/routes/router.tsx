@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react';
-import { Navigate, Outlet, RouteObject, createBrowserRouter, useLocation } from 'react-router';
+import { Navigate, Outlet, type RouteObject, createBrowserRouter, useLocation } from 'react-router';
 import { docRoutes } from 'docs/routes/docRouter';
 import AuthLayout from 'layouts/auth-layout';
 import DefaultAuthLayout from 'layouts/auth-layout/DefaultAuthLayout';
@@ -11,6 +11,17 @@ import Page404 from 'pages/errors/Page404';
 import AllFiles from 'components/sections/file-manager/main/all-files';
 import RecentFiles from 'components/sections/file-manager/main/recent-files';
 import paths, { rootPaths } from './paths';
+
+const HiringRoot = lazy(() => import('components/sections/hiring'));
+
+const NewOpening = lazy(() => import('pages/apps/hiring/admin/NewOpening'));
+const CandidateDetails = lazy(() => import('pages/apps/hiring/admin/CandidateDetails'));
+const JobOpening = lazy(() => import('pages/apps/hiring/admin/JobOpening'));
+const Pipeline = lazy(() => import('pages/apps/hiring/admin/Pipeline'));
+
+const JobApplication = lazy(() => import('pages/apps/hiring/candidate/JobApplication'));
+const JobDetails = lazy(() => import('pages/apps/hiring/candidate/JobDetails'));
+const JobList = lazy(() => import('pages/apps/hiring/candidate/JobList'));
 
 const InvoiceLists = lazy(() => import('pages/apps/invoice/InvoiceLists'));
 const CreateInvoice = lazy(() => import('pages/apps/invoice/CreateInvoice'));
@@ -39,6 +50,7 @@ const Landing404 = lazy(() => import('pages/misc/landing/404'));
 const LandingComingSoon = lazy(() => import('pages/misc/landing/ComingSoon'));
 const LandingMaintenance = lazy(() => import('pages/misc/landing/Maintenance'));
 const ECommerce = lazy(() => import('pages/dashboards/ECommerce'));
+const Hiring = lazy(() => import('pages/dashboards/Hiring'));
 const CRM = lazy(() => import('pages/dashboards/CRM'));
 const Analytics = lazy(() => import('pages/dashboards/Analytics'));
 const HRM = lazy(() => import('pages/dashboards/HRM'));
@@ -226,6 +238,10 @@ export const routes: RouteObject[] = [
             element: <TimeTracker />,
           },
           {
+            path: paths.hiring,
+            element: <Hiring />,
+          },
+          {
             path: paths.starter,
             element: <Starter />,
           },
@@ -376,6 +392,42 @@ export const routes: RouteObject[] = [
               {
                 path: paths.createBoard,
                 element: <CreateBoard />,
+              },
+            ],
+          },
+          {
+            path: paths.hiringRoot,
+            element: <HiringRoot />,
+            children: [
+              {
+                path: paths.hiringAdmin,
+                children: [
+                  {
+                    path: paths.hiringJobOpening,
+                    element: <JobOpening />,
+                  },
+                  {
+                    path: paths.hiringPipeline,
+                    element: <Pipeline />,
+                  },
+                  {
+                    path: paths.hiringNewOpening,
+                    element: <NewOpening />,
+                  },
+                  {
+                    path: paths.hiringCandidateDetails,
+                    element: <CandidateDetails />,
+                  },
+                ],
+              },
+              {
+                path: paths.hiringCandidate,
+                children: [
+                  { path: paths.hiringJobList, element: <JobList /> },
+                  { path: paths.hiringJobDetails(), element: <JobDetails /> },
+                  { path: paths.hiringJobDetails(':id'), element: <JobDetails /> },
+                  { path: paths.hiringJobApplication, element: <JobApplication /> },
+                ],
               },
             ],
           },

@@ -88,5 +88,14 @@
   "landing_contact": "Contact",
   "landing_404": "404",
   "landing_comingSoon": "Coming soon",
-  "landing_maintenance": "Maintenance"
+  "landing_maintenance": "Maintenance",
+  "hiring": "Hiring",
+  "candidate": "Candidate",
+  "job_opening": "Job Opening",
+  "pipeline": "Pipeline",
+  "new_opening": "New Opening",
+  "candidate_details": "Candidate Details",
+  "job_list": "Job list",
+  "job_details": "Job Details",
+  "job_application": "Job Application"
 }

@@ -24,6 +24,9 @@ export const rootPaths = {
   fileManagerRoot: 'file-manager',
   invoiceRoot: 'invoice',
   landingRoot: 'landing',
+  hiringRoot: 'hiring',
+  hiringAdmin: 'admin',
+  hiringCandidate: 'candidate',
 };
 
 const paths = {
@@ -35,6 +38,7 @@ const paths = {
   analytics: `/${rootPaths.dashboardRoot}/analytics`,
   hrm: `/${rootPaths.dashboardRoot}/hrm`,
   timeTracker: `/${rootPaths.dashboardRoot}/time-tracker`,
+  hiring: `/${rootPaths.dashboardRoot}/${rootPaths.hiringRoot}`,
 
   starter: `/${rootPaths.pagesRoot}/starter`,
   notifications: `/${rootPaths.pagesRoot}/notifications`,
@@ -128,6 +132,21 @@ const paths = {
   landingComingSoon: `/${rootPaths.miscRoot}/${rootPaths.landingRoot}/coming-soon`,
   landingMaintenance: `/${rootPaths.miscRoot}/${rootPaths.landingRoot}/maintenance`,
 
+  hiringRoot: `/${rootPaths.appsRoot}/${rootPaths.hiringRoot}`,
+  hiringCandidate: `/${rootPaths.appsRoot}/${rootPaths.hiringRoot}/${rootPaths.hiringCandidate}`,
+  hiringJobList: `/${rootPaths.appsRoot}/${rootPaths.hiringRoot}/${rootPaths.hiringCandidate}/job-list`,
+  hiringJobDetails: (jobId?: string) =>
+    `/${rootPaths.appsRoot}/${rootPaths.hiringRoot}/${rootPaths.hiringCandidate}/job-details${
+      jobId ? `/${jobId}` : ''
+    }`,
+  hiringJobApplication: `/${rootPaths.appsRoot}/${rootPaths.hiringRoot}/${rootPaths.hiringCandidate}/job-application`,
+
+  hiringAdmin: `/${rootPaths.appsRoot}/${rootPaths.hiringRoot}/${rootPaths.hiringAdmin}`,
+  hiringJobOpening: `/${rootPaths.appsRoot}/${rootPaths.hiringRoot}/${rootPaths.hiringAdmin}/job-opening`,
+  hiringPipeline: `/${rootPaths.appsRoot}/${rootPaths.hiringRoot}/${rootPaths.hiringAdmin}/pipeline`,
+  hiringNewOpening: `/${rootPaths.appsRoot}/${rootPaths.hiringRoot}/${rootPaths.hiringAdmin}/new-opening`,
+  hiringCandidateDetails: `/${rootPaths.appsRoot}/${rootPaths.hiringRoot}/${rootPaths.hiringAdmin}/candidate-details`,
+
   ...docRoutePaths,
 };
 
@@ -155,6 +174,7 @@ export const apiEndpoints = {
   forgotPassword: '/auth/forgot-password',
   setPassword: '/auth/set-password',
   getProduct: (id: string) => `e-commerce/products/${id}`,
+  getJob: (id: string) => `hiring/jobs/${id}`,
 };
 
 export default paths;

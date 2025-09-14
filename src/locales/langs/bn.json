@@ -88,5 +88,14 @@
   "landing_contact": "যোগাযোগ",
   "landing_404": "৪০৪",
   "landing_comingSoon": "শীঘ্রই আসছে",
-  "landing_maintenance": "রক্ষণাবেক্ষণ"
+  "landing_maintenance": "রক্ষণাবেক্ষণ",
+  "hiring": "নিয়োগ",
+  "candidate": "প্রার্থী",
+  "job_opening": "চাকরির সুযোগ",
+  "pipeline": "পাইপলাইন",
+  "new_opening": "নতুন চাকরির সুযোগ",
+  "candidate_details": "প্রার্থীর বিবরণ",
+  "job_list": "কাজের তালিকা",
+  "job_details": "কাজের বিবরণ",
+  "job_application": "চাকরির আবেদন"
 }

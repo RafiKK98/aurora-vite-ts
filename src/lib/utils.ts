@@ -348,3 +348,11 @@ export const generatePaletteChannel = <T extends ColorPalette>(
 export const cssVarRgba = (color: string, alpha: number) => {
   return `rgba(${color} / ${alpha})`;
 };
+
+export const getRangeLabel = (value: number) => {
+  if (value < 50) return '0-50';
+  if (value < 100) return '50-100';
+  if (value < 250) return '100-250';
+  if (value < 500) return '250-500';
+  return '500+';
+};
