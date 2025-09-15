@@ -1,3 +1,4 @@
+import { UniqueIdentifier } from '@dnd-kit/core';
 import { ChipProps } from '@mui/material/Chip';
 import { User } from './users';
 
@@ -99,4 +100,18 @@ export type JobOpening = {
   hiringLead: string;
   tags: { label: string; color: ChipProps['color'] }[];
   postedDate: string;
+};
+
+export type PipelineItem = {
+  id: UniqueIdentifier;
+  user: User;
+  appliedDate: string;
+  rating: number;
+  comments?: number;
+};
+
+export type PipelineList = {
+  id: UniqueIdentifier;
+  title: string;
+  items: PipelineItem[];
 };
