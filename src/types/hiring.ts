@@ -87,3 +87,16 @@ export type Job = {
     benefits: string[];
   };
 };
+
+// Admin
+export type JobOpening = {
+  id?: string | number;
+  title: string;
+  field: string;
+  branch: string;
+  vacancy: number;
+  candidates: number;
+  hiringLead: string;
+  tags: { label: string; color: ChipProps['color'] }[];
+  postedDate: string;
+};

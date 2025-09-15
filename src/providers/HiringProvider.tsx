@@ -7,14 +7,18 @@ import {
   use,
   useState,
 } from 'react';
+import { jobOpenings } from 'data/hiring/admin';
 import { jobList } from 'data/hiring/candidate';
-import type { Job } from 'types/hiring';
+import type { Job, JobOpening } from 'types/hiring';
 
 interface HiringContextProps {
   job: Job | null;
   setJob: Dispatch<SetStateAction<Job | null>>;
   candidate: {
     jobs: Job[];
+  };
+  admin: {
+    jobOpenings: JobOpening[];
   };
 }
 
@@ -28,6 +32,7 @@ const HiringProvider = ({ children }: PropsWithChildren) => {
         job,
         setJob,
         candidate: { jobs: jobList },
+        admin: { jobOpenings },
       }}
     >
       {children}

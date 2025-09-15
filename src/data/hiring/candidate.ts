@@ -328,5 +328,3 @@ export const jobList: Job[] = [
     },
   },
 ];
-
-// Job Application
