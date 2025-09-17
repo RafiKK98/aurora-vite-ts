@@ -1,4 +1,3 @@
-import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
@@ -35,21 +34,23 @@ const PipelineHeader = () => {
             <Stack gap={2} flexWrap="wrap" alignItems="flex-end">
               <Typography variant="body2" color="text.secondary">
                 <Box component="span" fontWeight={700} color="text.primary">
-                  2
+                  2{` `}
                 </Box>
-                {` `}Vacancy
+                Vacancy
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 <Box component="span" fontWeight={700} color="text.primary">
                   10
+                  {` `}
                 </Box>
-                {` `}Candidates
+                Candidates
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 <Box component="span" fontWeight={700} color="text.primary">
                   John Carter
+                  {` `}
                 </Box>
-                {` `}Hiring Lead
+                Hiring Lead
               </Typography>
             </Stack>
             <Button

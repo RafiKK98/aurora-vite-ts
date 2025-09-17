@@ -30,11 +30,12 @@ const findList = (id: string | null, listItems: PipelineList[]) => {
 
   return listItems.find((list) => list.id === listId) ?? null;
 };
+
 export const hiringReducer = (state: PipelineState, action: ACTIONTYPE): PipelineState => {
   switch (action.type) {
     case DRAG_START: {
       if (action.payload.type === 'item')
-        return { ...state, draggedItem: action.payload.item.deal };
+        return { ...state, draggedItem: action.payload.item.pipeline };
       if (action.payload.type === 'list')
         return { ...state, draggedList: action.payload.item.list };
       return state;

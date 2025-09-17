@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import { PipelineItem } from 'types/hiring';
-import { PipelineCard } from './PipelineItems';
+import PipelineCard from './PipelineCard';
 
 interface PipelineCardOverlayProps {
   pipeline: PipelineItem;

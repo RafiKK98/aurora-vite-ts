@@ -1,15 +1,6 @@
-import { useSortable } from '@dnd-kit/sortable';
-import { CSS } from '@dnd-kit/utilities';
-import Avatar from '@mui/material/Avatar';
-import Paper from '@mui/material/Paper';
-import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
-import Tooltip from '@mui/material/Tooltip';
-import Typography from '@mui/material/Typography';
-import dayjs from 'dayjs';
 import { PipelineItem } from 'types/hiring';
-import IconifyIcon from 'components/base/IconifyIcon';
-import DashboardMenu from 'components/common/DashboardMenu';
+import SortablePipelineItem from './SortablePipelineItem';
 
 interface PipelineItemsProps {
   pipelines: PipelineItem[];
@@ -26,55 +17,3 @@ const PipelineItems = ({ pipelines }: PipelineItemsProps) => {
 };
 
 export default PipelineItems;
-
-const SortablePipelineItem = ({ pipeline }: { pipeline: PipelineItem }) => {
-  const { setNodeRef, attributes, listeners, transform, transition, isDragging } = useSortable({
-    id: pipeline.id,
-    data: {
-      type: 'deal',
-      pipeline: pipeline,
-    },
-  });
-
-  const style = {
-    transition,
-    transform: CSS.Transform.toString(transform),
-    opacity: isDragging ? 0.5 : 1,
-    cursor: 'grab',
-  };
-
-  return (
-    <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
-      <PipelineCard pipeline={pipeline} />
-    </div>
-  );
-};
-
-export const PipelineCard = ({ pipeline }: { pipeline: PipelineItem }) => {
-  return (
-    <Paper background={2} sx={{ p: 2, borderRadius: 4, outline: 0 }}>
-      <Stack direction="column" gap={1}>
-        <Stack gap={2} alignItems="center">
-          <Tooltip title={pipeline.user.name}>
-            <Avatar src={pipeline.user.avatar} sx={{ width: 56, height: 56 }} />
-          </Tooltip>
-          <Stack direction="column" gap={0.5}>
-            <Typography variant="subtitle1" fontWeight={700}>
-              {pipeline.user.name}
-            </Typography>
-            <Rating size="small" value={pipeline.rating} />
-          </Stack>
-        </Stack>
-        <Stack justifyContent="space-between" alignItems="center" gap={2}>
-          <Stack gap={1}>
-            <IconifyIcon icon="material-symbols:schedule-outline-rounded" sx={{ fontSize: 18 }} />
-            <Typography variant="caption" color="text.secondary" fontWeight={500} lineHeight={1.5}>
-              {dayjs(pipeline.appliedDate).format('MMM DD, YYYY')}
-            </Typography>
-          </Stack>
-          <DashboardMenu />
-        </Stack>
-      </Stack>
-    </Paper>
-  );
-};

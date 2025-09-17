@@ -21,11 +21,9 @@ const ListHeader = ({ list }: ListHeaderProps) => {
           <Button size="small" variant="soft" shape="square" color="neutral">
             <IconifyIcon icon="material-symbols:add-rounded" sx={{ fontSize: 16 }} />
           </Button>
-          <Button size="small" shape="square" color="neutral">
-            <DashboardMenu
-              icon={<IconifyIcon icon="material-symbols:more-vert" sx={{ fontSize: 16 }} />}
-            />
-          </Button>
+          <DashboardMenu
+            icon={<IconifyIcon icon="material-symbols:more-vert" sx={{ fontSize: 16 }} />}
+          />
         </Stack>
       </Stack>
       <Box sx={{ width: 30, height: 2, bgcolor: 'primary.main' }} />

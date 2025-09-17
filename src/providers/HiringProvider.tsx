@@ -21,6 +21,12 @@ export interface PipelineState {
   draggedItem: PipelineItem | null;
 }
 
+const initialState: PipelineState = {
+  listItems: pipelineData,
+  draggedList: null,
+  draggedItem: null,
+};
+
 interface HiringContextProps {
   job: Job | null;
   setJob: Dispatch<SetStateAction<Job | null>>;
@@ -42,11 +48,7 @@ export const HiringContext: Context<HiringContextProps> = createContext({});
 
 const HiringProvider = ({ children }: PropsWithChildren) => {
   const [job, setJob] = useState<Job | null>(jobList[2]);
-  const [state, hiringDispatch] = useReducer(hiringReducer, {
-    listItems: pipelineData,
-    draggedList: null,
-    draggedItem: null,
-  });
+  const [state, hiringDispatch] = useReducer(hiringReducer, initialState);
 
   const handleDragStart = (event: DragStartEvent) => {
     hiringDispatch({
