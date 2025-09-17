@@ -1,11 +1,17 @@
+import Box from '@mui/material/Box';
 import { PipelineItem } from 'types/hiring';
+import { PipelineCard } from './PipelineItems';
 
 interface PipelineCardOverlayProps {
   pipeline: PipelineItem;
 }
 
 const PipelineCardOverlay = ({ pipeline }: PipelineCardOverlayProps) => {
-  return <div key={pipeline.id}>PipelineCardOverlay</div>;
+  return (
+    <Box sx={{ cursor: 'grabbing', borderRadius: 4, boxShadow: (theme) => theme.vars.shadows[5] }}>
+      <PipelineCard pipeline={pipeline} />
+    </Box>
+  );
 };
 
 export default PipelineCardOverlay;

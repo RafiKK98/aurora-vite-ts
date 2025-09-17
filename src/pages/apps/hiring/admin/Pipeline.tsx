@@ -16,7 +16,6 @@ const Pipeline = () => {
       <Box
         sx={{
           px: { xs: 3, md: 5 },
-          pb: { xs: 3, md: 5 },
           height: ({ mixins }) =>
             mixins.contentHeight(
               topbarHeight,

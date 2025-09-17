@@ -50,7 +50,7 @@ const SortablePipelineItem = ({ pipeline }: { pipeline: PipelineItem }) => {
   );
 };
 
-const PipelineCard = ({ pipeline }: { pipeline: PipelineItem }) => {
+export const PipelineCard = ({ pipeline }: { pipeline: PipelineItem }) => {
   return (
     <Paper background={2} sx={{ p: 2, borderRadius: 4, outline: 0 }}>
       <Stack direction="column" gap={1}>

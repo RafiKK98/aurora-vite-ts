@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
+import Paper from '@mui/material/Paper';
 import { useHiringContext } from 'providers/HiringProvider';
 import ActiveSearchFilter from 'components/sections/hiring/candidate/job-list/ActiveSearchFilter';
 import FilterDrawer from 'components/sections/hiring/candidate/job-list/FilterDrawer';
@@ -17,7 +17,7 @@ const JobList = () => {
 
   const toggleDrawer = (newOpen: boolean) => () => setIsDrawerOpen(newOpen);
   return (
-    <Box sx={{ px: { xs: 3, md: 5 }, pb: { xs: 3, md: 5 }, pt: 3 }}>
+    <Paper sx={{ px: { xs: 3, md: 5 }, pb: { xs: 3, md: 5 }, pt: 3 }}>
       <Container maxWidth={false} disableGutters sx={{ maxWidth: 820 }}>
         <Header toggleDrawer={toggleDrawer} search={search} setSearch={setSearch} />
         {search.length > 0 && <ActiveSearchFilter search={search} />}
@@ -25,7 +25,7 @@ const JobList = () => {
         <JobPagination jobs={jobs} />
       </Container>
       <FilterDrawer open={isDrawerOpen} handleClose={toggleDrawer(false)} />
-    </Box>
+    </Paper>
   );
 };
 
