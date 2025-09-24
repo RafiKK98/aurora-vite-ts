@@ -1,10 +1,10 @@
 {
   "name": "vite-ts",
   "private": true,
-  "version": "1.5.0-rc.1",
+  "version": "1.5.0",
   "type": "module",
   "scripts": {
-    "dev": "NODE_OPTIONS='--max-old-space-size=4096' vite",
+    "dev": "vite",
     "build": "NODE_OPTIONS='--max-old-space-size=8192' vite build",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
@@ -60,7 +60,7 @@
     "notistack": "^3.0.2",
     "re-resizable": "^6.11.2",
     "react": "^19.1.1",
-    "react-datepicker": "^8.4.0",
+    "react-datepicker": "^8.7.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^19.1.1",
     "react-dropzone": "^14.3.8",

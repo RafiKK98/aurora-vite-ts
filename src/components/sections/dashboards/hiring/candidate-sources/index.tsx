@@ -34,8 +34,12 @@ const CandidateSources = () => {
         subTitle="Applications by source last month"
         actionComponent={<DashboardMenu size="medium" />}
       />
-      <Stack direction="column" gap={4}>
-        <Box sx={{ position: 'relative' }}>
+      <Stack
+        direction={{ xs: 'column', sm: 'row', md: 'column' }}
+        alignItems="center"
+        gap={{ xs: 4, sm: 2, md: 4 }}
+      >
+        <Box sx={{ position: 'relative', width: { xs: '100%', sm: '50%', md: '100%' } }}>
           <CandidateSourcesChart data={data} ref={chartRef} sx={{ height: '160px !important' }} />
           <Stack
             direction="column"
@@ -55,7 +59,7 @@ const CandidateSources = () => {
             </Typography>
           </Stack>
         </Box>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} sx={{ width: { xs: '100%', sm: '50%', md: '100%' } }}>
           {legends.map((legend) => (
             <Grid key={legend.name} size={4}>
               <ButtonBase

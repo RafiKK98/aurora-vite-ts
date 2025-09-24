@@ -42,7 +42,6 @@ export interface InvoicePreviewItem {
   shippingCost: number;
   discount: number;
   tax: number;
-  purpose: string;
   itemDetails: {
     id: number;
     type: string;

@@ -35,8 +35,9 @@ const InvoiceTable = ({ invoice }: InvoiceTableProps) => {
   const { itemDetails } = invoice;
   const subTotal = useMemo(() => {
     return itemDetails.reduce((acc, item) => {
-      const subtotal = item.price * item.quantity;
-      return acc + subtotal;
+      const itemPriceCents = Math.round((item.price || 0) * 100);
+      const lineTotal = (itemPriceCents * (item.quantity || 0)) / 100;
+      return acc + lineTotal;
     }, 0);
   }, [itemDetails]);
   return (
@@ -44,7 +45,7 @@ const InvoiceTable = ({ invoice }: InvoiceTableProps) => {
       <Stack
         sx={{ justifyContent: 'space-between', alignItems: { md: 'flex-end' }, gap: 2, mb: 4 }}
       >
-        <Image src={invoice.organizationImage?.file} alt="logo" />
+        <Image src={invoice.organizationImage?.file} alt="logo" width={144} height={72} />
         <Box sx={{ textAlign: 'end' }}>
           <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
             Amount: {currencyFormat(invoice.invoiceDetails.amount)}
@@ -85,23 +86,7 @@ const InvoiceTable = ({ invoice }: InvoiceTableProps) => {
           </Grid>
         </Grid>
       </Paper>
-      <Stack
-        sx={{
-          alignItems: 'center',
-          gap: 1,
-          mb: 4,
-        }}
-      >
-        <Typography
-          variant="subtitle2"
-          sx={{
-            fontWeight: 700,
-          }}
-        >
-          Invoice subject:
-        </Typography>
-        <Typography variant="body2">{invoice.purpose}</Typography>
-      </Stack>
+
       <TableContainer
         sx={{
           mb: 4,
@@ -152,7 +137,9 @@ const InvoiceTable = ({ invoice }: InvoiceTableProps) => {
                   {currencyFormat(item.price)}
                 </TableCell>
                 <TableCell align="right" sx={{ width: 104 }}>
-                  {currencyFormat(item.quantity * item.price)}
+                  {currencyFormat(
+                    (Math.round((item.price || 0) * 100) * (item.quantity || 0)) / 100,
+                  )}
                 </TableCell>
               </TableRow>
             ))}
@@ -186,7 +173,7 @@ const InvoiceTable = ({ invoice }: InvoiceTableProps) => {
               <TableCell align="right">
                 <Typography
                   color="error"
-                  align="right"
+                  // align="right"
                   variant="subtitle2"
                   sx={{ fontWeight: 400 }}
                 >
@@ -206,7 +193,7 @@ const InvoiceTable = ({ invoice }: InvoiceTableProps) => {
                 <Typography variant="body2">Tax</Typography>
               </TableCell>
               <TableCell align="right">
-                <Typography align="right" variant="subtitle2" sx={{ fontWeight: 400 }}>
+                <Typography variant="subtitle2" sx={{ fontWeight: 400 }}>
                   {currencyFormat(invoice.tax)}
                 </Typography>
               </TableCell>
@@ -222,7 +209,7 @@ const InvoiceTable = ({ invoice }: InvoiceTableProps) => {
                 <Typography variant="body2">Shipping cost</Typography>
               </TableCell>
               <TableCell align="right">
-                <Typography align="right" variant="subtitle2" sx={{ fontWeight: 400 }}>
+                <Typography variant="subtitle2" sx={{ fontWeight: 400 }}>
                   {currencyFormat(invoice.shippingCost)}
                 </Typography>
               </TableCell>
@@ -238,11 +225,7 @@ const InvoiceTable = ({ invoice }: InvoiceTableProps) => {
                 <Typography variant="body2">Total amount</Typography>
               </TableCell>
               <TableCell align="right">
-                <Typography
-                  align="right"
-                  variant="subtitle2"
-                  sx={{ color: 'text.primary', fontWeight: 700 }}
-                >
+                <Typography variant="subtitle2" sx={{ color: 'text.primary', fontWeight: 700 }}>
                   {currencyFormat(
                     getTotalPrice(
                       subTotal,

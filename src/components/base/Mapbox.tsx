@@ -1,16 +1,17 @@
 import { HTMLAttributes, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Box, Button, ButtonGroup, SxProps, buttonGroupClasses } from '@mui/material';
+import { Alert, Box, Button, ButtonGroup, SxProps, buttonGroupClasses } from '@mui/material';
 import { useThemeMode } from 'hooks/useThemeMode';
 import mapboxgl, { Map, MapOptions } from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { ThemeMode } from 'providers/ThemeProvider';
 import IconifyIcon from './IconifyIcon';
-import MapboxWorker from './mapboxWorker.js?worker';
+
+// import MapboxWorker from './mapboxWorker.js?worker';
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN || '';
 
-mapboxgl.workerClass = MapboxWorker;
+// mapboxgl.workerClass = MapboxWorker;
 
 interface MapboxProps extends HTMLAttributes<HTMLDivElement> {
   sx?: SxProps;
@@ -21,6 +22,7 @@ const Mapbox = ({ sx, options, ...rest }: MapboxProps) => {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<Map | null>(null);
   const { mode } = useThemeMode();
+  const hasAccessToken = Boolean(mapboxgl.accessToken);
 
   const mapStyles = {
     system: window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -32,6 +34,7 @@ const Mapbox = ({ sx, options, ...rest }: MapboxProps) => {
 
   useEffect(() => {
     if (!mapContainerRef.current || mapRef.current) return;
+    if (!mapboxgl.accessToken) return;
 
     mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
@@ -68,12 +71,26 @@ const Mapbox = ({ sx, options, ...rest }: MapboxProps) => {
         ...sx,
       }}
     >
-      <Box
-        ref={mapContainerRef}
-        sx={{
-          height: 1,
-        }}
-      />
+      {hasAccessToken ? (
+        <Box
+          ref={mapContainerRef}
+          sx={{
+            height: 1,
+          }}
+        />
+      ) : (
+        <Box sx={{ p: 3 }}>
+          <Alert
+            severity="error"
+            sx={{
+              width: 1,
+            }}
+          >
+            Mapbox access token is missing. Please add VITE_MAPBOX_ACCESS_TOKEN to your environment
+            variables.
+          </Alert>
+        </Box>
+      )}
       <ButtonGroup
         orientation="vertical"
         aria-label="Mapbox control button"

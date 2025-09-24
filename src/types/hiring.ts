@@ -115,3 +115,16 @@ export type PipelineList = {
   title: string;
   items: PipelineItem[];
 };
+
+export type Question = {
+  question: string;
+  description?: string;
+  format?: string;
+  responseType?: string;
+  isMandatory: boolean;
+};
+
+export type StepType = {
+  isMandatory: boolean;
+  label: string;
+};

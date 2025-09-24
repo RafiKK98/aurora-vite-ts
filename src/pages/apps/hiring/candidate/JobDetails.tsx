@@ -16,12 +16,11 @@ const JobDetails = () => {
   const foundJob = jobs.find((job) => job.id === Number(id)) || jobs[2];
 
   useEffect(() => {
-    console.log({ foundJob });
     setJob(foundJob);
   }, [id]);
 
   return (
-    <Grid container>
+    <Grid container height={1}>
       <Grid
         size={{
           xs: 12,

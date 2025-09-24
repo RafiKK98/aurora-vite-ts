@@ -7,7 +7,6 @@ import {
   InputLabel,
   MenuItem,
   Select,
-  TextField,
 } from '@mui/material';
 import { DatePicker } from '@mui/x-date-pickers';
 import dayjs, { Dayjs } from 'dayjs';
@@ -265,18 +264,6 @@ const InvoiceDetailsForm = () => {
               />
             </Grid>
           </Grid>
-        </InvoiceDetailsFormSections>
-      </Grid>
-
-      <Grid size={{ xs: 12 }}>
-        <InvoiceDetailsFormSections title="Purposes">
-          <TextField
-            label="Subject"
-            error={!!errors.purpose}
-            helperText={errors.purpose?.message}
-            {...register('purpose')}
-            fullWidth
-          />
         </InvoiceDetailsFormSections>
       </Grid>
     </Grid>

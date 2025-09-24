@@ -32,7 +32,6 @@ export interface CreateInvoiceFormSchemaValues {
     discount: number | null;
     tax: number | null;
   };
-  purpose: string;
   itemDetails: {
     type: 'service' | 'product';
     description: string;
@@ -95,7 +94,6 @@ export const CreateInvoiceFormSchema: yup.ObjectSchema<CreateInvoiceFormSchemaVa
       .required('Discount is required'),
     tax: yup.number().typeError('Tax must be a number').nullable().required('Tax is required'),
   }),
-  purpose: yup.string().required('Purpose is required'),
   itemDetails: yup
     .array()
     .of(
@@ -155,7 +153,6 @@ export const useCreateInvoiceForm = () => {
         discount: null,
         tax: null,
       },
-      purpose: '',
       itemDetails: [
         {
           type: 'service',

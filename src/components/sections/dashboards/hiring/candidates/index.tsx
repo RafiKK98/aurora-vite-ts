@@ -13,9 +13,12 @@ const Candidates = () => {
       <SectionHeader
         title="Candidates"
         subTitle="Summary of candidate engagement"
+        direction={{ xs: 'column', sm: 'row' }}
         actionComponent={
           <DashboardSelectMenu
+            size="medium"
             defaultValue={30}
+            sx={{ width: { xs: '50%', sm: 150 } }}
             options={[
               {
                 value: 7,

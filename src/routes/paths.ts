@@ -120,22 +120,24 @@ const paths = {
   invoiceList: `/${rootPaths.appsRoot}/${rootPaths.invoiceRoot}/invoice-list`,
   createInvoice: `/${rootPaths.appsRoot}/${rootPaths.invoiceRoot}/create-invoice`,
   invoicePreview: `/${rootPaths.appsRoot}/${rootPaths.invoiceRoot}/invoice-preview`,
+  invoicePreviewWithId: (id: string) =>
+    `/${rootPaths.appsRoot}/${rootPaths.invoiceRoot}/invoice-preview/${id}`,
 
   calendar: `/${rootPaths.appsRoot}/${rootPaths.calendarRoot}`,
   scheduler: `/${rootPaths.appsRoot}/${rootPaths.schedulerRoot}`,
 
-  landingHomepage: `/${rootPaths.miscRoot}/${rootPaths.landingRoot}/homepage`,
-  landingAbout: `/${rootPaths.miscRoot}/${rootPaths.landingRoot}/about-us`,
-  landingContact: `/${rootPaths.miscRoot}/${rootPaths.landingRoot}/contact`,
-  landingFaq: `/${rootPaths.miscRoot}/${rootPaths.landingRoot}/faq`,
-  landing404: `/${rootPaths.miscRoot}/${rootPaths.landingRoot}/404`,
-  landingComingSoon: `/${rootPaths.miscRoot}/${rootPaths.landingRoot}/coming-soon`,
-  landingMaintenance: `/${rootPaths.miscRoot}/${rootPaths.landingRoot}/maintenance`,
+  landingHomepage: `/${rootPaths.pagesRoot}/${rootPaths.landingRoot}/homepage`,
+  landingAbout: `/${rootPaths.pagesRoot}/${rootPaths.landingRoot}/about-us`,
+  landingContact: `/${rootPaths.pagesRoot}/${rootPaths.landingRoot}/contact`,
+  landingFaq: `/${rootPaths.pagesRoot}/${rootPaths.landingRoot}/faq`,
+  landing404: `/${rootPaths.pagesRoot}/${rootPaths.landingRoot}/404`,
+  landingComingSoon: `/${rootPaths.pagesRoot}/${rootPaths.landingRoot}/coming-soon`,
+  landingMaintenance: `/${rootPaths.pagesRoot}/${rootPaths.landingRoot}/maintenance`,
 
   hiringRoot: `/${rootPaths.appsRoot}/${rootPaths.hiringRoot}`,
   hiringCandidate: `/${rootPaths.appsRoot}/${rootPaths.hiringRoot}/${rootPaths.hiringCandidate}`,
   hiringJobList: `/${rootPaths.appsRoot}/${rootPaths.hiringRoot}/${rootPaths.hiringCandidate}/job-list`,
-  hiringJobDetails: (jobId?: string) =>
+  hiringJobDetails: (jobId?: string | number) =>
     `/${rootPaths.appsRoot}/${rootPaths.hiringRoot}/${rootPaths.hiringCandidate}/job-details${
       jobId ? `/${jobId}` : ''
     }`,
@@ -174,7 +176,6 @@ export const apiEndpoints = {
   forgotPassword: '/auth/forgot-password',
   setPassword: '/auth/set-password',
   getProduct: (id: string) => `e-commerce/products/${id}`,
-  getJob: (id: string) => `hiring/jobs/${id}`,
 };
 
 export default paths;

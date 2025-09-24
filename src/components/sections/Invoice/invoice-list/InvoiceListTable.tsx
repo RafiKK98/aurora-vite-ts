@@ -9,6 +9,7 @@ import {
 import { GridApiCommunity } from '@mui/x-data-grid/internals';
 import dayjs from 'dayjs';
 import useNumberFormat from 'hooks/useNumberFormat';
+import paths from 'routes/paths';
 import { InvoiceTableRow } from 'types/invoice';
 import DashboardMenu from 'components/common/DashboardMenu';
 import DataGridPagination from 'components/pagination/DataGridPagination';
@@ -59,7 +60,11 @@ const InvoiceListTable = ({
         renderCell: (params) => {
           const { id } = params.row;
           return (
-            <Link variant="body2" sx={{ fontWeight: 400 }} href="#!">
+            <Link
+              variant="body2"
+              sx={{ fontWeight: 400 }}
+              href={paths.invoicePreviewWithId(id.toString())}
+            >
               #{id}
             </Link>
           );

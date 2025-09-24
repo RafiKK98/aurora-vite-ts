@@ -12,7 +12,7 @@ const SidenavCollapse = () => {
   const pathRef = useRef(null);
   const svgRef = useRef(null);
   const {
-    config: { sidenavCollapsed },
+    config: { sidenavCollapsed, textDirection },
     toggleNavbarCollapse,
   } = useSettingsContext();
 
@@ -27,8 +27,12 @@ const SidenavCollapse = () => {
 
     const targetPath = isHovered
       ? sidenavCollapsed
-        ? paths.chevronRight
-        : paths.chevronLeft
+        ? textDirection === 'rtl'
+          ? paths.chevronLeft
+          : paths.chevronRight
+        : textDirection === 'rtl'
+          ? paths.chevronRight
+          : paths.chevronLeft
       : paths.vertical;
 
     gsap.to(pathRef.current, {
@@ -36,7 +40,7 @@ const SidenavCollapse = () => {
       morphSVG: targetPath,
       ease: 'power2.out',
     });
-  }, [isHovered, sidenavCollapsed]);
+  }, [isHovered, sidenavCollapsed, textDirection]);
 
   return (
     <ButtonBase

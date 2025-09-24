@@ -10,21 +10,26 @@ interface JobOpeningFooterProps {
 
 const JobOpeningFooter = ({ jobs }: JobOpeningFooterProps) => {
   return (
-    <Stack alignItems="center" gap={1} sx={{ py: 1, px: 3 }}>
-      <TableLabelDisplayedRows count={jobs.length} from={1} to={jobs.length} />
-      <Stack alignItems="center" flexGrow={1} justifyContent="space-between">
+    <Stack
+      direction={{ xs: 'column', sm: 'row' }}
+      alignItems="center"
+      gap={1}
+      sx={{ py: 1, px: 3 }}
+    >
+      <Stack alignItems="center" flexGrow={1} gap={1}>
+        <TableLabelDisplayedRows count={jobs.length} from={1} to={jobs.length} />
         <Link variant="caption" href="#!" sx={{ fontWeight: 700, flexShrink: 0 }}>
           Show all
         </Link>
-        <Pagination
-          variant="solid"
-          color="primary"
-          showFirstButton
-          showLastButton
-          count={3}
-          siblingCount={1}
-        />
       </Stack>
+      <Pagination
+        variant="solid"
+        color="primary"
+        showFirstButton
+        showLastButton
+        count={3}
+        siblingCount={1}
+      />
     </Stack>
   );
 };

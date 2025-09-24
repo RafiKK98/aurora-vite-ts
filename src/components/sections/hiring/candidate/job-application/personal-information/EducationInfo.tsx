@@ -88,7 +88,7 @@ const EducationFormItem = ({ index, field, remove }: EducationFormItemProps) => 
         <IconifyIcon icon="material-symbols:drag-indicator" sx={{ cursor: 'grab', fontSize: 20 }} />
       </IconButton>
       <Grid container spacing={1}>
-        <Grid size={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField
             label="Institution Name"
             fullWidth
@@ -97,7 +97,7 @@ const EducationFormItem = ({ index, field, remove }: EducationFormItemProps) => 
             {...register(`personalInfo.education.${index}.institutionName`)}
           />
         </Grid>
-        <Grid size={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField
             label="Degree/Field of Study"
             fullWidth
@@ -106,7 +106,7 @@ const EducationFormItem = ({ index, field, remove }: EducationFormItemProps) => 
             {...register(`personalInfo.education.${index}.degree`)}
           />
         </Grid>
-        <Grid size={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField
             label="Location"
             fullWidth
@@ -115,7 +115,7 @@ const EducationFormItem = ({ index, field, remove }: EducationFormItemProps) => 
             {...register(`personalInfo.education.${index}.location`)}
           />
         </Grid>
-        <Grid size={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <FormControl
             fullWidth
             error={!!errors.personalInfo?.education?.[index]?.timePeriod}

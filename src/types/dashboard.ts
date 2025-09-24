@@ -12,3 +12,11 @@ export interface ComparisonChartData {
   currentYear: number[];
   lastYear: number[];
 }
+
+export interface PromoSlideData {
+  title: string;
+  subtitle: string;
+  buttonText: string;
+  buttonLink: string;
+  imageKey: 'rocket' | 'customer' | 'aiTools';
+}

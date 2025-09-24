@@ -20,7 +20,7 @@ const Hiring = () => {
         <Grid size={{ xs: 12, md: 6, xl: 4 }}>
           <MyPositions />
         </Grid>
-        <Grid size={{ xs: 12, xl: 8 }} container>
+        <Grid container size={{ xs: 12, xl: 8 }}>
           <Grid size={{ xs: 12, sm: 6 }}>
             <NewHires />
           </Grid>

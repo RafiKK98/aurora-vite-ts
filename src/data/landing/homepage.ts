@@ -1,19 +1,19 @@
-import blogImg1 from 'assets/images/sections/misc/landing/blog/blog-img-1.webp';
-import blogImg2 from 'assets/images/sections/misc/landing/blog/blog-img-2.webp';
-import blogImg3 from 'assets/images/sections/misc/landing/blog/blog-img-3.webp';
-import img1 from 'assets/images/sections/misc/landing/gallery/img1.webp';
-import img2 from 'assets/images/sections/misc/landing/gallery/img2.webp';
-import img3 from 'assets/images/sections/misc/landing/gallery/img3.webp';
-import img4 from 'assets/images/sections/misc/landing/gallery/img4.webp';
-import img5 from 'assets/images/sections/misc/landing/gallery/img5.webp';
-import img6 from 'assets/images/sections/misc/landing/gallery/img6.webp';
-import img7 from 'assets/images/sections/misc/landing/gallery/img7.webp';
-import ecovisionProject from 'assets/images/sections/misc/landing/showcase/ecovision-project.webp';
-import quantumLeapInitiative from 'assets/images/sections/misc/landing/showcase/quantum-leap-initiative.webp';
-import skylineInnovations from 'assets/images/sections/misc/landing/showcase/skyline-innovations.webp';
-import testimonialImg1 from 'assets/images/sections/misc/landing/testimonial/testimonial-1.webp';
-import testimonialImg2 from 'assets/images/sections/misc/landing/testimonial/testimonial-2.webp';
-import testimonialImg3 from 'assets/images/sections/misc/landing/testimonial/testimonial-3.webp';
+import blogImg1 from 'assets/images/landing/blog/blog-img-1.webp';
+import blogImg2 from 'assets/images/landing/blog/blog-img-2.webp';
+import blogImg3 from 'assets/images/landing/blog/blog-img-3.webp';
+import img1 from 'assets/images/landing/gallery/img1.webp';
+import img2 from 'assets/images/landing/gallery/img2.webp';
+import img3 from 'assets/images/landing/gallery/img3.webp';
+import img4 from 'assets/images/landing/gallery/img4.webp';
+import img5 from 'assets/images/landing/gallery/img5.webp';
+import img6 from 'assets/images/landing/gallery/img6.webp';
+import img7 from 'assets/images/landing/gallery/img7.webp';
+import ecovisionProject from 'assets/images/landing/showcase/ecovision-project.webp';
+import quantumLeapInitiative from 'assets/images/landing/showcase/quantum-leap-initiative.webp';
+import skylineInnovations from 'assets/images/landing/showcase/skyline-innovations.webp';
+import testimonialImg1 from 'assets/images/landing/testimonial/testimonial-1.webp';
+import testimonialImg2 from 'assets/images/landing/testimonial/testimonial-2.webp';
+import testimonialImg3 from 'assets/images/landing/testimonial/testimonial-3.webp';
 import { users } from 'data/users';
 import type { User } from 'types/users';
 
@@ -100,7 +100,7 @@ export type Stat = {
 };
 
 export const statsData: Stat[] = [
-  { value: '4000+', label: 'Users and still counting' },
+  { value: '4,000+', label: 'Users and still counting' },
   { value: '$25,000', label: 'In revenue and still generating' },
   { value: '3%', label: 'Flat platform fee' },
   { value: '5,152', label: 'Transactions this year' },

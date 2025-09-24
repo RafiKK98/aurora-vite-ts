@@ -2,13 +2,13 @@ import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { Job } from 'types/hiring';
+import type { Job } from 'types/hiring';
 import ActionBtns from './ActionBtns';
 import DetailsSection from './DetailsSection';
 
 const JobDetailsMain = ({ job }: { job: Job }) => {
   return (
-    <Paper sx={{ p: { xs: 3, md: 5 } }}>
+    <Paper sx={{ height: 1, p: { xs: 3, md: 5 } }}>
       <Container maxWidth="sm" disableGutters>
         <Typography variant="h4" sx={{ mb: 3 }}>
           {job.title}

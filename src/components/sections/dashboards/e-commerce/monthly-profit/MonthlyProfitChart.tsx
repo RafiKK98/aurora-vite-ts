@@ -27,6 +27,26 @@ const MonthlyProfitChart = ({ data, sx }: MonthlyProfitChartProps) => {
     () => ({
       tooltip: {
         trigger: 'axis',
+        confine: false,
+        position: (
+          point: [number, number],
+          params: any,
+          dom: HTMLElement,
+          rect: any,
+          size: { contentSize: [any, any]; viewSize: [any, any] },
+        ) => {
+          const [x, y] = point;
+          const [tooltipWidth, tooltipHeight] = size.contentSize;
+          const [chartWidth, chartHeight] = size.viewSize;
+
+          const posX = x + tooltipWidth > chartWidth ? x - tooltipWidth - 10 : x + 10;
+          const posY = Math.max(
+            10,
+            Math.min(y - tooltipHeight / 2, chartHeight - tooltipHeight - 10),
+          );
+
+          return [posX, posY];
+        },
         formatter: (params: CallbackDataParams[]) => tooltipFormatterList(params, true),
       },
       xAxis: {
@@ -90,12 +110,12 @@ const MonthlyProfitChart = ({ data, sx }: MonthlyProfitChartProps) => {
           },
         },
       ],
-      grid: { left: 5, right: '-15%', top: 5, bottom: '5%' },
+      grid: { left: 5, right: '5%', top: 5, bottom: '5%' },
     }),
     [vars.palette, getThemeColor, data],
   );
 
-  return <ReactEchart echarts={echarts} option={getOptions} sx={sx} />;
+  return <ReactEchart echarts={echarts} option={getOptions} sx={{ overflow: 'visible', ...sx }} />;
 };
 
 export default MonthlyProfitChart;

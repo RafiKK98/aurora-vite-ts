@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import img from 'assets/images/sections/misc/landing/landing-footer.webp';
+import img from 'assets/images/landing/landing-footer.webp';
 import { cssVarRgba } from 'lib/utils';
 import CTA from './CTA';
 import NavSection from './NavSection';
@@ -16,7 +16,7 @@ const LandingFooter = () => {
           position: 'absolute',
           inset: 0,
           opacity: 0.5,
-          background: `url(${img}) no-repeat, linear-gradient(to bottom, color-mix(in srgb, ${cssVarRgba(vars.palette.primary.lighterChannel, 1)} 80%, transparent), ${cssVarRgba(vars.palette.background.defaultChannel, 1)})`,
+          background: `url(${img}) no-repeat, linear-gradient(to bottom, color-mix(in srgb, ${cssVarRgba(vars.palette.background.defaultChannel, 1)} 80%, transparent), ${cssVarRgba(vars.palette.background.defaultChannel, 1)})`,
           backgroundPosition: 'center',
           backgroundBlendMode: 'overlay',
         },

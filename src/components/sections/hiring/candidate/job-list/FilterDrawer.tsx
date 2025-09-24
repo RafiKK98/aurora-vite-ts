@@ -6,7 +6,12 @@ import Typography from '@mui/material/Typography';
 import IconifyIcon from 'components/base/IconifyIcon';
 import FilterSection from './FilterSection';
 
-const FilterDrawer = ({ open, handleClose }: { open: boolean; handleClose: () => void }) => {
+interface FilterDrawerProps {
+  open: boolean;
+  handleClose: () => void;
+}
+
+const FilterDrawer = ({ open, handleClose }: FilterDrawerProps) => {
   return (
     <Drawer
       variant="temporary"

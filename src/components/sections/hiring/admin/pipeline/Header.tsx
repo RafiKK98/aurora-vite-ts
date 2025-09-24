@@ -17,7 +17,12 @@ const PipelineHeader = () => {
             { label: 'Pipeline', active: true },
           ]}
         />
-        <Stack gap={2} justifyContent="space-between" alignItems="flex-end">
+        <Stack
+          direction={{ xs: 'column', sm: 'row' }}
+          gap={2}
+          justifyContent="space-between"
+          alignItems={{ sm: 'flex-end' }}
+        >
           <Stack direction="column" gap={2}>
             <Typography variant="h4">Content Writer</Typography>
             <Stack gap={2}>
@@ -30,7 +35,7 @@ const PipelineHeader = () => {
             </Stack>
           </Stack>
 
-          <Stack gap={10} alignItems="flex-end">
+          <Stack gap={{ sm: 10 }} justifyContent="space-between" alignItems="flex-end">
             <Stack gap={2} flexWrap="wrap" alignItems="flex-end">
               <Typography variant="body2" color="text.secondary">
                 <Box component="span" fontWeight={700} color="text.primary">
@@ -56,6 +61,7 @@ const PipelineHeader = () => {
             <Button
               variant="contained"
               startIcon={<IconifyIcon icon="material-symbols:add-rounded" />}
+              sx={{ flexShrink: 0 }}
             >
               Add Member
             </Button>

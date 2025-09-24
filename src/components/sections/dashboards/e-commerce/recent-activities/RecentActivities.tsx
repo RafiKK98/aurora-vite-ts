@@ -15,7 +15,7 @@ import SectionHeader from 'components/common/SectionHeader';
 
 const RecentActivities = () => {
   return (
-    <Paper sx={{ p: { xs: 3, md: 5 }, height: 1 }}>
+    <Paper sx={{ p: { xs: 3, md: 5 }, height: { xs: 1, xl: 'auto' } }}>
       <Stack direction="column" sx={{ height: 1 }}>
         <SectionHeader
           title="Recent activities"

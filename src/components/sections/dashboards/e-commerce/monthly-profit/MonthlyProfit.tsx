@@ -7,7 +7,7 @@ import MonthlyProfitChart from './MonthlyProfitChart';
 
 const MonthlyProfit = () => {
   return (
-    <Paper sx={{ p: { xs: 3, md: 5 }, flex: 1 }}>
+    <Paper sx={{ p: { xs: 3, md: 5 }, flex: 1, height: 1 }}>
       <Stack
         direction="column"
         sx={{
@@ -17,8 +17,8 @@ const MonthlyProfit = () => {
         }}
       >
         <SectionHeader
-          title="Monthly Net Profit"
-          subTitle=" Total profit gained"
+          title="Monthly Earnings"
+          subTitle="Total profit gained"
           actionComponent={<DashboardMenu />}
           sx={{ mb: 0 }}
         />
@@ -28,7 +28,7 @@ const MonthlyProfit = () => {
           chart={
             <MonthlyProfitChart
               data={monthlyProfitChartData}
-              sx={{ height: '100% !important', width: '50%' }}
+              sx={{ height: '100% !important', width: 1, maxWidth: '45%', overflow: 'visible' }}
             />
           }
         />

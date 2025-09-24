@@ -1,26 +1,29 @@
 import {
   Avatar,
-  AvatarGroup,
   Button,
+  Chip,
   Divider,
   List,
   ListItemButton,
+  ListItemIcon,
+  ListItemText,
   Paper,
   Stack,
+  Tooltip,
   Typography,
-  avatarGroupClasses,
+  chipClasses,
 } from '@mui/material';
-import { MeetingSchedule, Stat } from 'data/e-commerce/greetings';
+import { Order, Stat } from 'data/e-commerce/greetings';
 import dayjs from 'dayjs';
 import IconifyIcon from 'components/base/IconifyIcon';
 import SimpleBar from 'components/base/SimpleBar';
 
 interface GreetingProps {
   stats: Stat[];
-  meetingSchedules: MeetingSchedule[];
+  orders: Order[];
 }
 
-const Greeting = ({ stats, meetingSchedules }: GreetingProps) => {
+const Greeting = ({ stats, orders }: GreetingProps) => {
   return (
     <Paper
       background={1}
@@ -116,78 +119,87 @@ const Greeting = ({ stats, meetingSchedules }: GreetingProps) => {
             fontWeight: 400,
           }}
         >
-          You have 3 meetings today.
+          Your have 16 orders today.
         </Typography>
 
-        <SimpleBar sx={{ maxHeight: { xs: 'auto', md: 354 }, height: 'min-content' }}>
+        <SimpleBar
+          sx={{ maxHeight: { xs: 300, md: 368, lg: 596, xl: 376 }, height: 'min-content' }}
+        >
           <List
             disablePadding
             component={Stack}
             gap={1}
             direction={{ xs: 'column', sm: 'row', md: 'column' }}
           >
-            {meetingSchedules.map(({ title, time, attendants }) => (
+            {orders.map(({ id, productName, productImage, price, statusIcon, status }) => (
               <ListItemButton
-                key={title}
+                key={id}
                 sx={{
-                  flexDirection: 'column',
-                  alignItems: 'stretch',
                   minWidth: { xs: 0, sm: 254, md: 0 },
-                  p: 2,
+                  py: 1.75,
+                  px: 1.5,
                   bgcolor: 'background.elevation2',
                   borderRadius: 2,
                   gap: 1,
-                  flex: 1,
                   '&:hover': {
                     backgroundColor: 'background.elevation3',
                   },
                 }}
               >
-                <Typography
-                  variant="body1"
-                  sx={{
-                    fontWeight: 700,
-                    color: 'text.primary',
-                    lineClamp: 1,
-                  }}
-                >
-                  {title}
-                </Typography>
-                <Stack
-                  direction={{ xs: 'row', sm: 'column', md: 'row' }}
-                  sx={{
-                    flex: 1,
-                    columnGap: 0.5,
-                    rowGap: 1,
-                    flexWrap: 'wrap',
-                    alignItems: { xs: 'flex-end', sm: 'start', md: 'flex-end' },
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <Typography variant="caption" color="text.secondary" fontWeight={600}>
-                    {time}
-                  </Typography>
+                <ListItemIcon>
+                  <Avatar
+                    sx={{ width: 48, height: 48, bgcolor: 'transparent' }}
+                    src={productImage}
+                    alt={productName}
+                    variant="rounded"
+                  />
+                </ListItemIcon>
 
-                  <AvatarGroup
-                    max={4}
+                <ListItemText
+                  primary={productName}
+                  secondary={`${price}`}
+                  slotProps={{
+                    primary: {
+                      sx: {
+                        typography: 'body2',
+                        fontWeight: 600,
+                        color: 'text.primary',
+                        lineClamp: 1,
+                      },
+                    },
+                    secondary: {
+                      sx: {
+                        typography: 'caption',
+                        fontWeight: 600,
+                        lineClamp: 1,
+                      },
+                    },
+                  }}
+                />
+
+                <Tooltip
+                  title={
+                    status === 'warning'
+                      ? 'Processing'
+                      : status === 'primary'
+                        ? 'Shipped'
+                        : 'Delivered'
+                  }
+                >
+                  <Chip
+                    variant="soft"
+                    icon={<IconifyIcon icon={statusIcon} fontSize={16} />}
+                    color={status}
+                    size="small"
                     sx={{
-                      mr: 1,
-                      [`& .${avatarGroupClasses.avatar}`]: {
-                        mr: -1.5,
-                        width: 24,
-                        height: 24,
-                        fontSize: '0.6rem',
-                        '&:first-of-type': {
-                          backgroundColor: 'primary.main',
-                        },
+                      height: 24,
+                      width: 24,
+                      [`& .${chipClasses.label}`]: {
+                        display: 'none',
                       },
                     }}
-                  >
-                    {attendants.map((attendant) => (
-                      <Avatar alt={attendant.name} key={attendant.name} src={attendant.avatar} />
-                    ))}
-                  </AvatarGroup>
-                </Stack>
+                  />
+                </Tooltip>
               </ListItemButton>
             ))}
           </List>
@@ -199,13 +211,15 @@ const Greeting = ({ stats, meetingSchedules }: GreetingProps) => {
           size="small"
           endIcon={
             <IconifyIcon
-              icon="material-symbols:open-in-new-rounded"
-              sx={{ height: 18, width: 18 }}
+              icon="material-symbols:keyboard-arrow-right"
+              height={18}
+              width={18}
+              sx={{ mt: 0.5 }}
             />
           }
           sx={{ alignSelf: 'flex-end' }}
         >
-          Open Schedule
+          All orders
         </Button>
       </Stack>
     </Paper>

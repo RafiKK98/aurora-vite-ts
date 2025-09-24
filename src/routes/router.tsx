@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react';
-import { Navigate, Outlet, type RouteObject, createBrowserRouter, useLocation } from 'react-router';
+import { Navigate, Outlet, RouteObject, createBrowserRouter, useLocation } from 'react-router';
 import { docRoutes } from 'docs/routes/docRouter';
 import AuthLayout from 'layouts/auth-layout';
 import DefaultAuthLayout from 'layouts/auth-layout/DefaultAuthLayout';
@@ -42,13 +42,13 @@ const Notifications = lazy(() => import('pages/others/Notifications'));
 const EventsDetail = lazy(() => import('pages/events/EventDetail'));
 const CreateEvent = lazy(() => import('pages/events/CreateEvent'));
 const ComingSoon = lazy(() => import('pages/others/ComingSoon'));
-const LandingHomepage = lazy(() => import('pages/misc/landing/Homepage'));
-const AboutUs = lazy(() => import('pages/misc/landing/AboutUs'));
-const Contact = lazy(() => import('pages/misc/landing/Contact'));
-const LandingFAQ = lazy(() => import('pages/misc/landing/LandingFAQ'));
-const Landing404 = lazy(() => import('pages/misc/landing/404'));
-const LandingComingSoon = lazy(() => import('pages/misc/landing/ComingSoon'));
-const LandingMaintenance = lazy(() => import('pages/misc/landing/Maintenance'));
+const LandingHomepage = lazy(() => import('pages/landing/Homepage'));
+const AboutUs = lazy(() => import('pages/landing/AboutUs'));
+const Contact = lazy(() => import('pages/landing/Contact'));
+const LandingFAQ = lazy(() => import('pages/landing/LandingFAQ'));
+const Landing404 = lazy(() => import('pages/landing/404'));
+const LandingComingSoon = lazy(() => import('pages/landing/ComingSoon'));
+const LandingMaintenance = lazy(() => import('pages/landing/Maintenance'));
 const ECommerce = lazy(() => import('pages/dashboards/ECommerce'));
 const Hiring = lazy(() => import('pages/dashboards/Hiring'));
 const CRM = lazy(() => import('pages/dashboards/CRM'));
@@ -369,6 +369,10 @@ export const routes: RouteObject[] = [
               },
               {
                 path: paths.invoicePreview,
+                element: <InvoicePreview />,
+              },
+              {
+                path: `${paths.invoicePreview}/:id`,
                 element: <InvoicePreview />,
               },
             ],

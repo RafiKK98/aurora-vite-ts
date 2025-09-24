@@ -77,23 +77,26 @@ const reactDatepicker = (theme: Theme) => {
               fontWeight: 600,
               padding: spacing(1.5, 0, 3.5, 0),
             },
-            '& .react-datepicker__day-names': {
-              height: spacing(5),
-              borderRadius: spacing(1),
-              backgroundColor: vars.palette.background.elevation2,
-              marginBottom: 0,
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
+          },
 
-              '& .react-datepicker__day-name': {
-                color: vars.palette.text.disabled,
-                fontWeight: 500,
-                fontSize: typography.overline.fontSize,
-                margin: 0,
-                width: spacing(5),
-                varticalAlign: 'center',
-              },
+          '& .react-datepicker__day-names': {
+            marginLeft: spacing(3),
+            marginRight: spacing(3),
+            height: spacing(5),
+            borderRadius: spacing(1),
+            backgroundColor: vars.palette.background.elevation2,
+            marginBottom: 0,
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+
+            '& .react-datepicker__day-name': {
+              color: vars.palette.text.disabled,
+              fontWeight: 500,
+              fontSize: typography.overline.fontSize,
+              margin: 0,
+              width: spacing(5),
+              varticalAlign: 'center',
             },
           },
 

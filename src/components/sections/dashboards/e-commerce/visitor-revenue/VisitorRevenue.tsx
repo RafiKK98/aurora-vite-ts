@@ -7,18 +7,18 @@ import VisitorRevenueChart from './VisitorRevenueChart';
 
 const VisitorRevenue = () => {
   return (
-    <Paper sx={{ p: { xs: 3, md: 5 }, flex: 1 }}>
+    <Paper sx={{ p: { xs: 3, md: 5 }, flex: 1, height: 1 }}>
       <Stack
         direction="column"
         sx={{
           rowGap: 2,
-          height: '100%',
+          height: 1,
           justifyContent: 'space-between',
         }}
       >
         <SectionHeader
-          title="Revenue per visitor"
-          subTitle="Average income per visitors in your website"
+          title="Visitor Value"
+          subTitle="Avg. income per site visit"
           actionComponent={<DashboardMenu />}
           sx={{ mb: 0 }}
         />
@@ -29,7 +29,7 @@ const VisitorRevenue = () => {
           chart={
             <VisitorRevenueChart
               data={visitorRevenueChartData}
-              sx={{ height: '100% !important', width: '50%' }}
+              sx={{ height: '100% !important', width: 1, maxWidth: '45%' }}
             />
           }
         />

@@ -12,7 +12,7 @@ const OverviewItem = ({ icon, label, value }: OverviewItemProps) => {
     <Stack direction="column" gap={1}>
       <Stack gap={1} alignItems="center">
         <IconifyIcon icon={icon} sx={{ fontSize: 24 }} />
-        <Typography variant="subtitle1" fontWeight={600} lineHeight={1.6}>
+        <Typography variant="subtitle1" fontWeight={600}>
           {label}
         </Typography>
       </Stack>

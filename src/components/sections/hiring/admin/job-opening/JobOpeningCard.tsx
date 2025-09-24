@@ -14,18 +14,25 @@ interface JobOpeningCardProps {
 
 const JobOpeningCard = ({ job }: JobOpeningCardProps) => {
   return (
-    <Paper background={1} sx={{ p: 3, borderRadius: 6, outline: 0, height: 1 }}>
+    <Paper
+      component={Link}
+      href="#!"
+      underline="none"
+      background={1}
+      sx={{
+        p: 3,
+        display: 'block',
+        borderRadius: 6,
+        outline: 0,
+        height: 1,
+        '&:hover': { bgcolor: 'background.elevation2' },
+      }}
+    >
       <Stack direction="column" gap={3} height={1} justifyContent="space-between">
         <Stack direction="column" gap={2}>
           <Stack gap={2} justifyContent="space-between">
             <Stack direction="column" gap={0.5}>
-              <Typography
-                component={Link}
-                href="#!"
-                color="text.primary"
-                variant="h6"
-                lineHeight={1.5}
-              >
+              <Typography color="text.primary" variant="h6" lineHeight={1.5}>
                 {job.title}
               </Typography>
               <Stack gap={2}>
@@ -62,14 +69,14 @@ const JobOpeningCard = ({ job }: JobOpeningCardProps) => {
             </Typography>
           </Stack>
         </Stack>
-        <Stack justifyContent="space-between" alignItems="center">
-          <Stack gap={1} alignItems="center">
+        <Stack gap={1} justifyContent="space-between" alignItems="center">
+          <Stack gap={1} alignItems="center" flexWrap="wrap">
             {job.tags.map((tag, index) => (
               <Chip key={index} label={tag.label} color={tag.color} />
             ))}
           </Stack>
           <Typography variant="caption" fontWeight={500} lineHeight={1.5} color="text.secondary">
-            {dayjs(job.postedDate).format('MMM DD, YYYY')}
+            {dayjs(job.postedDate).format('MMM D, YYYY')}
           </Typography>
         </Stack>
       </Stack>

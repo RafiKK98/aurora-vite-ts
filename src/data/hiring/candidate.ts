@@ -1,10 +1,10 @@
-import brightwaveMedia from 'assets/images/hiring/brightwave-media.png';
-import gEquipmentCo from 'assets/images/hiring/g-equipment-co.png';
-import oEcopowerInnovations from 'assets/images/hiring/o-ecopower-innovations.png';
-import shieldnetSecurity from 'assets/images/hiring/shieldnet-security.png';
-import swiftpaySystems from 'assets/images/hiring/swiftpay-systems.png';
-import victoryTechOutfittersLtd from 'assets/images/hiring/victory-tech-outfitters-ltd.png';
-import wakaWakaPlc from 'assets/images/hiring/waka-waka-plc.png';
+import brightwaveMedia from 'assets/images/hiring/brightwave-media.webp';
+import gEquipmentCo from 'assets/images/hiring/g-equipment-co.webp';
+import oEcopowerInnovations from 'assets/images/hiring/o-ecopower-innovations.webp';
+import shieldnetSecurity from 'assets/images/hiring/shieldnet-security.webp';
+import swiftpaySystems from 'assets/images/hiring/swiftpay-systems.webp';
+import victoryTechOutfittersLtd from 'assets/images/hiring/victory-tech-outfitters-ltd.webp';
+import wakaWakaPlc from 'assets/images/hiring/waka-waka-plc.webp';
 import type { Job } from 'types/hiring';
 
 // Job List

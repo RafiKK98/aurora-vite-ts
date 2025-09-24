@@ -11,7 +11,7 @@ import product10 from 'assets/images/ecommerce/products/96x96/product_10.webp';
 import product11 from 'assets/images/ecommerce/products/96x96/product_11.webp';
 import product12 from 'assets/images/ecommerce/products/96x96/product_12.webp';
 import { users } from 'data/users';
-import { ClientLocation, ComparisonChartData, Storage } from 'types/dashboard';
+import { ClientLocation, ComparisonChartData, PromoSlideData, Storage } from 'types/dashboard';
 import { ProductSummary } from 'types/ecommerce';
 
 export const topProducts: ProductSummary[] = [
@@ -151,3 +151,29 @@ export const monthlyProfitChartData: ComparisonChartData = {
   currentYear: [0, 400, 250, 300, 80, 600],
   lastYear: [100, 250, 150, 200, 400, 250],
 };
+
+export const promoSliderData: PromoSlideData[] = [
+  {
+    title: 'Grow your store confidently.',
+    subtitle:
+      'Access advanced tools and proven strategies to grow your business faster and smarter.',
+    buttonText: 'Upgrade Now',
+    buttonLink: '#!',
+    imageKey: 'rocket',
+  },
+  {
+    title: 'Smarter selling with AI tools',
+    subtitle:
+      'Automate tasks, reply instantly, and gain helpful insights for growth with less effort.',
+    buttonText: 'Explore AI',
+    buttonLink: '#!',
+    imageKey: 'aiTools',
+  },
+  {
+    title: 'Priority help, anytime',
+    subtitle: 'Receive quicker responses and dedicated support for smoother store operations.',
+    buttonText: 'Learn More',
+    buttonLink: '#!',
+    imageKey: 'customer',
+  },
+];

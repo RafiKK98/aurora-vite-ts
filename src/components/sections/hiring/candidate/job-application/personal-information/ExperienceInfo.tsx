@@ -93,7 +93,7 @@ const ExperienceFormItem = ({ index, field, remove }: ExperienceFormItemProps) =
         <IconifyIcon icon="material-symbols:drag-indicator" sx={{ cursor: 'grab', fontSize: 20 }} />
       </IconButton>
       <Grid container spacing={1}>
-        <Grid size={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField
             label="Institution Name"
             fullWidth
@@ -102,7 +102,7 @@ const ExperienceFormItem = ({ index, field, remove }: ExperienceFormItemProps) =
             {...register(`personalInfo.experience.${index}.institutionName`)}
           />
         </Grid>
-        <Grid size={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField
             label="Position"
             fullWidth
@@ -111,7 +111,7 @@ const ExperienceFormItem = ({ index, field, remove }: ExperienceFormItemProps) =
             {...register(`personalInfo.experience.${index}.position`)}
           />
         </Grid>
-        <Grid size={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField
             label="Location"
             fullWidth
@@ -120,7 +120,7 @@ const ExperienceFormItem = ({ index, field, remove }: ExperienceFormItemProps) =
             {...register(`personalInfo.experience.${index}.location`)}
           />
         </Grid>
-        <Grid size={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <FormControl
             fullWidth
             error={!!errors.personalInfo?.experience?.[index]?.timePeriod}

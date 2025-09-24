@@ -21,7 +21,7 @@ const PipelineCard = ({ pipeline }: { pipeline: PipelineItem }) => {
             <Typography variant="subtitle1" fontWeight={700}>
               {pipeline.user.name}
             </Typography>
-            <Rating size="small" value={pipeline.rating} />
+            <Rating size="small" value={pipeline.rating} readOnly />
           </Stack>
         </Stack>
         <Stack justifyContent="space-between" alignItems="center" gap={2}>

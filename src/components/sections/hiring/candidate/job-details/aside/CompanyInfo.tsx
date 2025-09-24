@@ -5,18 +5,22 @@ import { getRangeLabel } from 'lib/utils';
 import { Job } from 'types/hiring';
 import Image from 'components/base/Image';
 
-const CompanyInfo = ({ company }: { company: Job['company'] }) => {
+interface CompanyInfoProps {
+  company: Job['company'];
+}
+
+const CompanyInfo = ({ company }: CompanyInfoProps) => {
   return (
     <Stack direction="column" gap={1}>
-      <Stack alignItems="center" gap={2}>
-        <Box sx={{ width: 48, height: 48, borderRadius: 2, overflow: 'hidden' }}>
+      <Stack direction={{ xs: 'row', md: 'column', lg: 'row' }} alignItems="flex-start" gap={2}>
+        <Box sx={{ maxWidth: 48, height: 48, borderRadius: 2, overflow: 'hidden', flexShrink: 0 }}>
           <Image src={company.logo} height="100%" width="100%" />
         </Box>
         <Stack direction="column" gap={0.5}>
           <Typography variant="subtitle1" fontWeight={700} color="neutral.main">
             {company.name}
           </Typography>
-          <Stack gap={1}>
+          <Stack gap={1} flexWrap="wrap">
             <Typography variant="caption" fontWeight={500} color="text.secondary">
               {company.type}
             </Typography>

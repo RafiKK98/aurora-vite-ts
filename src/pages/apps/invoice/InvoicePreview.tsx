@@ -1,4 +1,4 @@
-import React from 'react';
+import { useParams } from 'react-router';
 import { Button, Paper, Stack } from '@mui/material';
 import { invoiceData } from 'data/invoice';
 import paths from 'routes/paths';
@@ -7,11 +7,13 @@ import InvoicePreviewContainer from 'components/sections/Invoice/invoice-preview
 import PageHeader from 'components/sections/ecommerce/admin/common/PageHeader';
 
 const InvoicePreview = () => {
+  const { id } = useParams();
+
   return (
     <>
       <Stack direction="column">
         <PageHeader
-          title={`Invoice #${invoiceData.invoiceDetails.invoiceNumber}`}
+          title={`Invoice #${id || invoiceData.invoiceDetails.invoiceNumber}`}
           breadcrumb={[
             { label: 'Home', url: '/' },
             { label: 'Invoice', url: paths.createInvoice },
@@ -50,7 +52,7 @@ const InvoicePreview = () => {
           background={1}
           sx={{ width: 1, p: { xs: 3, lg: 5 }, mt: '1px', borderRadius: 0 }}
         >
-          <InvoicePreviewContainer invoiceDate={invoiceData} />
+          <InvoicePreviewContainer invoiceData={invoiceData} />
         </Paper>
       </Stack>
     </>

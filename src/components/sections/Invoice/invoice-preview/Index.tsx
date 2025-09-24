@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Paper } from '@mui/material';
 import { InvoicePreviewItem } from 'types/invoice';
 import SimpleBar from 'components/base/SimpleBar';
@@ -6,10 +5,10 @@ import InvoiceHistory from './InvoiceHistory';
 import InvoiceTable from './InvoiceTable';
 
 interface InvoicePreviewContainerProps {
-  invoiceDate: InvoicePreviewItem;
+  invoiceData: InvoicePreviewItem;
 }
 
-const InvoicePreviewContainer = ({ invoiceDate }: InvoicePreviewContainerProps) => {
+const InvoicePreviewContainer = ({ invoiceData }: InvoicePreviewContainerProps) => {
   return (
     <>
       <SimpleBar sx={{ mb: 4, width: 1 }}>
@@ -19,7 +18,7 @@ const InvoicePreviewContainer = ({ invoiceDate }: InvoicePreviewContainerProps) 
             elevation={0}
             sx={{ p: { xs: 3, md: 5 }, border: 1, borderColor: 'divider' }}
           >
-            <InvoiceTable invoice={invoiceDate} />
+            <InvoiceTable invoice={invoiceData} />
           </Paper>
         </Container>
       </SimpleBar>

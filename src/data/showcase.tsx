@@ -43,7 +43,7 @@ export const showcaseAssets = {
 export const preloadAssets = [auroraBeam, illustration1, ss1, ss2, ss3, ss4];
 
 export const figmaPreviewLink =
-  'https://www.figma.com/design/Uu7B3vKIKlvV4vdRP43Ioe/Aurora--Preview--v1.4.0-?node-id=201-89946&p=f&t=56oBqoaSE8rhh6Ks-0';
+  'https://www.figma.com/design/WtheGggsqsIs87B3d0HGpA/Aurora--Preview--v1.5.0-?node-id=201-89946&p=f&t=wLrGhDOg1H41syO2-0';
 
 export const navItems = [
   { label: 'Documentation', href: paths.gettingStared },

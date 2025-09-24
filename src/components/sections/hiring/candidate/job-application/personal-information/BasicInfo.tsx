@@ -15,8 +15,12 @@ const BasicInfo = () => {
   } = useFormContext<JobApplicationFormValues>();
   return (
     <ApplicationFormSection name="Basic">
-      <Stack gap={4}>
-        <Box sx={{ py: 2 }}>
+      <Stack
+        direction={{ xs: 'column', sm: 'row' }}
+        gap={4}
+        alignItems={{ xs: 'center', sm: 'stretch' }}
+      >
+        <Box sx={{ py: { sm: 2 } }}>
           <Controller
             control={control}
             name="personalInfo.basic.avatar"

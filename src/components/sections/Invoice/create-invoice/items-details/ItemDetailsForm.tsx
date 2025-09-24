@@ -1,19 +1,9 @@
 import { useMemo } from 'react';
-import {
-  Controller,
-  FieldArrayWithId,
-  useFieldArray,
-  useFormContext,
-  useWatch,
-} from 'react-hook-form';
+import { useFieldArray, useFormContext, useWatch } from 'react-hook-form';
 import { DragEndEvent } from '@dnd-kit/core';
-import { useSortable } from '@dnd-kit/sortable';
-import { CSS } from '@dnd-kit/utilities';
 import {
   Button,
   Divider,
-  IconButton,
-  MenuItem,
   Stack,
   Table,
   TableBody,
@@ -23,12 +13,11 @@ import {
   TableRow,
   Typography,
 } from '@mui/material';
-import useNumberFormat from 'hooks/useNumberFormat';
 import { currencyFormat } from 'lib/utils';
 import IconifyIcon from 'components/base/IconifyIcon';
 import SortableDnd from 'components/base/SortableDnd';
-import StyledTextField from 'components/styled/StyledTextField';
 import { CreateInvoiceFormSchemaValues } from '../useCreateInvoiceForm';
+import TableRowForm from './TableRowForm';
 
 const getTotalPrice = (subtotal: number, vat: number, discount: number, shippingCost: number) => {
   const taxableAmount = subtotal - discount;
@@ -61,7 +50,12 @@ const ItemDetailsTableForm = () => {
     }
   };
   const subTotal = useMemo(
-    () => itemDetails.reduce((acc, item) => acc + item.price * item.quantity, 0),
+    () =>
+      itemDetails.reduce((acc, item) => {
+        const itemPriceCents = Math.round((item.price || 0) * 100);
+        const itemTotal = (itemPriceCents * (item.quantity || 0)) / 100;
+        return acc + itemTotal;
+      }, 0),
     [itemDetails],
   );
 
@@ -197,172 +191,6 @@ const ItemDetailsTableForm = () => {
         <Divider />
       </SortableDnd>
     </Stack>
-  );
-};
-
-interface TableRowFormProps {
-  index: number;
-  field: FieldArrayWithId<CreateInvoiceFormSchemaValues, 'itemDetails', 'id'>;
-  remove: (index: number) => void;
-}
-
-const TableRowForm = ({ index, field, remove }: TableRowFormProps) => {
-  const { currencyFormat } = useNumberFormat();
-  const {
-    register,
-    control,
-    watch,
-    formState: { errors },
-  } = useFormContext<CreateInvoiceFormSchemaValues>();
-
-  const { attributes, listeners, setNodeRef, transform, transition } = useSortable({
-    id: field.id,
-  });
-
-  const itemDetails = watch(`itemDetails.${index}`);
-  const quantity = itemDetails.quantity || 0;
-  const price = itemDetails.price || 0;
-  return (
-    <TableRow
-      ref={setNodeRef}
-      sx={{
-        transform: CSS.Transform.toString(transform),
-        transition,
-      }}
-      {...attributes}
-    >
-      <TableCell sx={{ width: 24, paddingRight: '12px !important' }}>
-        <IconButton {...listeners} sx={{ p: 0 }}>
-          <IconifyIcon sx={{ cursor: 'grab' }} icon="material-symbols:drag-indicator" />
-        </IconButton>
-      </TableCell>
-      <TableCell sx={{ width: 140 }}>
-        <Controller
-          name={`itemDetails.${index}.type`}
-          control={control}
-          render={({ field }) => (
-            <StyledTextField
-              variant="filled"
-              select
-              size="large"
-              {...field}
-              fullWidth
-              error={!!errors.itemDetails?.[index]?.type}
-              slotProps={{
-                input: {
-                  sx: {
-                    '& .MuiInputBase-input': {
-                      color: 'text.secondary',
-                      padding: '9px 16px !important',
-                    },
-                  },
-                },
-              }}
-            >
-              <MenuItem value="service">Service</MenuItem>
-              <MenuItem value="product">Product</MenuItem>
-            </StyledTextField>
-          )}
-        />
-      </TableCell>
-      <TableCell sx={{ width: 316 }}>
-        <StyledTextField
-          variant="filled"
-          type="text"
-          size="large"
-          {...register(`itemDetails.${index}.description`)}
-          error={!!errors.itemDetails?.[index]?.description}
-          fullWidth
-          slotProps={{
-            input: {
-              sx: {
-                '& .MuiInputBase-input': {
-                  color: 'text.secondary',
-                  padding: '9px 16px !important',
-                },
-              },
-            },
-          }}
-        />
-      </TableCell>
-      <TableCell sx={{ width: 104 }}>
-        <Controller
-          name={`itemDetails.${index}.quantity`}
-          control={control}
-          render={({ field }) => (
-            <StyledTextField
-              type="number"
-              variant="filled"
-              size="large"
-              value={
-                field.value !== undefined && field.value !== null
-                  ? String(field.value).padStart(2, '0')
-                  : ''
-              }
-              onChange={(e) => {
-                const numericValue = parseInt(e.target.value, 10) || 0;
-                field.onChange(numericValue);
-              }}
-              error={!!errors.itemDetails?.[index]?.quantity}
-              slotProps={{
-                input: {
-                  sx: {
-                    '& .MuiInputBase-input': {
-                      textAlign: 'end',
-                      color: 'text.secondary',
-                      padding: '9px 16px !important',
-                    },
-                  },
-                },
-              }}
-            />
-          )}
-        />
-      </TableCell>
-      <TableCell sx={{ width: 130 }}>
-        <Controller
-          name={`itemDetails.${index}.price`}
-          control={control}
-          render={({ field }) => (
-            <StyledTextField
-              variant="filled"
-              size="large"
-              fullWidth
-              value={currencyFormat(field.value)}
-              error={!!errors.itemDetails?.[index]?.price}
-              onChange={(e) => {
-                const rawValue = e.target.value.replace(/[^0-9.]/g, '');
-                field.onChange(rawValue ? Number(rawValue) : '');
-              }}
-              slotProps={{
-                input: {
-                  sx: {
-                    '& .MuiInputBase-input': {
-                      textAlign: 'end',
-                      color: 'text.secondary',
-                      padding: '9px 16px !important',
-                    },
-                  },
-                },
-              }}
-            />
-          )}
-        />
-      </TableCell>
-      <TableCell align="right" sx={{ width: 80 }}>
-        {currencyFormat(quantity * price)}
-      </TableCell>
-      <TableCell sx={{ width: 36 }}>
-        <IconButton color="error" onClick={() => remove(index)}>
-          <IconifyIcon
-            icon="mdi:trash-can-outline"
-            sx={{
-              fontSize: '20px',
-            }}
-          />
-        </IconButton>
-      </TableCell>
-    </TableRow>
   );
 };
 

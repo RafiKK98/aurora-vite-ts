@@ -28,36 +28,45 @@ const JobOpeningHeader = () => {
           </Typography>
         </div>
 
-        <Stack gap={1} flex={1} alignItems="center">
-          <StyledTextField
-            fullWidth
-            id="searchItem"
-            type="search"
-            placeholder="Search"
-            size="medium"
-            slotProps={{
-              input: {
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <IconifyIcon icon="material-symbols:search-rounded" />
-                  </InputAdornment>
-                ),
-              },
-            }}
-            sx={{ maxWidth: 250, ml: 'auto' }}
-          />
-          <Button
-            variant="soft"
-            color="neutral"
-            startIcon={<IconifyIcon icon="material-symbols:filter-alt-outline" />}
-          >
-            Filter
-          </Button>
+        <Stack
+          direction={{ xs: 'column', sm: 'row' }}
+          gap={1}
+          flex={1}
+          justifyContent={{ sm: 'flex-end' }}
+          alignItems={{ sm: 'center' }}
+        >
+          <Stack gap={1}>
+            <StyledTextField
+              fullWidth
+              id="searchItem"
+              type="search"
+              placeholder="Search"
+              size="medium"
+              slotProps={{
+                input: {
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <IconifyIcon icon="material-symbols:search-rounded" />
+                    </InputAdornment>
+                  ),
+                },
+              }}
+              sx={{ maxWidth: { sm: 250 }, ml: { sm: 'auto' } }}
+            />
+            <Button
+              variant="soft"
+              color="neutral"
+              startIcon={<IconifyIcon icon="material-symbols:filter-alt-outline" />}
+              sx={{ textWrap: 'nowrap', flexShrink: 0 }}
+            >
+              Filter
+            </Button>
+          </Stack>
           <Button
             href={paths.hiringNewOpening}
             variant="contained"
             startIcon={<IconifyIcon icon="material-symbols:add" />}
-            sx={{ textWrap: 'nowrap' }}
+            sx={{ textWrap: 'nowrap', width: { xs: 1, sm: 'auto' } }}
           >
             New Opening
           </Button>

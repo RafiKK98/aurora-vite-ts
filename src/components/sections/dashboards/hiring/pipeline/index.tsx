@@ -24,6 +24,8 @@ const Pipeline = () => {
       <SectionHeader
         title="Pipeline"
         subTitle="Current status of all hiring pipelines"
+        direction={{ xs: 'column', sm: 'row' }}
+        alignItems={{ xs: 'stretch', sm: 'flex-start' }}
         actionComponent={
           <Stack gap={1} flex={1} justifyContent="flex-end">
             <StyledTextField
@@ -42,7 +44,7 @@ const Pipeline = () => {
                   ),
                 },
               }}
-              sx={{ maxWidth: 250 }}
+              sx={{ maxWidth: { sm: 250 } }}
             />
             <DashboardSelectMenu
               defaultValue={30}
@@ -61,7 +63,7 @@ const Pipeline = () => {
                   label: 'Last 30 Days',
                 },
               ]}
-              sx={{ maxWidth: 150, width: 1 }}
+              sx={{ maxWidth: { sm: 150 }, width: 1 }}
             />
           </Stack>
         }

@@ -10,7 +10,7 @@ export const changelog: ChangelogEntry[] = [
   {
     version: 'V1.5.0',
     title: 'NeonFlare',
-    publish: '04 September, 2025',
+    publish: '17 September, 2025',
     badgeTitle: 'Latest',
     logs: {
       New: [
@@ -25,7 +25,11 @@ export const changelog: ChangelogEntry[] = [
         { text: 'Page', link: paths.landingFaq },
         { text: 'Page', link: paths.landingMaintenance },
       ],
-      Updates: [{ text: 'Updated Sidenav collapse button.' }],
+      Updates: [
+        { text: 'Updated Sidenav collapse button.' },
+        { text: 'Updated Ecommerce dashboard.' },
+        { text: 'React-datepicker: Upgraded to v8.7.0' },
+      ],
       Fixes: [{ text: 'Minor UI and behavior bugs fix and performance improvements.' }],
     },
   },

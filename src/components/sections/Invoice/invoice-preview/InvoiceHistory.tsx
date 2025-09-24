@@ -51,7 +51,7 @@ const InvoiceHistory = () => {
                     height: 32,
                     border: (theme) => `1px solid ${theme.vars.palette.dividerLight}`,
                     transform: { xs: 'translateY(4px)', md: 'none' },
-                    bgcolor: 'background.paper',
+                    bgcolor: 'background.menu',
                     p: 0.5,
                   }}
                 />

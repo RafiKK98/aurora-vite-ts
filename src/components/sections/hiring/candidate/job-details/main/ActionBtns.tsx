@@ -1,5 +1,6 @@
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import paths from 'routes/paths';
 
 const ActionBtns = () => {
   return (
@@ -9,7 +10,9 @@ const ActionBtns = () => {
         <Button variant="soft" color="neutral">
           Save
         </Button>
-        <Button variant="contained">Apply Now</Button>
+        <Button href={paths.hiringJobApplication} variant="contained">
+          Apply Now
+        </Button>
       </Stack>
     </Stack>
   );

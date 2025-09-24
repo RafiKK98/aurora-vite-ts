@@ -2,7 +2,7 @@ import { PropsWithChildren, useEffect, useRef } from 'react';
 import useSettingsPanelMountEffect from 'hooks/useSettingsPanelMountEffect';
 import { useSettingsContext } from 'providers/SettingsProvider';
 import { mutate } from 'swr';
-import LandingAppBar from './LandingAppBar';
+import LandingAppBar from './app-bar';
 import LandingFooter from './footer';
 
 const LandingLayout = ({ children }: PropsWithChildren) => {

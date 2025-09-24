@@ -1,21 +1,12 @@
-import { useState } from 'react';
 import Box from '@mui/material/Box';
-import { inputBaseClasses } from '@mui/material/InputBase';
 import Stack from '@mui/material/Stack';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { meetingsData as data } from 'data/hiring/dashboard';
-import dayjs, { type Dayjs } from 'dayjs';
 import SectionHeader from 'components/common/SectionHeader';
-import StyledTextField from 'components/styled/StyledTextField';
 import SectionPaper from '../common/Section';
+import CustomDatePicker from './CustomDatePicker';
 import MeetingCard from './MeetingCard';
 
 const Meetings = () => {
-  const [selectedDate, setSelectedDate] = useState<Dayjs | null>(dayjs());
-
-  const handleDateChange = (date: Dayjs | null) => {
-    setSelectedDate(date);
-  };
   return (
     <Stack component={SectionPaper} direction="column">
       <SectionHeader
@@ -23,23 +14,7 @@ const Meetings = () => {
         subTitle="All your events at a glance"
         actionComponent={
           <>
-            <DatePicker
-              format="DD MMM, YYYY"
-              defaultValue={selectedDate}
-              onChange={handleDateChange}
-              slotProps={{
-                textField: {
-                  fullWidth: true,
-                },
-                inputAdornment: {
-                  position: 'start',
-                },
-              }}
-              slots={{
-                textField: StyledTextField,
-              }}
-              sx={{ maxWidth: 150, [`& .${inputBaseClasses.input}`]: { pr: '0px !important' } }}
-            />
+            <CustomDatePicker />
           </>
         }
       />

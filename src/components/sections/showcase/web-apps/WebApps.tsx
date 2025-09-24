@@ -3,7 +3,7 @@ import { Box, ButtonBase, Stack, Theme } from '@mui/material';
 import { showcaseAssets } from 'data/showcase';
 import { cssVarRgba } from 'lib/utils';
 import { useBreakpoints } from 'providers/BreakpointsProvider';
-import { Navigation, Pagination } from 'swiper/modules';
+import { FreeMode, Navigation, Pagination } from 'swiper/modules';
 import { SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper/types';
 import { WebApp } from 'types/showcase';
@@ -100,10 +100,9 @@ const WebApps = ({ data }: { data: WebApp[] }) => {
       <Swiper
         slidesPerView={upSm ? 'auto' : 1}
         spaceBetween={32}
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, FreeMode]}
         loop
-        centeredSlides
-        // autoplay={{ disableOnInteraction: false, pauseOnMouseEnter: true }}
+        freeMode
         navigation={{ prevEl: prevRef, nextEl: nextRef }}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;

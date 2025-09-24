@@ -376,8 +376,6 @@ export const invoiceData: InvoicePreviewItem = {
   shippingCost: 4.49,
   discount: 4.49,
   tax: 4.49,
-  purpose:
-    '2 services (Web design & Facebook ad campaign) and 1 product (Sofa set) was provided to Jane Doe',
   itemDetails: [
     {
       id: 1,

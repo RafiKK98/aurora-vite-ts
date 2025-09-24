@@ -1,6 +1,5 @@
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 interface DetailsSectionProps {
@@ -10,8 +9,8 @@ interface DetailsSectionProps {
 
 const DetailsSection = ({ title, description }: DetailsSectionProps) => {
   return (
-    <Stack direction="column" gap={1}>
-      <Typography variant="body1" fontWeight={700}>
+    <div>
+      <Typography variant="body1" fontWeight={700} lineHeight={1.5} mb={1}>
         {title}
       </Typography>
       {typeof description === 'string' && (
@@ -20,7 +19,7 @@ const DetailsSection = ({ title, description }: DetailsSectionProps) => {
         </Typography>
       )}
       {Array.isArray(description) && (
-        <List sx={{ listStyleType: 'disc', pl: 3 }}>
+        <List disablePadding sx={{ listStyleType: 'disc', pl: 3 }}>
           {description.map((item, index) => (
             <ListItem
               key={index}
@@ -37,7 +36,7 @@ const DetailsSection = ({ title, description }: DetailsSectionProps) => {
           ))}
         </List>
       )}
-    </Stack>
+    </div>
   );
 };
 
