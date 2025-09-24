@@ -27,6 +27,10 @@ const InvoiceLists = lazy(() => import('pages/apps/invoice/InvoiceLists'));
 const CreateInvoice = lazy(() => import('pages/apps/invoice/CreateInvoice'));
 const InvoicePreview = lazy(() => import('pages/apps/invoice/InvoicePreview'));
 
+const Member = lazy(() => import('pages/apps/member'));
+const MemberProfile = lazy(() => import('pages/apps/member/Profile'));
+const NewMember = lazy(() => import('pages/apps/member/NewMember'));
+
 // import App from 'App';
 const App = lazy(() => import('App'));
 
@@ -432,6 +436,24 @@ export const routes: RouteObject[] = [
                   { path: paths.hiringJobDetails(':id'), element: <JobDetails /> },
                   { path: paths.hiringJobApplication, element: <JobApplication /> },
                 ],
+              },
+            ],
+          },
+          {
+            path: paths.member,
+            element: <Outlet />,
+            children: [
+              {
+                index: true,
+                element: <Member />,
+              },
+              {
+                path: paths.memberProfile,
+                element: <MemberProfile />,
+              },
+              {
+                path: paths.memberNew,
+                element: <NewMember />,
               },
             ],
           },

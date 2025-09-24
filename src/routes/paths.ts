@@ -27,6 +27,7 @@ export const rootPaths = {
   hiringRoot: 'hiring',
   hiringAdmin: 'admin',
   hiringCandidate: 'candidate',
+  memberRoot: 'member',
 };
 
 const paths = {
@@ -148,6 +149,10 @@ const paths = {
   hiringPipeline: `/${rootPaths.appsRoot}/${rootPaths.hiringRoot}/${rootPaths.hiringAdmin}/pipeline`,
   hiringNewOpening: `/${rootPaths.appsRoot}/${rootPaths.hiringRoot}/${rootPaths.hiringAdmin}/new-opening`,
   hiringCandidateDetails: `/${rootPaths.appsRoot}/${rootPaths.hiringRoot}/${rootPaths.hiringAdmin}/candidate-details`,
+
+  member: `/${rootPaths.appsRoot}/${rootPaths.memberRoot}`,
+  memberProfile: `/${rootPaths.appsRoot}/${rootPaths.memberRoot}/profile`,
+  memberNew: `/${rootPaths.appsRoot}/${rootPaths.memberRoot}/new-member`,
 
   ...docRoutePaths,
 };

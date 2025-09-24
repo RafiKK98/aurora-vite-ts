@@ -486,6 +486,36 @@ const sitemap: MenuItem[] = [
         ],
       },
       {
+        name: 'Member',
+        key: 'member',
+        pathName: 'member',
+        icon: 'material-symbols:groups-2-outline-rounded',
+        active: true,
+        items: [
+          {
+            name: 'Member',
+            key: 'member',
+            path: paths.member,
+            pathName: 'member',
+            active: true,
+          },
+          {
+            name: 'Profile',
+            key: 'member_profile',
+            path: paths.memberProfile,
+            pathName: 'member-profile',
+            active: true,
+          },
+          {
+            name: 'New Member',
+            key: 'new_member',
+            path: paths.memberNew,
+            pathName: 'new-member',
+            active: true,
+          },
+        ],
+      },
+      {
         name: 'Chat',
         key: 'chat',
         path: paths.chat,
