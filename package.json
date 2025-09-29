@@ -4,7 +4,7 @@
   "version": "1.5.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "NODE_OPTIONS='--max-old-space-size=8192' vite",
     "build": "NODE_OPTIONS='--max-old-space-size=8192' vite build",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",

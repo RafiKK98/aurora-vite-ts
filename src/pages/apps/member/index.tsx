@@ -7,26 +7,19 @@ import Typography from '@mui/material/Typography';
 import { useBreakpoints } from 'providers/BreakpointsProvider';
 import IconifyIcon from 'components/base/IconifyIcon';
 import PageBreadcrumb from 'components/sections/common/PageBreadcrumb';
-import FilterControlBar from 'components/sections/member/FilterControlBar';
-import FilterSidebar from 'components/sections/member/filter-sidebar';
-import MemberGridView from 'components/sections/member/grid-view';
-import MemberListView from 'components/sections/member/list-view';
-import MemberOrgChartView from 'components/sections/member/org-chart-view';
+import MemberMain from 'components/sections/member/main';
+import FilterSidebar from 'components/sections/member/main/filter-sidebar';
 
 const Member = () => {
   const { up, down } = useBreakpoints();
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [viewType, setViewType] = useState<'list' | 'grid' | 'org-chart'>('list');
 
   const upMd = up('md');
   const downLg = down('lg');
 
   const handleDrawerOpen = () => setIsDrawerOpen(true);
   const handleDrawerClose = () => setIsDrawerOpen(false);
-
-  const handleChange = (event: MouseEvent, newView: 'list' | 'grid' | 'org-chart') =>
-    setViewType(newView);
 
   useEffect(() => {
     if (!upMd) handleDrawerClose();
@@ -79,19 +72,12 @@ const Member = () => {
             </Button>
           </Stack>
         </Box>
-        <Stack direction="column" gap={5} sx={{ px: { xs: 3, md: 5 }, pb: { xs: 3, md: 5 } }}>
-          <FilterControlBar
-            viewType={viewType}
-            handleChange={handleChange}
-            toggleDrawer={() => {
-              if (isDrawerOpen) handleDrawerClose();
-              else handleDrawerOpen();
-            }}
-          />
-          {viewType === 'list' && <MemberListView />}
-          {viewType === 'grid' && <MemberGridView />}
-          {viewType === 'org-chart' && <MemberOrgChartView />}
-        </Stack>
+
+        <MemberMain
+          isDrawerOpen={isDrawerOpen}
+          handleDrawerOpen={handleDrawerOpen}
+          handleDrawerClose={handleDrawerClose}
+        />
       </Paper>
     </Stack>
   );

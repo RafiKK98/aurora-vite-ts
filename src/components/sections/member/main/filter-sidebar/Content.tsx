@@ -25,11 +25,23 @@ const Content = ({ toggleDrawer }: ContentProps) => {
         </Stack>
         <Stack direction="column" gap={1}>
           <FilterSelect title="Department" options={['IT', 'HR', 'Sales', 'Marketing']} />
-          <FilterSelect title="Team" />
-          <FilterCheckbox title="Employment" />
-          <FilterCheckbox title="Status" />
-          <FilterCheckbox title="Gender" />
-          <FilterCheckbox title="Religion" />
+          <FilterSelect
+            title="Team"
+            options={['One GO', 'CodeCrafters', 'Kernel Kings', 'Brainy Bytes', 'Pixel Thinkers']}
+          />
+          <FilterCheckbox
+            title="Employment"
+            options={['Full-Time', 'Part-Time', 'Intern', 'Contractor']}
+          />
+          <FilterCheckbox
+            title="Status"
+            options={['Active', 'Probation', 'Contract', 'Intern', 'Resigned']}
+          />
+          <FilterCheckbox title="Gender" options={['Male', 'Female', 'Other']} />
+          <FilterCheckbox
+            title="Religion"
+            options={['Christianity', 'Islam', 'Hinduism', 'Buddhism', 'Other']}
+          />
           <FilterSlider title="Pay range" />
         </Stack>
       </div>

@@ -20,6 +20,8 @@ const FilterSelect = ({ title, options }: FilterSelectProps) => {
       <FormControl fullWidth sx={{ px: '1px' }}>
         <StyledTextField
           select
+          placeholder="Select"
+          defaultValue={options?.[0]}
           slotProps={{
             input: {
               'aria-label': 'Filter Select',
