@@ -1,6 +1,6 @@
 import { RefObject, useMemo } from 'react';
 import Avatar from '@mui/material/Avatar';
-import Chip from '@mui/material/Chip';
+import Chip, { ChipProps } from '@mui/material/Chip';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
@@ -17,6 +17,23 @@ interface MemberTableProps {
   apiRef: RefObject<GridApiCommunity | null>;
   data: Member[];
 }
+
+const getStatusChipColor = (status: Member['job']['status']): ChipProps['color'] => {
+  switch (status) {
+    case 'Active':
+      return 'success';
+    case 'Resigned':
+      return 'error';
+    case 'Intern':
+      return 'warning';
+    case 'Contract':
+      return 'neutral';
+    case 'Probation':
+      return 'info';
+    default:
+      return 'primary';
+  }
+};
 
 const MemberTable = ({ apiRef, data }: MemberTableProps) => {
   const columns: GridColDef<Member>[] = useMemo(
@@ -88,9 +105,13 @@ const MemberTable = ({ apiRef, data }: MemberTableProps) => {
         headerName: 'Status',
         minWidth: 120,
         renderCell: (params) => {
-          <Stack alignItems="flex-start">
-            <Chip variant="soft" label={params.row.job.status} color="success" />;
-          </Stack>;
+          return (
+            <Chip
+              variant="soft"
+              label={params.row.job.status as string}
+              color={getStatusChipColor(params.row.job.status)}
+            />
+          );
         },
       },
       {
