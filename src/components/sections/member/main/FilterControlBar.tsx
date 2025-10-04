@@ -1,8 +1,10 @@
+// FilterControlBar.tsx
 import Button from '@mui/material/Button';
 import InputAdornment from '@mui/material/InputAdornment';
 import Stack from '@mui/material/Stack';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import { useMemberContext } from 'providers/MemberProvider';
 import IconifyIcon from 'components/base/IconifyIcon';
 import StyledTextField from 'components/styled/StyledTextField';
 
@@ -13,14 +15,22 @@ interface FilterControlBarProps {
 }
 
 const FilterControlBar = ({ viewType, handleChange, toggleDrawer }: FilterControlBarProps) => {
+  const { state, handleSearch } = useMemberContext();
+
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    handleSearch(event.target.value);
+  };
+
   return (
-    <Stack justifyContent="space-between" alignItems="center">
-      <Stack gap={1} alignItems="center" justifyContent="flex-start" flex={1}>
+    <Stack justifyContent="space-between" alignItems="center" direction="row">
+      <Stack gap={1} alignItems="center" justifyContent="flex-start" flex={1} direction="row">
         <StyledTextField
           id="filter-search-box"
           type="search"
           placeholder="Search member"
           fullWidth
+          value={state.searchTerm}
+          onChange={handleSearchChange}
           slotProps={{
             input: {
               startAdornment: (
@@ -41,7 +51,8 @@ const FilterControlBar = ({ viewType, handleChange, toggleDrawer }: FilterContro
           Filter
         </Button>
       </Stack>
-      <Stack gap={2} alignItems="center" justifyContent="flex-end" flex={1}>
+
+      <Stack gap={2} alignItems="center" justifyContent="flex-end" flex={1} direction="row">
         <ToggleButtonGroup
           color="primary"
           value={viewType}
