@@ -1,13 +1,9 @@
 import { Controller, useFormContext } from 'react-hook-form';
-import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import FormHelperText from '@mui/material/FormHelperText';
 import Grid from '@mui/material/Grid';
-import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
-import Select from '@mui/material/Select';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
@@ -111,6 +107,7 @@ const PersonalInformation = () => {
             <Controller
               control={control}
               name="birthday"
+              defaultValue=""
               render={({ field: { value, ...rest } }) => (
                 <DatePicker
                   label="Birthday"
@@ -131,29 +128,21 @@ const PersonalInformation = () => {
             />
           </Grid>
           <Grid size={6}>
-            <FormControl variant="filled" fullWidth error={!!errors.religion}>
-              <InputLabel id="religion-select-label">Religion</InputLabel>
-              <Controller
-                control={control}
-                name="religion"
-                render={({ field }) => (
-                  <Select
-                    labelId="religion-select-label"
-                    label="Religion"
-                    displayEmpty
-                    inputProps={{ 'aria-label': 'Without label' }}
-                    {...field}
-                  >
-                    <MenuItem value="Islam">Islam</MenuItem>
-                    <MenuItem value="Christian">Christian</MenuItem>
-                    <MenuItem value="Hindu">Hindu</MenuItem>
-                    <MenuItem value="Buddhist">Buddhist</MenuItem>
-                    <MenuItem value="Other">Other</MenuItem>
-                  </Select>
-                )}
-              />
-              <FormHelperText>{errors.religion?.message}</FormHelperText>
-            </FormControl>
+            <TextField
+              label="Religion"
+              fullWidth
+              select
+              defaultValue="Islam"
+              error={!!errors.religion}
+              helperText={errors.religion?.message}
+              {...register('religion')}
+            >
+              <MenuItem value="Islam">Islam</MenuItem>
+              <MenuItem value="Christian">Christian</MenuItem>
+              <MenuItem value="Hindu">Hindu</MenuItem>
+              <MenuItem value="Buddhist">Buddhist</MenuItem>
+              <MenuItem value="Other">Other</MenuItem>
+            </TextField>
           </Grid>
         </Grid>
         <Stack direction="column" gap={1}>
@@ -163,6 +152,7 @@ const PersonalInformation = () => {
           <Controller
             control={control}
             name="gender"
+            defaultValue="Male"
             render={({ field }) => (
               <RadioGroup row aria-labelledby="gender-buttons" {...field}>
                 <FormControlLabel value="Male" control={<Radio />} label="Male" />
@@ -179,6 +169,7 @@ const PersonalInformation = () => {
           <Controller
             control={control}
             name="maritalStatus"
+            defaultValue="Single"
             render={({ field }) => (
               <RadioGroup row aria-labelledby="marital-status-buttons" {...field}>
                 <FormControlLabel value="Single" control={<Radio />} label="Single" />

@@ -1,13 +1,9 @@
 import { Controller, useFormContext } from 'react-hook-form';
-import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import FormHelperText from '@mui/material/FormHelperText';
 import Grid from '@mui/material/Grid';
-import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
-import Select from '@mui/material/Select';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
@@ -64,9 +60,10 @@ const JobInformation = () => {
           <Controller
             control={control}
             name="joiningDate"
+            defaultValue=""
             render={({ field: { value, ...rest } }) => (
               <DatePicker
-                label="Birthday"
+                label="Joining Date"
                 value={dayjs(value)}
                 slotProps={{
                   textField: {
@@ -84,29 +81,90 @@ const JobInformation = () => {
           />
         </Grid>
         <Grid size={6}>
-          <FormControl variant="filled" fullWidth error={!!errors.department}>
-            <InputLabel id="department-select-label">Department</InputLabel>
-            <Controller
-              control={control}
-              name="department"
-              render={({ field }) => (
-                <Select
-                  labelId="department-select-label"
-                  label="Department"
-                  displayEmpty
-                  inputProps={{ 'aria-label': 'Without label' }}
-                  {...field}
-                >
-                  <MenuItem value="Islam">Islam</MenuItem>
-                  <MenuItem value="Christian">Christian</MenuItem>
-                  <MenuItem value="Hindu">Hindu</MenuItem>
-                  <MenuItem value="Buddhist">Buddhist</MenuItem>
-                  <MenuItem value="Other">Other</MenuItem>
-                </Select>
-              )}
-            />
-            <FormHelperText>{errors.department?.message}</FormHelperText>
-          </FormControl>
+          <TextField
+            fullWidth
+            label="Department"
+            defaultValue="Design"
+            error={!!errors.department}
+            helperText={errors.department?.message}
+            {...register('department')}
+          >
+            <MenuItem value="Design">Design</MenuItem>
+            <MenuItem value="Sales">Sales</MenuItem>
+            <MenuItem value="Engineering">Engineering</MenuItem>
+            <MenuItem value="Finance">Finance</MenuItem>
+            <MenuItem value="HR">HR</MenuItem>
+          </TextField>
+        </Grid>
+        <Grid size={6}>
+          <TextField
+            fullWidth
+            label="Team"
+            defaultValue="One GO"
+            error={!!errors.team}
+            helperText={errors.team?.message}
+            {...register('team')}
+          >
+            <MenuItem value="One GO">One GO</MenuItem>
+            <MenuItem value="CodeCrafters">CodeCrafters</MenuItem>
+            <MenuItem value="Kernel Kings">Kernel Kings</MenuItem>
+            <MenuItem value="Brainy Bytes">Brainy Bytes</MenuItem>
+            <MenuItem value="Pixel Thinkers">Pixel Thinkers</MenuItem>
+          </TextField>
+        </Grid>
+        <Grid size={6}>
+          <TextField
+            fullWidth
+            label="Branch"
+            defaultValue="New York"
+            error={!!errors.branch}
+            helperText={errors.branch?.message}
+            {...register('branch')}
+          >
+            <MenuItem value="New York">New York</MenuItem>
+            <MenuItem value="Chicago">Chicago</MenuItem>
+            <MenuItem value="Los Angeles">Los Angeles</MenuItem>
+            <MenuItem value="Houston">Houston</MenuItem>
+            <MenuItem value="Miami">Miami</MenuItem>
+          </TextField>
+        </Grid>
+        <Grid size={6}>
+          <TextField
+            fullWidth
+            label="Shift"
+            defaultValue="Day"
+            error={!!errors.shift}
+            helperText={errors.shift?.message}
+            {...register('shift')}
+          >
+            <MenuItem value="Day">Day</MenuItem>
+            <MenuItem value="Night">Night</MenuItem>
+          </TextField>
+        </Grid>
+        <Grid size={6}>
+          <TextField
+            fullWidth
+            label="Supervisor"
+            error={!!errors.supervisor}
+            helperText={errors.supervisor?.message}
+            {...register('supervisor')}
+          />
+        </Grid>
+        <Grid size={6}>
+          <TextField
+            fullWidth
+            label="Employment Status"
+            defaultValue="Active"
+            error={!!errors.employmentStatus}
+            helperText={errors.employmentStatus?.message}
+            {...register('employmentStatus')}
+          >
+            <MenuItem value="Active">Active</MenuItem>
+            <MenuItem value="Resigned">Resigned</MenuItem>
+            <MenuItem value="Intern">Intern</MenuItem>
+            <MenuItem value="Contract">Contract</MenuItem>
+            <MenuItem value="Probation">Probation</MenuItem>
+          </TextField>
         </Grid>
       </Grid>
       <Stack direction="column" gap={1}>
@@ -116,6 +174,7 @@ const JobInformation = () => {
         <Controller
           control={control}
           name="employmentType"
+          defaultValue="In Office"
           render={({ field }) => (
             <RadioGroup row aria-labelledby="marital-status-buttons" {...field}>
               <FormControlLabel value="In Office" control={<Radio />} label="In Office" />

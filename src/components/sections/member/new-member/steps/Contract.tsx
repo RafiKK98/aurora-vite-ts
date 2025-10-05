@@ -1,3 +1,6 @@
+import { useFormContext } from 'react-hook-form';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
 import * as yup from 'yup';
 
 export interface ContractFormValues {
@@ -11,7 +14,32 @@ export const contractFormSchema = yup.object().shape({
 });
 
 const Contract = () => {
-  return <div>Contract</div>;
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext<ContractFormValues>();
+  return (
+    <Grid container rowSpacing={2} columnSpacing={1}>
+      <Grid size={6}>
+        <TextField
+          label="Email"
+          error={!!errors.email}
+          helperText={errors.email?.message}
+          fullWidth
+          {...register('email')}
+        />
+      </Grid>
+      <Grid size={6}>
+        <TextField
+          label="Phone No"
+          error={!!errors.phoneNo}
+          helperText={errors.phoneNo?.message}
+          fullWidth
+          {...register('phoneNo')}
+        />
+      </Grid>
+    </Grid>
+  );
 };
 
 export default Contract;

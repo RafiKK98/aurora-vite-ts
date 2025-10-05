@@ -31,12 +31,11 @@ const useNewMemberForm = (activeStep: number) => {
       ? yupResolver(newMemberFormSchema[activeStep])
       : undefined,
     defaultValues: {
-      //   jobInformation,
-      //   candidateData,
-      //   options,
-      //   hiringManager,
-      //   teamMember,
-      //   boards,
+      // ...personalInformation,
+      // ...jobInformation,
+      // ...address,
+      // ...contract,
+      // ...pay,
     },
   });
 
@@ -44,3 +43,55 @@ const useNewMemberForm = (activeStep: number) => {
 };
 
 export default useNewMemberForm;
+
+// const personalInformation: Partial<PersonalInformationFormValues> = {
+//   avatar: '',
+//   firstName: '',
+//   lastName: '',
+//   displayName: '',
+//   IDNo: '',
+//   birthday: dayjs().format(),
+//   religion: 'Islam',
+//   gender: 'Male',
+//   maritalStatus: 'Single',
+// };
+
+// const jobInformation: Partial<JobInformationFormValues> = {
+//   designation: '',
+//   joiningDate: dayjs().format(),
+//   department: '',
+//   team: '',
+//   branch: '',
+//   shift: '',
+//   supervisor: '',
+//   employmentStatus: '',
+//   employmentType: 'In Office',
+// };
+
+// const address: Partial<AddressFormValues> = {
+//   permanent: {
+//     country: '',
+//     state: '',
+//     city: '',
+//     street: '',
+//     zip: '',
+//   },
+//   present: {
+//     country: '',
+//     state: '',
+//     city: '',
+//     street: '',
+//     zip: '',
+//   },
+// };
+
+// const contract: Partial<ContractFormValues> = {
+//   email: '',
+//   phoneNo: '',
+// };
+
+// const pay: Partial<PayFormValues> = {
+//   payType: '',
+//   paySchedule: dayjs().format(),
+//   salaryRate: '',
+// };

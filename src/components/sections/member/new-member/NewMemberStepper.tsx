@@ -13,12 +13,12 @@ import Stepper from '@mui/material/Stepper';
 import Typography from '@mui/material/Typography';
 import { useSnackbar } from 'notistack';
 import IconifyIcon from 'components/base/IconifyIcon';
-import useNewOpeningForm from 'components/sections/hiring/admin/new-opening/useNewOpeningForm';
 import Address from './steps/Address';
 import Contract from './steps/Contract';
 import JobInformation from './steps/JobInformation';
 import Pay from './steps/Pay';
 import PersonalInformation from './steps/PersonalInformation';
+import useNewMemberForm from './useNewMemberForm';
 
 interface Step {
   label: string;
@@ -55,7 +55,7 @@ const NewMemberStepper = () => {
   const [completedSteps, setCompletedSteps] = useState<boolean[]>([]);
   const { enqueueSnackbar } = useSnackbar();
 
-  const methods = useNewOpeningForm(activeStep);
+  const methods = useNewMemberForm(activeStep);
 
   const { handleSubmit, trigger, watch } = methods;
 
