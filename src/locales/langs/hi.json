@@ -97,5 +97,8 @@
   "candidate_details": "उम्मीदवार विवरण",
   "job_list": "नौकरी सूची",
   "job_details": "नौकरी का विवरण",
-  "job_application": "नौकरी के लिए आवेदन"
+  "job_application": "नौकरी के लिए आवेदन",
+  "member": "सदस्य",
+  "member_profile": "सदस्य प्रोफ़ाइल",
+  "new_member": "नया सदस्य"
 }

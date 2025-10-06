@@ -97,5 +97,8 @@
   "candidate_details": "تفاصيل المرشح",
   "job_list": "قائمة الوظائف",
   "job_details": "تفاصيل الوظيفة",
-  "job_application": "طلب وظيفة"
+  "job_application": "طلب وظيفة",
+  "member": "عضو",
+  "member_profile": "ملف العضو",
+  "new_member": "عضو جديد"
 }

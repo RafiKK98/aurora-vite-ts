@@ -97,5 +97,8 @@
   "candidate_details": "Candidate Details",
   "job_list": "Job list",
   "job_details": "Job Details",
-  "job_application": "Job Application"
+  "job_application": "Job Application",
+  "member": "Member",
+  "member_profile": "Member Profile",
+  "new_member": "New Member"
 }

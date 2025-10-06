@@ -97,5 +97,8 @@
   "candidate_details": "候选人详情",
   "job_list": "作业列表",
   "job_details": "职位详情",
-  "job_application": "工作申请"
+  "job_application": "工作申请",
+  "member": "会员",
+  "member_profile": "会员资料",
+  "new_member": "新会员"
 }

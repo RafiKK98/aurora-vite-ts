@@ -1,23 +1,20 @@
 import { Controller, useFormContext } from 'react-hook-form';
-import FormControl from '@mui/material/FormControl';
-import FormHelperText from '@mui/material/FormHelperText';
 import Grid from '@mui/material/Grid';
-import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
-import Select from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
+import { currencyFormat } from 'lib/utils';
 import * as yup from 'yup';
 
 export interface PayFormValues {
   payType: string;
   paySchedule: string;
-  salaryRate: string;
+  salaryRate: number;
 }
 
 export const payFormSchema = yup.object().shape({
   payType: yup.string().required(),
   paySchedule: yup.string().required(),
-  salaryRate: yup.string().required(),
+  salaryRate: yup.number().required(),
 });
 
 const Pay = () => {
@@ -29,58 +26,53 @@ const Pay = () => {
   return (
     <Grid container rowSpacing={2} columnSpacing={1}>
       <Grid size={6}>
-        <FormControl variant="filled" fullWidth error={!!errors.payType}>
-          <InputLabel id="pay-type-select-label">Pay type</InputLabel>
-          <Controller
-            control={control}
-            name="payType"
-            render={({ field }) => (
-              <Select
-                labelId="pay-type-select-label"
-                label="Pay type"
-                displayEmpty
-                inputProps={{ 'aria-label': 'Without label' }}
-                {...field}
-              >
-                <MenuItem value="Weekly">Weekly</MenuItem>
-                <MenuItem value="Monthly">Monthly</MenuItem>
-                <MenuItem value="Yearly">Yearly</MenuItem>
-              </Select>
-            )}
-          />
-          <FormHelperText>{errors.payType?.message}</FormHelperText>
-        </FormControl>
-      </Grid>
-      <Grid size={6}>
-        <FormControl variant="filled" fullWidth error={!!errors.paySchedule}>
-          <InputLabel id="pay-schedule-select-label">Pay Schedule</InputLabel>
-          <Controller
-            control={control}
-            name="paySchedule"
-            render={({ field }) => (
-              <Select
-                labelId="pay-schedule-select-label"
-                label="Pay Schedule"
-                displayEmpty
-                inputProps={{ 'aria-label': 'Without label' }}
-                {...field}
-              >
-                <MenuItem value="Weekly">Weekly</MenuItem>
-                <MenuItem value="Monthly">Monthly</MenuItem>
-                <MenuItem value="Yearly">Yearly</MenuItem>
-              </Select>
-            )}
-          />
-          <FormHelperText>{errors.paySchedule?.message}</FormHelperText>
-        </FormControl>
+        <TextField
+          fullWidth
+          label="Pay type"
+          error={!!errors.payType}
+          helperText={errors.payType?.message}
+          defaultValue="Weekly"
+          {...register('payType')}
+        >
+          <MenuItem value="Weekly">Weekly</MenuItem>
+          <MenuItem value="Monthly">Monthly</MenuItem>
+          <MenuItem value="Yearly">Yearly</MenuItem>
+        </TextField>
       </Grid>
       <Grid size={6}>
         <TextField
-          label="Salary Rate"
-          error={!!errors.salaryRate}
-          helperText={errors.salaryRate?.message}
           fullWidth
-          {...register('salaryRate')}
+          label="Pay Schedule"
+          error={!!errors.paySchedule}
+          helperText={errors.paySchedule?.message}
+          defaultValue="Weekly"
+          {...register('paySchedule')}
+        >
+          <MenuItem value="Weekly">Weekly</MenuItem>
+          <MenuItem value="Monthly">Monthly</MenuItem>
+          <MenuItem value="Yearly">Yearly</MenuItem>
+        </TextField>
+      </Grid>
+      <Grid size={6}>
+        <Controller
+          name="salaryRate"
+          control={control}
+          defaultValue={10}
+          render={({ field }) => (
+            <TextField
+              variant="filled"
+              label="Salary Rate"
+              fullWidth
+              value={
+                field.value && currencyFormat(field.value, 'en-US', { maximumFractionDigits: 0 })
+              }
+              error={!!errors.salaryRate}
+              onChange={(e) => {
+                const rawValue = e.target.value.replace(/[^0-9.]/g, '');
+                field.onChange(rawValue ? Number(rawValue) : '');
+              }}
+            />
+          )}
         />
       </Grid>
     </Grid>

@@ -67,7 +67,7 @@ const NewMemberStepper = () => {
 
   const onSubmit = handleSubmit((data) => {
     console.log({ data, activeStep });
-    enqueueSnackbar('Job posted successfully', { variant: 'success', autoHideDuration: 3000 });
+    enqueueSnackbar('Member added successfully', { variant: 'success', autoHideDuration: 3000 });
     //   navigate(paths.hiringJobOpening);
   });
 

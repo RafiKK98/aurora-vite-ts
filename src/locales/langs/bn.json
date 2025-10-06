@@ -97,5 +97,8 @@
   "candidate_details": "প্রার্থীর বিবরণ",
   "job_list": "কাজের তালিকা",
   "job_details": "কাজের বিবরণ",
-  "job_application": "চাকরির আবেদন"
+  "job_application": "চাকরির আবেদন",
+  "member": "সদস্য",
+  "member_profile": "সদস্য প্রোফাইল",
+  "new_member": "নতুন সদস্য"
 }

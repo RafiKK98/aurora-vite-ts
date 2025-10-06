@@ -97,5 +97,8 @@
   "candidate_details": "Détails du candidat",
   "job_list": "Liste des emplois",
   "job_details": "Détails du poste",
-  "job_application": "Demande d'emploi"
+  "job_application": "Demande d'emploi",
+  "member": "Membre",
+  "member_profile": "Profil du membre",
+  "new_member": "Nouveau membre"
 }

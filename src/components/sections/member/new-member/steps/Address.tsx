@@ -1,7 +1,9 @@
+import { useEffect, useState } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Grid from '@mui/material/Grid';
+// ← If you're using MUI v5 Grid2, else import from '@mui/material/Grid'
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
@@ -47,8 +49,31 @@ const Address = () => {
   const {
     control,
     register,
+    watch,
+    setValue,
+    getValues,
     formState: { errors },
   } = useFormContext<AddressFormValues>();
+
+  const [sameAsPermanent, setSameAsPermanent] = useState(false);
+  const [previousPresent, setPreviousPresent] = useState<AddressFormValues['present'] | null>(null);
+
+  const permanent = watch('permanent');
+
+  useEffect(() => {
+    if (sameAsPermanent) setValue('present', { ...permanent });
+  }, [sameAsPermanent, permanent, setValue]);
+
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const checked = event.target.checked;
+    setSameAsPermanent(checked);
+
+    if (checked) {
+      const currentPresent = getValues('present');
+      setPreviousPresent(currentPresent);
+      setValue('present', { ...getValues('permanent') });
+    } else if (previousPresent) setValue('present', previousPresent);
+  };
 
   return (
     <Stack direction="column" gap={4}>
@@ -63,8 +88,8 @@ const Address = () => {
                 <CountrySelect
                   sx={{ mb: 1 }}
                   fullWidth
-                  onChange={(_, value) => onChange(value ? value.label : '')}
-                  value={countries.find((country) => country.label === value) || null}
+                  onChange={(_, val) => onChange(val ? val.label : '')}
+                  value={countries.find((c) => c.label === value) || null}
                   renderInput={(params) => (
                     <TextField
                       label="Country"
@@ -115,10 +140,14 @@ const Address = () => {
           </Grid>
         </Grid>
       </Stack>
+
       <Stack direction="column" gap={1}>
-        <Stack justifyContent="space-between">
+        <Stack direction="row" justifyContent="space-between" alignItems="center">
           <Typography fontWeight={600}>Present Address</Typography>
-          <FormControlLabel control={<Checkbox />} label="Same as permanent" />
+          <FormControlLabel
+            control={<Checkbox checked={sameAsPermanent} onChange={handleCheckboxChange} />}
+            label="Same as permanent"
+          />
         </Stack>
         <Grid container rowSpacing={2} columnSpacing={1}>
           <Grid size={6}>
@@ -129,8 +158,9 @@ const Address = () => {
                 <CountrySelect
                   sx={{ mb: 1 }}
                   fullWidth
-                  onChange={(_, value) => onChange(value ? value.label : '')}
-                  value={countries.find((country) => country.label === value) || null}
+                  disabled={sameAsPermanent}
+                  onChange={(_, val) => onChange(val ? val.label : '')}
+                  value={countries.find((c) => c.label === value) || null}
                   renderInput={(params) => (
                     <TextField
                       label="Country"
@@ -146,6 +176,7 @@ const Address = () => {
           <Grid size={6}>
             <TextField
               label="State"
+              disabled={sameAsPermanent}
               error={!!errors.present?.state}
               helperText={errors.present?.state?.message}
               fullWidth
@@ -155,6 +186,7 @@ const Address = () => {
           <Grid size={6}>
             <TextField
               label="City"
+              disabled={sameAsPermanent}
               error={!!errors.present?.city}
               helperText={errors.present?.city?.message}
               fullWidth
@@ -164,6 +196,7 @@ const Address = () => {
           <Grid size={6}>
             <TextField
               label="Street"
+              disabled={sameAsPermanent}
               error={!!errors.present?.street}
               helperText={errors.present?.street?.message}
               fullWidth
@@ -173,6 +206,7 @@ const Address = () => {
           <Grid size={6}>
             <TextField
               label="Zip"
+              disabled={sameAsPermanent}
               error={!!errors.present?.zip}
               helperText={errors.present?.zip?.message}
               fullWidth
