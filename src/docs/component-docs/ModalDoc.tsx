@@ -82,7 +82,7 @@ const ChildModal = () => {
           <Typography id="child-modal-title" variant="h6">
             Child modal
           </Typography>
-          <Typography id="child-modal-description" variant="body1">
+          <Typography id="child-modal-description" >
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           </Typography>
           <Button onClick={handleClose}>Close Child Modal</Button>
@@ -129,7 +129,7 @@ const NestedModal = () => {
           <Typography id="parent-modal-title" variant="h6">
             Text in a modal
           </Typography>
-          <Typography id="parent-modal-description" variant="body1">
+          <Typography id="parent-modal-description" >
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
           </Typography>
           <ChildModal />
@@ -287,7 +287,6 @@ const ModalDoc = () => {
         title="With Transition"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -306,7 +305,6 @@ const ModalDoc = () => {
         title="Server-Side Modal"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 6,
             }}

@@ -22,13 +22,9 @@ const PricingHeader = ({
 }: PricingHeaderProps) => {
   const renderPricingSwitch = (
     <Stack spacing={1} sx={{ alignSelf: { xs: 'flex-start', lg: 'flex-end' } }}>
-      <Typography variant="body1" color="text.secondary">
-        Monthly pricing
-      </Typography>
+      <Typography color="text.secondary">Monthly pricing</Typography>
       <Switch checked={isYearly} onChange={handleSwitchChange} />
-      <Typography variant="body1" color="text.secondary">
-        Annual pricing
-      </Typography>
+      <Typography color="text.secondary">Annual pricing</Typography>
     </Stack>
   );
 
@@ -76,7 +72,7 @@ const PricingHeader = ({
           <Typography variant="h4">Pricing Options</Typography>
           <Chip label="Free for 30 days" variant="soft" color="warning" />
         </Stack>
-        <Typography variant="body1" color="text.secondary" sx={{ mb: 1 }}>
+        <Typography color="text.secondary" sx={{ mb: 1 }}>
           Get the power, control, and customization you need to manage your team’s and
           organization’s projects.
         </Typography>

@@ -133,16 +133,7 @@ const DocPageHeader = (props: DocPageHeaderProps) => {
               )}
             </Stack>
           )}
-          {description && (
-            <Typography
-              variant="body1"
-              sx={{
-                color: 'text.secondary',
-              }}
-            >
-              {description}
-            </Typography>
-          )}
+          {description && <Typography color="text.secondary">{description}</Typography>}
           {descriptionEl}
         </Grid>
       </Grid>

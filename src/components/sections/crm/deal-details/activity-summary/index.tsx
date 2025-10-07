@@ -20,9 +20,7 @@ const ActivitySummary = ({ activitySummary }: ActivitySummaryProps) => {
   return (
     <Paper component={Stack} direction="column" sx={{ p: { xs: 3, md: 5 }, gap: 3 }}>
       <Stack sx={{ justifyContent: 'space-between' }}>
-        <Typography variant="body1" sx={{ fontWeight: 700 }}>
-          Activity Summary
-        </Typography>
+        <Typography sx={{ fontWeight: 700 }}>Activity Summary</Typography>
         <Button
           variant="soft"
           color="neutral"

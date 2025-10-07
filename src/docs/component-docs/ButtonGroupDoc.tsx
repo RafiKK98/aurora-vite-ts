@@ -235,7 +235,6 @@ const ButtonGroupDoc = () => {
         title="Basic button group"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -251,7 +250,6 @@ const ButtonGroupDoc = () => {
         title="Button variants"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -266,7 +264,6 @@ const ButtonGroupDoc = () => {
         title="Sizes and colors"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -282,7 +279,6 @@ const ButtonGroupDoc = () => {
         title="Vertical group"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -298,7 +294,6 @@ const ButtonGroupDoc = () => {
         title="Split button"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -314,7 +309,6 @@ const ButtonGroupDoc = () => {
         title="Disabled elevation"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -329,7 +323,6 @@ const ButtonGroupDoc = () => {
         title="Loading button"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

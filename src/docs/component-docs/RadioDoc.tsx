@@ -251,7 +251,6 @@ const RadioDoc = () => {
         title="Radio group"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -265,7 +264,6 @@ const RadioDoc = () => {
 
         <DocNestedSection title="Direction" id={kebabCase('Direction')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -277,7 +275,6 @@ const RadioDoc = () => {
 
         <DocNestedSection title="Controlled" id={kebabCase('Controlled')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -292,7 +289,6 @@ const RadioDoc = () => {
         title="Standalone radio buttons"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -307,7 +303,6 @@ const RadioDoc = () => {
         title="Size"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -326,7 +321,6 @@ const RadioDoc = () => {
         title="Label placement"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

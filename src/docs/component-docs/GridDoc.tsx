@@ -604,7 +604,7 @@ const GridDoc = () => {
       pageHeaderProps={{
         title: 'Grid',
         descriptionEl: (
-          <Typography variant="body1">
+          <Typography>
             The Material Design responsive layout grid adapts to screen size and orientation,
             ensuring consistency across layouts.
           </Typography>
@@ -629,7 +629,6 @@ const GridDoc = () => {
         title="Spacing"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
               lineHeight: 1.5,
@@ -658,7 +657,6 @@ const GridDoc = () => {
         title="Nested Grid"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -688,7 +686,6 @@ const GridDoc = () => {
         title="Offset Grid"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

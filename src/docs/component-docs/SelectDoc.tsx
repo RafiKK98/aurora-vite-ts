@@ -910,7 +910,6 @@ const SelectDoc = () => {
         title="Sizes"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 3,
             }}
@@ -925,7 +924,6 @@ const SelectDoc = () => {
       <DocSection title="Props">
         <DocNestedSection title="Variants" id={kebabCase('Variants')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 4,
             }}
@@ -955,7 +953,6 @@ const SelectDoc = () => {
         title="Multiple select"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 2,
             }}
@@ -985,7 +982,6 @@ const SelectDoc = () => {
         title="Controlling the open state"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -1008,7 +1004,6 @@ const SelectDoc = () => {
         title="Grouping"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

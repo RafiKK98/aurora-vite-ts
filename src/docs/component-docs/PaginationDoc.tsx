@@ -241,7 +241,6 @@ const PaginationDoc = () => {
         title="Basic Pagination"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
               lineHeight: 2,
@@ -262,7 +261,6 @@ const PaginationDoc = () => {
         title="Pagination Variant"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
               lineHeight: 2,
@@ -286,7 +284,6 @@ const PaginationDoc = () => {
         title="Sizes"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -305,7 +302,6 @@ const PaginationDoc = () => {
         title="Pagination Ranges"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -324,7 +320,6 @@ const PaginationDoc = () => {
         title="Controlled Pagination"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -340,7 +335,6 @@ const PaginationDoc = () => {
         title="usePagination Hook"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -357,7 +351,6 @@ const PaginationDoc = () => {
         title="Table Pagination"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

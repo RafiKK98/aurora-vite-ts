@@ -19,7 +19,7 @@ const BasicCard = () => {
   return (
     <Stack sx={{ justifyContent:'center' }}>
       <Card background={1} sx={{ minWidth: 275 }}>
-        <CardHeader title={<Typography variant="body1">Basic Card</Typography>} />
+        <CardHeader title={<Typography >Basic Card</Typography>} />
         <Divider />
         <CardContent>
           <Typography sx={{ fontSize: 14 }} gutterBottom>
@@ -58,7 +58,7 @@ const OutlinedCard = () => {
   return (
     <Stack spacing={2} sx={{ justifyContent:'center' }}>
       <Card variant="outlined" background={1} sx={{ minWidth: 275 }}>
-        <CardHeader title={<Typography variant="body1">Rounded Outline</Typography>} />
+        <CardHeader title={<Typography >Rounded Outline</Typography>} />
         <Divider />
         <CardContent>
           <Typography sx={{ fontSize: 14 }} gutterBottom>
@@ -290,7 +290,6 @@ const CardDoc = () => {
         title="Rounded Card"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -308,7 +307,6 @@ const CardDoc = () => {
         title="Media"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

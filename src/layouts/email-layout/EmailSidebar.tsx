@@ -1,5 +1,4 @@
-import { Drawer, Stack, Typography, drawerClasses } from '@mui/material';
-import { Button } from '@mui/material';
+import { Button, Drawer, Stack, Typography, drawerClasses } from '@mui/material';
 import { emailSidebarWidth } from 'providers/EmailProvider';
 import IconifyIcon from 'components/base/IconifyIcon';
 import EmailSidebarPanel from './EmailSidebarPanel';
@@ -63,7 +62,6 @@ const EmailSidebar = ({ isDrawerOpen, toggleDrawer, up }: EmailSideBarProps) => 
             }}
           >
             <Typography
-              variant="body1"
               sx={{
                 fontWeight: 700,
               }}

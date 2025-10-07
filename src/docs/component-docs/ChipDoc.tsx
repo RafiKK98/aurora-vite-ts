@@ -499,7 +499,6 @@ const ChipDoc = () => {
       >
         <DocNestedSection title="Clickable" id={kebabCase('Clickable')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 4,
             }}
@@ -512,7 +511,6 @@ const ChipDoc = () => {
 
         <DocNestedSection title="Deletable" id={kebabCase('Deletable')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 4,
             }}
@@ -525,7 +523,6 @@ const ChipDoc = () => {
 
         <DocNestedSection title="Clickable and deletable" id={kebabCase('Clickable and deletable')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 4,
             }}
@@ -538,7 +535,6 @@ const ChipDoc = () => {
 
         <DocNestedSection title="Clickable link" id={kebabCase('Clickable link')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 4,
             }}
@@ -551,7 +547,6 @@ const ChipDoc = () => {
 
         <DocNestedSection title="Custom delete icon" id={kebabCase('Custom delete icon')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 4,
             }}
@@ -564,7 +559,6 @@ const ChipDoc = () => {
       <DocSection title="Chip adornments">
         <DocNestedSection title="Avatar chip" id={kebabCase('Avatar chip')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -576,7 +570,6 @@ const ChipDoc = () => {
 
         <DocNestedSection title="Icon chip" id={kebabCase('Icon chip')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -590,7 +583,6 @@ const ChipDoc = () => {
         title="Chip Sizes"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -606,7 +598,6 @@ const ChipDoc = () => {
         title="Multiline chip"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -623,7 +614,6 @@ const ChipDoc = () => {
         title="Chip array"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

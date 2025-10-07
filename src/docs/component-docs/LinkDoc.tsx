@@ -89,7 +89,6 @@ const LinkDoc = () => {
         descriptionEl={
           <>
             <Typography
-              variant="body1"
               sx={{
                 mb: 2,
               }}
@@ -124,7 +123,6 @@ const LinkDoc = () => {
         title="Underline"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -140,7 +138,6 @@ const LinkDoc = () => {
         title="react-router examples"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

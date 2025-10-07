@@ -338,7 +338,6 @@ const ButtonDoc = () => {
         title="Basic button"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
               color: 'text.secondary',
@@ -351,7 +350,6 @@ const ButtonDoc = () => {
       >
         <DocNestedSection title="Contained button" id={kebabCase('Contained button')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
               color: 'text.secondary',
@@ -365,7 +363,6 @@ const ButtonDoc = () => {
 
         <DocNestedSection title="Soft button" id={kebabCase('Soft button')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -379,7 +376,6 @@ const ButtonDoc = () => {
 
         <DocNestedSection title="Outlined button" id={kebabCase('Outlined button')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -392,7 +388,6 @@ const ButtonDoc = () => {
 
         <DocNestedSection title="Text button" id={kebabCase('Text button')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -408,7 +403,6 @@ const ButtonDoc = () => {
         title="Button Sizes"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -424,7 +418,6 @@ const ButtonDoc = () => {
         title="Button Shape"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -443,7 +436,6 @@ const ButtonDoc = () => {
 
         <DocNestedSection title="Sizes" id={kebabCase('Sizes')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -462,7 +454,6 @@ const ButtonDoc = () => {
         title="File upload"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -479,7 +470,6 @@ const ButtonDoc = () => {
         title="Loading button"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

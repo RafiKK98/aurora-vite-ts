@@ -322,7 +322,6 @@ const ProgressDoc = () => {
       <DocSection title="Circular Progress">
         <DocNestedSection id="circular-indeterminate" title="Circular Indeterminate">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -336,7 +335,6 @@ const ProgressDoc = () => {
         </DocNestedSection>
         <DocNestedSection id="circular-determinate" title="Circular Determinate">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -348,7 +346,6 @@ const ProgressDoc = () => {
         </DocNestedSection>
         <DocNestedSection id="circular-label" title="Circular Label">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -360,7 +357,6 @@ const ProgressDoc = () => {
         </DocNestedSection>
         <DocNestedSection id="interactive-integration" title="Interactive Integration">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -373,7 +369,6 @@ const ProgressDoc = () => {
       <DocSection title="Linear Progress">
         <DocNestedSection id="linear-indeterminate" title="Linear Indeterminate">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -385,7 +380,6 @@ const ProgressDoc = () => {
 
         <DocNestedSection id="linear-determinate" title="Linear Determinate">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -398,7 +392,6 @@ const ProgressDoc = () => {
 
         <DocNestedSection id="linear-buffer" title="Linear Buffer">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

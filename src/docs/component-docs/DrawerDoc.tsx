@@ -281,12 +281,12 @@ const ResponsiveDrawer = () => {
         }}
       >
         <Toolbar />
-        <Typography component="p" variant="body1" sx={{ mb: 2 }}>
+        <Typography component="p"  sx={{ mb: 2 }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
           facilisis leo vel.
         </Typography>
-        <Typography component="p" variant="body1" >
+        <Typography component="p"  >
           Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
           facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
           tincidunt.
@@ -379,12 +379,12 @@ const PersistentDrawerRight = () => {
             justifyContent: 'flex-start',
           }}
         />
-        <Typography component="p" variant="body1" sx={{ mb: 2}} >
+        <Typography component="p"  sx={{ mb: 2}} >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
           facilisis leo vel.
         </Typography>
-        <Typography component="p" variant="body1" >
+        <Typography component="p"  >
           Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
           facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
           tincidunt.
@@ -1030,7 +1030,6 @@ const DrawerDoc = () => {
         <DocCard code={temporaryDrawerCode} noInline sx={{ mb: 3 }} />
         <DocNestedSection title="Anchor" id="anchor">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -1042,7 +1041,6 @@ const DrawerDoc = () => {
         </DocNestedSection>
         <DocNestedSection title="Swipeable" id="swipeable">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -1057,7 +1055,6 @@ const DrawerDoc = () => {
         title="Responsive Drawer"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -1073,7 +1070,6 @@ const DrawerDoc = () => {
         title="Persistent Drawer"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -1094,7 +1090,6 @@ const DrawerDoc = () => {
       >
         <DocNestedSection title="Full-height navigation" id="full-height-navigation">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -1105,7 +1100,6 @@ const DrawerDoc = () => {
         </DocNestedSection>
         <DocNestedSection title="Clipped under the app bar" id="clipped-under-the-app-bar">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

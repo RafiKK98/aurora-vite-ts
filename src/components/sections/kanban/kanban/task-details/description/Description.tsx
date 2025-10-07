@@ -34,9 +34,7 @@ const Description = () => {
         ]}
       >
         {!isActiveEditMode ? (
-          <Typography variant="body1" sx={{ color: 'text.secondary' }}>
-            {description}
-          </Typography>
+          <Typography sx={{ color: 'text.secondary' }}>{description}</Typography>
         ) : (
           <EditDescription handleCloseEditMode={() => setIsActiveEditMode(false)} />
         )}

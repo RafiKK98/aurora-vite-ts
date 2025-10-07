@@ -68,7 +68,6 @@ const RecentActivities = () => {
                   sx={{ pb: index !== activities.length - 1 ? { xs: 3, xl: 5 } : 0, pt: 0 }}
                 >
                   <Typography
-                    variant="body1"
                     sx={{
                       fontWeight: 'bold',
                       mb: 0.5,

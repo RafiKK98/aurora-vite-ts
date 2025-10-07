@@ -308,7 +308,6 @@ const FabDoc = () => {
         title="Color"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -324,7 +323,6 @@ const FabDoc = () => {
         title="Size"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -341,7 +339,6 @@ const FabDoc = () => {
         descriptionEl={
           <>
             <Typography
-              variant="body1"
               sx={{
                 mb: 2,
               }}
@@ -350,7 +347,6 @@ const FabDoc = () => {
               by default.
             </Typography>
             <Typography
-              variant="body1"
               sx={{
                 mb: 2,
               }}
@@ -359,7 +355,6 @@ const FabDoc = () => {
               should briefly disappear, then reappear if its action changes.
             </Typography>
             <Typography
-              variant="body1"
               sx={{
                 mb: 5,
               }}

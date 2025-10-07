@@ -164,7 +164,6 @@ const SwitchDoc = () => {
         title="Label"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -180,7 +179,6 @@ const SwitchDoc = () => {
         title="Size"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -199,7 +197,6 @@ const SwitchDoc = () => {
         title="Controlled"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -216,7 +213,6 @@ const SwitchDoc = () => {
         descriptionEl={
           <>
             <Typography
-              variant="body1"
               sx={{
                 mb: 2,
               }}
@@ -225,7 +221,6 @@ const SwitchDoc = () => {
               components that provides an easier API.
             </Typography>
             <Typography
-              variant="body1"
               sx={{
                 mb: 5,
               }}

@@ -25,7 +25,6 @@ const EmojiPickerDoc = () => {
         title: 'Emoji Picker',
         descriptionEl: (
           <Typography
-            variant="body1"
             sx={{
               color: 'text.secondary',
             }}

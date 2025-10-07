@@ -39,10 +39,7 @@ const ActivityItem = ({ data, isLastItem }: ActivityItemProps) => {
       <TimelineContent sx={{ p: 0, pl: 2, pb: !isLastItem ? 2 : 0 }}>
         <Stack sx={{ justifyContent: 'space-between', alignItems: 'flex-end' }}>
           <div>
-            <Typography
-              variant="body1"
-              sx={{ pb: data.description || data.avatars ? 1 : 0, fontWeight: 500 }}
-            >
+            <Typography sx={{ pb: data.description || data.avatars ? 1 : 0, fontWeight: 500 }}>
               {data.title}
             </Typography>
             {data.avatars && (

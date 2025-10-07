@@ -95,7 +95,7 @@ const ForgotPasswordForm = ({ provider = 'jwt', handleSendResetLink }: ForgotPas
           >
             Forgot Password?
           </Typography>
-          <Typography variant="body1">
+          <Typography>
             Please enter your email address and an email with a link to reset your password will be
             sent.
           </Typography>

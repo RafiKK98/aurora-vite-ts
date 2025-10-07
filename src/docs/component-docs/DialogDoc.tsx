@@ -747,7 +747,6 @@ const DialogDoc = () => {
         title="Alerts"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -763,7 +762,6 @@ const DialogDoc = () => {
         title="Transitions"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -787,7 +785,6 @@ const DialogDoc = () => {
         title="Optional sizes"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -804,7 +801,6 @@ const DialogDoc = () => {
         title="Responsive full-screen"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -823,7 +819,6 @@ const DialogDoc = () => {
         descriptionEl={
           <>
             <Typography
-              variant="body1"
               sx={{
                 mb: 3,
               }}
@@ -836,7 +831,6 @@ const DialogDoc = () => {
               for more in-depth guidance about modal vs. non-modal dialog usage.
             </Typography>
             <Typography
-              variant="body1"
               sx={{
                 mb: 5,
               }}
@@ -854,7 +848,6 @@ const DialogDoc = () => {
         descriptionEl={
           <>
             <Typography
-              variant="body1"
               sx={{
                 mb: 3,
               }}

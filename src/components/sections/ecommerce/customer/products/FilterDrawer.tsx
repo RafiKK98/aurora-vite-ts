@@ -74,7 +74,6 @@ const FilterDrawer = ({ open, handleClose, drawerWidth, filterOptions }: FilterD
               }}
             >
               <Typography
-                variant="body1"
                 sx={{
                   fontWeight: 700,
                 }}

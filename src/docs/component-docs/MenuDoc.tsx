@@ -619,7 +619,6 @@ const MenuDoc = () => {
         title="Dense menu"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -635,7 +634,6 @@ const MenuDoc = () => {
         title="Selected menu"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -655,7 +653,6 @@ const MenuDoc = () => {
         title="Positioned menu"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -672,7 +669,6 @@ const MenuDoc = () => {
         descriptionEl={
           <>
             <Typography
-              variant="body1"
               sx={{
                 mb: 2,
               }}
@@ -683,7 +679,6 @@ const MenuDoc = () => {
               you can choose, with <Code>Paper</Code> in this example.
             </Typography>
             <Typography
-              variant="body1"
               sx={{
                 mb: 2,
               }}
@@ -700,7 +695,6 @@ const MenuDoc = () => {
         title="Account menu"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

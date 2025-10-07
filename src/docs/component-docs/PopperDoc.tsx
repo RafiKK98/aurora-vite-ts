@@ -230,7 +230,6 @@ const PopperDoc = () => {
         descriptionEl={
           <Typography
             component="div"
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -261,7 +260,6 @@ const PopperDoc = () => {
         descriptionEl={
           <>
             <Typography
-              variant="body1"
               sx={{
                 mb: 2,
               }}
@@ -274,7 +272,6 @@ const PopperDoc = () => {
               .
             </Typography>
             <Typography
-              variant="body1"
               sx={{
                 mb: 5,
               }}

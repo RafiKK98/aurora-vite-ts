@@ -1,4 +1,3 @@
-import React from 'react';
 import { Typography } from '@mui/material';
 import { folderBaseLink, muiComponentBaseLink } from 'lib/constants';
 import { kebabCase } from 'lib/utils';
@@ -573,7 +572,6 @@ const StepperDoc = () => {
         title="Horizontal stepper"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 2,
             }}
@@ -584,7 +582,6 @@ const StepperDoc = () => {
       >
         <DocNestedSection title="Linear" id={kebabCase('Linear')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -596,7 +593,6 @@ const StepperDoc = () => {
 
         <DocNestedSection title="Non-linear" id={kebabCase('Non-linear')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -608,7 +604,6 @@ const StepperDoc = () => {
 
         <DocNestedSection title="Alternative label" id={kebabCase('Alternative label')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -627,7 +622,6 @@ const StepperDoc = () => {
         title="Vertical stepper"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -644,7 +638,6 @@ const StepperDoc = () => {
         title="Mobile stepper"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 4,
             }}
@@ -656,7 +649,6 @@ const StepperDoc = () => {
       >
         <DocNestedSection title="Text" id={kebabCase('Text')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -668,7 +660,6 @@ const StepperDoc = () => {
 
         <DocNestedSection title="Dots" id={kebabCase('Dots')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -680,7 +671,6 @@ const StepperDoc = () => {
 
         <DocNestedSection title="Progress" id={kebabCase('Progress')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

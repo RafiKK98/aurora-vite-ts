@@ -38,7 +38,6 @@ const OrderConfirmationPreview = () => {
           Order #1411241235
         </Typography>
         <Typography
-          variant="body1"
           sx={{
             color: 'text.secondary',
           }}

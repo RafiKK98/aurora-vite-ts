@@ -137,7 +137,6 @@ const TaskSummary = () => {
               render={({ field: { onChange, value } }) => (
                 <div>
                   <Typography
-                    variant="body1"
                     sx={{
                       mb: 1,
                       fontWeight: 700,
@@ -174,7 +173,6 @@ const TaskSummary = () => {
                 render={({ field }) => (
                   <div>
                     <Typography
-                      variant="body1"
                       sx={{
                         mb: 1,
                         fontWeight: 700,

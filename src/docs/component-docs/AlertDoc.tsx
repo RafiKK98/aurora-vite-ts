@@ -214,7 +214,6 @@ const AlertDoc = () => {
         title="Simple Alert"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
               lineHeight: 2,
@@ -234,7 +233,6 @@ const AlertDoc = () => {
         title="Severity"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
               lineHeight: 2,
@@ -254,7 +252,6 @@ const AlertDoc = () => {
         title="Variants"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -272,7 +269,6 @@ const AlertDoc = () => {
         title="Alert Title"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -288,7 +284,6 @@ const AlertDoc = () => {
         title="Dismissible Alert"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

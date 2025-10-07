@@ -65,7 +65,6 @@ const CalendarSidebar = ({ isDrawerOpen, toggleDrawer }: CalendarSidebarProps) =
               }}
             >
               <Typography
-                variant="body1"
                 sx={{
                   fontWeight: 700,
                 }}

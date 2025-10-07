@@ -66,9 +66,7 @@ const Auth0Login = () => {
           >
             Log in
           </Typography>
-          <Typography variant="body1">
-            Click redirect button to continue logging in with Auth0
-          </Typography>
+          <Typography>Click redirect button to continue logging in with Auth0</Typography>
         </Box>
 
         <Box>

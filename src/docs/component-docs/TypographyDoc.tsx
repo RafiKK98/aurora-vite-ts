@@ -30,7 +30,7 @@ const typographyCode = `<Stack direction="column" spacing={2} sx={{ width: 1, ma
     subtitle2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
     blanditiis tenetur
   </Typography>
-  <Typography variant="body1" gutterBottom>
+  <Typography  gutterBottom>
     body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
     blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur,
     neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum

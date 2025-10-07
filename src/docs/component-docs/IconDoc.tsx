@@ -69,7 +69,7 @@ const IconDoc = () => {
       pageHeaderProps={{
         title: 'Icon',
         descriptionEl: (
-          <Typography variant="body1">
+          <Typography>
             Throughout the Aurora project, <Code>Iconify</Code> is used for icons, integrated via
             the{' '}
             <Link href="https://iconify.design/docs/icon-components/react/" target="_blank">

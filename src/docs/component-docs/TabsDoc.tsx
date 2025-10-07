@@ -608,7 +608,6 @@ const TabsDoc = () => {
       <DocSection title="Fixed Tabs">
         <DocNestedSection title="Full width" id="full-width">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -619,7 +618,6 @@ const TabsDoc = () => {
         </DocNestedSection>
         <DocNestedSection title="Centered" id="centered">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -638,7 +636,6 @@ const TabsDoc = () => {
       <DocSection title="Scrollable Tabs">
         <DocNestedSection title="Automatic scroll buttons" id="automatic-scroll-buttons">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -651,7 +648,6 @@ const TabsDoc = () => {
         </DocNestedSection>
         <DocNestedSection title="Forced scroll buttons" id="forced-scroll-buttons">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -667,7 +663,7 @@ const TabsDoc = () => {
         title="Vertical Tabs"
         description=" "
         descriptionEl={
-          <Typography variant="body1">
+          <Typography>
             To make vertical tabs instead of default horizontal ones, there is &nbsp;
             <Code>orientation="vertical"</Code>&nbsp;.
           </Typography>
@@ -679,7 +675,6 @@ const TabsDoc = () => {
         title="Nav Tabs"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

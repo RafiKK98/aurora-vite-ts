@@ -208,7 +208,6 @@ const PopoverDoc = () => {
         title="Mouse over interaction"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -224,7 +223,6 @@ const PopoverDoc = () => {
         title="Positioned popover"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -241,7 +239,6 @@ const PopoverDoc = () => {
         descriptionEl={
           <>
             <Typography
-              variant="body1"
               sx={{
                 mb: 2,
               }}
@@ -254,7 +251,6 @@ const PopoverDoc = () => {
               .
             </Typography>
             <Typography
-              variant="body1"
               sx={{
                 mb: 5,
               }}

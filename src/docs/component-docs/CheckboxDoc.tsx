@@ -284,7 +284,6 @@ const CheckboxDoc = () => {
         title="Label"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -300,7 +299,6 @@ const CheckboxDoc = () => {
         title="Size"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -322,7 +320,6 @@ const CheckboxDoc = () => {
         title="Controlled"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -338,7 +335,6 @@ const CheckboxDoc = () => {
         title="Indeterminate"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -355,7 +351,6 @@ const CheckboxDoc = () => {
         title="FormGroup"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

@@ -92,7 +92,6 @@ const FileUploaderDoc = () => {
         title: 'File Uploader',
         descriptionEl: (
           <Typography
-            variant="body1"
             sx={{
               color: 'text.secondary',
             }}
@@ -301,7 +300,6 @@ const FileUploaderDoc = () => {
         title="Single File"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               color: 'text.secondary',
             }}

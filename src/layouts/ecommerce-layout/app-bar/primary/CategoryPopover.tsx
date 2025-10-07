@@ -277,7 +277,6 @@ const CategoryPopover = ({
           }}
         >
           <Typography
-            variant="body1"
             sx={{
               fontWeight: 700,
             }}

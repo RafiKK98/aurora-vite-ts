@@ -943,7 +943,6 @@ const TableDoc = () => {
         title="Dense table"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -959,7 +958,6 @@ const TableDoc = () => {
         title="Sorting & selecting"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -980,7 +978,6 @@ const TableDoc = () => {
         title="Sticky header"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -1002,7 +999,6 @@ const TableDoc = () => {
         title="Collapsible table"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

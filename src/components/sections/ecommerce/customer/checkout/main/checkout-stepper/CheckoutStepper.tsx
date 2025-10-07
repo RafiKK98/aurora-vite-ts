@@ -216,7 +216,6 @@ const CheckoutStepper = () => {
                   {step.content}
 
                   <Typography
-                    variant="body1"
                     sx={{
                       color: 'text.disabled',
                     }}

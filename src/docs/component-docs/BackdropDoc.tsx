@@ -53,7 +53,6 @@ const BackdropDoc = () => {
         title="Backdrop Example"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

@@ -277,7 +277,6 @@ const SkeletonDoc = () => {
         title="Animation"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -298,7 +297,6 @@ const SkeletonDoc = () => {
         </DocNestedSection>
         <DocNestedSection title="Wave Animation Example" id="wave-animation-example">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -314,7 +312,6 @@ const SkeletonDoc = () => {
         title="Inferring Dimensions"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -330,7 +327,6 @@ const SkeletonDoc = () => {
         title="Skeleton Color"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

@@ -481,7 +481,6 @@ const SnackbarDoc = () => {
         title="Snackbar Position"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -500,7 +499,6 @@ const SnackbarDoc = () => {
         title="Transition"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -532,7 +530,6 @@ const SnackbarDoc = () => {
         title="Automatic Dismiss"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -552,7 +549,6 @@ const SnackbarDoc = () => {
         title="With Floating Action Button"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

@@ -353,7 +353,6 @@ const ToggleButtonDoc = () => {
         title="Size"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -372,7 +371,6 @@ const ToggleButtonDoc = () => {
         title="Vertical buttons"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -388,7 +386,6 @@ const ToggleButtonDoc = () => {
         title="Enforce value set"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

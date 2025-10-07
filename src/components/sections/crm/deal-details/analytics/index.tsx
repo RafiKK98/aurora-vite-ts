@@ -9,9 +9,7 @@ const Analytics = ({ analyticsData }: { analyticsData: AnalyticsData[] }) => {
   return (
     <Paper component={Stack} direction="column" sx={{ height: 1, p: { xs: 3, md: 5 }, gap: 3 }}>
       <Stack sx={{ justifyContent: 'space-between' }}>
-        <Typography variant="body1" sx={{ fontWeight: 700 }}>
-          Analytics
-        </Typography>
+        <Typography sx={{ fontWeight: 700 }}>Analytics</Typography>
       </Stack>
       <Stack direction="column" gap={2.5}>
         <AnalyticsChart

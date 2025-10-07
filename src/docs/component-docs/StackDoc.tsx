@@ -216,7 +216,6 @@ const StackDoc = () => {
         title="Basic Stack"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -239,7 +238,6 @@ const StackDoc = () => {
         title="With Dividers"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -254,7 +252,6 @@ const StackDoc = () => {
         title="Responsive Values"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -270,7 +267,6 @@ const StackDoc = () => {
         title="Flexbox Gap"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

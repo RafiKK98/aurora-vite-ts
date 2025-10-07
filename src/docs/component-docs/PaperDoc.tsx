@@ -66,7 +66,6 @@ const PaperDoc = () => {
         title="Basic Paper"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -82,7 +81,6 @@ const PaperDoc = () => {
         title="Paper Background"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -98,7 +96,6 @@ const PaperDoc = () => {
         title="Paper Elevation"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

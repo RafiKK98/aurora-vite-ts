@@ -229,7 +229,6 @@ const LightboxDoc = () => {
         title: 'Lightbox',
         descriptionEl: (
           <Typography
-            variant="body1"
             sx={{
               color: 'text.secondary',
             }}
@@ -311,7 +310,6 @@ import useLightbox from 'hooks/useLightbox`}
         title="Advance Example"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

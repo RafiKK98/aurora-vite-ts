@@ -358,7 +358,6 @@ const AccordionDoc = () => {
         descriptionEl={
           <>
             <Typography
-              variant="body1"
               sx={{
                 mb: 2,
                 color: 'text.secondary',
@@ -376,7 +375,6 @@ const AccordionDoc = () => {
         title="Transition"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 2,
               color: 'text.secondary',
@@ -397,7 +395,6 @@ const AccordionDoc = () => {
         title="Customized Accordion"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 2,
               color: 'text.secondary',

@@ -168,7 +168,6 @@ const BadgeDoc = () => {
         title="Basic Badge"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
               lineHeight: 2,
@@ -188,7 +187,6 @@ const BadgeDoc = () => {
         title="Badge Dot"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -204,7 +202,6 @@ const BadgeDoc = () => {
         title="Badge Visibility"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -220,7 +217,6 @@ const BadgeDoc = () => {
         title="Maximum Value"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -235,7 +231,6 @@ const BadgeDoc = () => {
         title="Badge Overlap"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -251,7 +246,6 @@ const BadgeDoc = () => {
         title="Badge Alignment"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

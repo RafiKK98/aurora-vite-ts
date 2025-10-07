@@ -53,9 +53,7 @@ const TaskList = ({ tasksData }: { tasksData: TasksData }) => {
               }),
             })}
           />
-          <Typography variant="body1" sx={{ fontWeight: 700, whiteSpace: 'nowrap' }}>
-            {tasksData.title}
-          </Typography>
+          <Typography sx={{ fontWeight: 700, whiteSpace: 'nowrap' }}>{tasksData.title}</Typography>
         </Stack>
         <Stack direction="column" gap={0.25} sx={{ maxWidth: 266, width: 1 }}>
           <Typography variant="overline" sx={{ color: 'text.secondary', fontWeight: 500 }}>

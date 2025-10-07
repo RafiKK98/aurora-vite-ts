@@ -524,7 +524,6 @@ const TextFieldDoc = () => {
         title="Basic Text Field"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -544,7 +543,6 @@ const TextFieldDoc = () => {
         title="Form props"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -561,7 +559,6 @@ const TextFieldDoc = () => {
         title="Validation"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -577,7 +574,6 @@ const TextFieldDoc = () => {
         title="Multiline"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -594,7 +590,6 @@ const TextFieldDoc = () => {
         title="Input Adornments"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -610,7 +605,6 @@ const TextFieldDoc = () => {
         title="Sizes"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -1017,7 +1011,6 @@ const TextFieldDoc = () => {
         title="Full width"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -1039,7 +1032,6 @@ const TextFieldDoc = () => {
         title="Color"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

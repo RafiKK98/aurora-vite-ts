@@ -604,7 +604,6 @@ const SliderDoc = () => {
         title="Sizes"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -620,7 +619,6 @@ const SliderDoc = () => {
         title="Discrete sliders"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -633,7 +631,6 @@ const SliderDoc = () => {
         <DocCard code={discreteSlidersCode} sx={{ mb: 4 }} />
         <DocNestedSection title="Small steps" id={kebabCase('Small steps')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -648,7 +645,6 @@ const SliderDoc = () => {
 
         <DocNestedSection title="Custom marks" id={kebabCase('Custom marks')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -660,7 +656,6 @@ const SliderDoc = () => {
 
         <DocNestedSection title="Restricted values" id={kebabCase('Restricted values')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -673,7 +668,6 @@ const SliderDoc = () => {
 
         <DocNestedSection title="Label always visible" id={kebabCase('Label always visible')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -688,7 +682,6 @@ const SliderDoc = () => {
         title="Range slider"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -701,7 +694,6 @@ const SliderDoc = () => {
         <DocCard code={rangeCode} noInline sx={{ mb: 4 }} />
         <DocNestedSection title="Minimum distance" id={kebabCase('Minimum distance')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -738,7 +730,6 @@ const SliderDoc = () => {
         title="Track"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 2,
             }}
@@ -749,7 +740,6 @@ const SliderDoc = () => {
       >
         <DocNestedSection title="Removed track" id={kebabCase('Removed track')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -761,7 +751,6 @@ const SliderDoc = () => {
 
         <DocNestedSection title="Inverted track" id={kebabCase('Inverted track')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -776,7 +765,6 @@ const SliderDoc = () => {
         descriptionEl={
           <>
             <Typography
-              variant="body1"
               sx={{
                 mb: 2,
               }}
@@ -785,7 +773,6 @@ const SliderDoc = () => {
               different scale.
             </Typography>
             <Typography
-              variant="body1"
               sx={{
                 mb: 5,
               }}

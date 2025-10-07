@@ -319,7 +319,6 @@ const SpeedDialDoc = () => {
         title="Controlled speed dial"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -335,7 +334,6 @@ const SpeedDialDoc = () => {
         title="Custom close icon"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -353,7 +351,6 @@ const SpeedDialDoc = () => {
         descriptionEl={
           <>
             <Typography
-              variant="body1"
               sx={{
                 mb: 2,
               }}
@@ -362,7 +359,6 @@ const SpeedDialDoc = () => {
               to long-press to see the tooltip on touch devices.
             </Typography>
             <Typography
-              variant="body1"
               sx={{
                 mb: 5,
               }}

@@ -97,7 +97,6 @@ const SetPasswordForm = ({ handleSetPassword }: SetPasswordFormProps) => {
             Set new password
           </Typography>
           <Typography
-            variant="body1"
             sx={{
               mb: 1,
             }}

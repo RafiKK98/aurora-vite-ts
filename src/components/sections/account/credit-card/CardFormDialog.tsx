@@ -74,9 +74,7 @@ const CardFormDialog = (props: CardFormDialogProps) => {
             </Stack>
           </Stack>
         ) : (
-          <Typography variant="body1" sx={{ fontWeight: 700 }}>
-            Add information
-          </Typography>
+          <Typography sx={{ fontWeight: 700 }}>Add information</Typography>
         )}
 
         <IconButton onClick={handleDialogClose}>

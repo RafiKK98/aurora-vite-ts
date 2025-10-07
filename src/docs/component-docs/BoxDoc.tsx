@@ -49,7 +49,6 @@ const BoxDoc = () => {
         title="Basic"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
               lineHeight: 2,
@@ -68,7 +67,6 @@ const BoxDoc = () => {
         title="With sx Prop"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

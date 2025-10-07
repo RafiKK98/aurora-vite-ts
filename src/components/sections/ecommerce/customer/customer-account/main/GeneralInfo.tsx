@@ -48,11 +48,11 @@ const GeneralInfo = ({ customerInfo }: GeneralInfoProps) => {
     },
     {
       label: 'Default shipping address',
-      value: <Typography variant="body1">{address.shipping}</Typography>,
+      value: <Typography>{address.shipping}</Typography>,
     },
     {
       label: 'Default billing address',
-      value: <Typography variant="body1">{address.billing}</Typography>,
+      value: <Typography>{address.billing}</Typography>,
     },
   ];
 
@@ -127,7 +127,6 @@ const GeneralInfo = ({ customerInfo }: GeneralInfoProps) => {
                     }}
                   >
                     <Typography
-                      variant="body1"
                       sx={{
                         fontWeight: 700,
                         display: 'flex',

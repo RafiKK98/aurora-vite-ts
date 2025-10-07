@@ -1498,26 +1498,24 @@ const AutocompleteDoc = () => {
 
         <DocNestedSection title="Controlled states" id={kebabCase('Controlled states')}>
           <Box sx={{ mb: 5, color: 'text.secondary' }}>
-            <Typography variant="body1">
-              The component has two states that can be controlled:
-            </Typography>
+            <Typography>The component has two states that can be controlled:</Typography>
             <ol>
               <li>
-                <Typography variant="body1">
+                <Typography>
                   the "value" state with the <Code>value</Code>/<Code>onChange</Code> props
                   combination. This state represents the value selected by the user, for instance
                   when pressing <Code>Enter</Code>
                 </Typography>
               </li>
               <li>
-                <Typography variant="body1">
+                <Typography>
                   the "input value" state with the <Code>inputValue</Code>/
                   <Code>onInputChange</Code> props combination. This state represents the value
                   displayed in the textbox.
                 </Typography>
               </li>
             </ol>
-            <Typography variant="body1">
+            <Typography>
               These two states are isolated and should be controlled independently.
             </Typography>
           </Box>
@@ -1528,7 +1526,6 @@ const AutocompleteDoc = () => {
         title="Free solo"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 2,
             }}
@@ -1543,7 +1540,6 @@ const AutocompleteDoc = () => {
 
         <DocNestedSection title="Creatable" id={kebabCase('Creatable')} sx={{ mt: 4 }}>
           <Typography
-            variant="body1"
             sx={{
               mb: 2,
             }}
@@ -1553,30 +1549,29 @@ const AutocompleteDoc = () => {
           </Typography>
           <ul>
             <li>
-              <Typography variant="body1">
+              <Typography>
                 <Code>selectOnFocus</Code> to help the user clear the selected value.
               </Typography>
             </li>
             <li>
-              <Typography variant="body1">
+              <Typography>
                 <Code>clearOnBlur</Code> to help the user enter a new value.
               </Typography>
             </li>
             <li>
-              <Typography variant="body1">
+              <Typography>
                 <Code>handleHomeEndKeys</Code> to move focus inside the popup with the{' '}
                 <Code>Home</Code> and <Code>End</Code> keys.
               </Typography>
             </li>
             <li>
-              <Typography variant="body1">
+              <Typography>
                 A last option, for instance: <Code>Add "YOUR SEARCH"</Code>.
               </Typography>
             </li>
           </ul>
           <DocCard code={creatableFreeSoloTextCode} noInline sx={{ my: 4 }} />
           <Typography
-            variant="body1"
             sx={{
               mb: 4,
             }}
@@ -1590,7 +1585,6 @@ const AutocompleteDoc = () => {
         title="Grouped"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -1620,7 +1614,6 @@ const AutocompleteDoc = () => {
 
         <DocNestedSection title="Limit tags" id={kebabCase('Limit tags')}>
           <Typography
-            variant="body1"
             sx={{
               mb: 3,
             }}
@@ -1635,7 +1628,6 @@ const AutocompleteDoc = () => {
         title="Sizes"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

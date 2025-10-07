@@ -194,7 +194,6 @@ const RatingDoc = () => {
         title="Basic Rating"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -211,7 +210,6 @@ const RatingDoc = () => {
         title="Rating precision"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -228,7 +226,6 @@ const RatingDoc = () => {
         title="Hover feedback"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -244,7 +241,6 @@ const RatingDoc = () => {
         title="Sizes"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -260,7 +256,6 @@ const RatingDoc = () => {
         title="Radio Group"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

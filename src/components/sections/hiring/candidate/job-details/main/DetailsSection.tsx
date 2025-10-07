@@ -10,7 +10,7 @@ interface DetailsSectionProps {
 const DetailsSection = ({ title, description }: DetailsSectionProps) => {
   return (
     <div>
-      <Typography variant="body1" fontWeight={700} lineHeight={1.5} mb={1}>
+      <Typography fontWeight={700} lineHeight={1.5} mb={1}>
         {title}
       </Typography>
       {typeof description === 'string' && (

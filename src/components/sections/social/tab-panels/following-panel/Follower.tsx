@@ -29,14 +29,10 @@ const Follower = ({ user, handleFollowStatus }: FollowerProps) => {
             {user.name}
           </Typography>
           <Stack spacing={{ xs: 1, sm: 2 }}>
-            <Typography
-              variant="body1"
-              sx={{ fontSize: { xs: 'body2.fontSize', sm: 'unset' }, fontWeight: 700 }}
-            >
+            <Typography sx={{ fontSize: { xs: 'body2.fontSize', sm: 'unset' }, fontWeight: 700 }}>
               {user.following}
               <Typography
                 component="span"
-                variant="body1"
                 sx={{
                   fontSize: { xs: 'body2.fontSize', sm: 'unset' },
                   color: 'text.secondary',
@@ -47,14 +43,10 @@ const Follower = ({ user, handleFollowStatus }: FollowerProps) => {
                 Following
               </Typography>
             </Typography>
-            <Typography
-              variant="body1"
-              sx={{ fontSize: { xs: 'body2.fontSize', sm: 'unset' }, fontWeight: 700 }}
-            >
+            <Typography sx={{ fontSize: { xs: 'body2.fontSize', sm: 'unset' }, fontWeight: 700 }}>
               {formatNumber(user.followers)}
               <Typography
                 component="span"
-                variant="body1"
                 sx={{
                   fontSize: { xs: 'body2.fontSize', sm: 'unset' },
                   color: 'text.secondary',

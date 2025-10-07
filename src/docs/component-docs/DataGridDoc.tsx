@@ -343,7 +343,6 @@ const DataGridDoc = () => {
         descriptionEl={
           <>
             <Typography
-              variant="body1"
               sx={{
                 mb: 5,
               }}
@@ -367,7 +366,6 @@ const DataGridDoc = () => {
         title="Custom Data Grid"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

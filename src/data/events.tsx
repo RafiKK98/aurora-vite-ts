@@ -30,17 +30,15 @@ export const eventInfo: EventInfo = {
 export const description: EventDescriptions = {
   content: (
     <>
-      <Typography variant="body1" sx={{ fontWeight: 700, mb: 3, color: 'text.secondary' }}>
+      <Typography sx={{ fontWeight: 700, mb: 3, color: 'text.secondary' }}>
         🌟 Louder Together: NightSky & Dawn 🌟
       </Typography>
-      <Typography variant="body1">
+      <Typography>
         Get ready for an otherworldly musical journey as the celestial forces align! 🎶 On a
         star-studded night, the bands NightSky and Dawn will collide in an unforgettable concert
         experience that transcends time and space.
       </Typography>
-      <Typography variant="body1" sx={{ fontWeight: 700, my: 3 }}>
-        What to Expect:
-      </Typography>
+      <Typography sx={{ fontWeight: 700, my: 3 }}>What to Expect:</Typography>
       <List dense disablePadding sx={{ mt: 3 }}>
         <ListItem disablePadding disableGutters sx={{ mb: 2 }}>
           <ListItemText
@@ -57,7 +55,6 @@ export const description: EventDescriptions = {
                   1.
                 </Typography>
                 <Typography
-                  variant="body1"
                   sx={{
                     mb: 2,
                   }}
@@ -96,7 +93,6 @@ export const description: EventDescriptions = {
                   2.
                 </Typography>
                 <Typography
-                  variant="body1"
                   sx={{
                     mb: 2,
                   }}
@@ -136,7 +132,6 @@ export const description: EventDescriptions = {
                   3.
                 </Typography>
                 <Typography
-                  variant="body1"
                   sx={{
                     mb: 2,
                   }}
@@ -175,7 +170,6 @@ export const description: EventDescriptions = {
                   4.
                 </Typography>
                 <Typography
-                  variant="body1"
                   sx={{
                     mb: 2,
                   }}
@@ -202,10 +196,8 @@ export const description: EventDescriptions = {
         </ListItem>
       </List>
 
-      <Typography variant="body1" sx={{ fontWeight: 700, my: 3 }}>
-        Why “Louder Together”?
-      </Typography>
-      <Typography variant="body1">
+      <Typography sx={{ fontWeight: 700, my: 3 }}>Why “Louder Together”?</Typography>
+      <Typography>
         Because when NightSky and Dawn collide, the universe itself resonates. Their harmonies echo
         across light-years, uniting stardust souls in a symphony of cosmic proportions. Remember,
         the night belongs to the dreamers, the stargazers, and those who seek magic beyond the

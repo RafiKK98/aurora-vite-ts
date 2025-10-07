@@ -353,7 +353,6 @@ const TooltipDoc = () => {
         title="Positioned tooltips"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -370,7 +369,6 @@ const TooltipDoc = () => {
         title="Arrow tooltips"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -386,7 +384,6 @@ const TooltipDoc = () => {
         title="Distance from anchor"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -402,7 +399,6 @@ const TooltipDoc = () => {
       >
         <DocCard code={distanceFromAnchorOffsetCode} sx={{ mb: 4 }} />
         <Typography
-          variant="body1"
           sx={{
             mb: 5,
           }}
@@ -416,7 +412,6 @@ const TooltipDoc = () => {
         title="Triggers"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -433,7 +428,6 @@ const TooltipDoc = () => {
         title="Controlled tooltips"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -449,7 +443,6 @@ const TooltipDoc = () => {
         title="Variable width"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -464,7 +457,6 @@ const TooltipDoc = () => {
         title="Interractive"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -481,7 +473,6 @@ const TooltipDoc = () => {
         title="Disabled elements"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -498,7 +489,6 @@ const TooltipDoc = () => {
         title="Transitions"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -513,7 +503,6 @@ const TooltipDoc = () => {
         title="Follow cursor"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -529,7 +518,6 @@ const TooltipDoc = () => {
         title="Virtual element"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -551,7 +539,6 @@ const TooltipDoc = () => {
         descriptionEl={
           <>
             <Typography
-              variant="body1"
               sx={{
                 mb: 2,
               }}
@@ -562,7 +549,6 @@ const TooltipDoc = () => {
               <Code>leaveDelay</Code> props.
             </Typography>
             <Typography
-              variant="body1"
               sx={{
                 mb: 5,
               }}

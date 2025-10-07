@@ -78,7 +78,6 @@ const MarketShareList = ({ shares, bgColorMap }: MarketShareListProps) => {
               }}
             >
               <Typography
-                variant="body1"
                 sx={{
                   fontWeight: 'bold',
                 }}

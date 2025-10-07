@@ -41,7 +41,6 @@ const Deals = ({ deals }: DealsProps) => {
           >
             <Stack direction="column" gap={2}>
               <Typography
-                variant="body1"
                 component={Link}
                 sx={[
                   { fontWeight: 700, width: 'max-content' },

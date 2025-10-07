@@ -88,7 +88,7 @@ const TwoFAForm = () => {
           >
             Enter the OTP
           </Typography>
-          <Typography variant="body1">
+          <Typography>
             A 6-digit one time password (OTP) has been sent to your number{' '}
             <Typography
               component="span"

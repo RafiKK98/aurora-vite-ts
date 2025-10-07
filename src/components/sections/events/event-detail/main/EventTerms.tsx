@@ -31,7 +31,7 @@ const EventTerms = ({ eventTermsConditions }: EventTermsConditionsProps) => {
               <ListItem key={term.id} disableGutters>
                 <ListItemText
                   primary={
-                    <Typography variant="body1" color="text.secondary">
+                    <Typography color="text.secondary">
                       {term.id}. {term.description}
                     </Typography>
                   }

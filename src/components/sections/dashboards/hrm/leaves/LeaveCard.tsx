@@ -19,7 +19,6 @@ const LeaveCard = ({ leaveData }: LeaveCardProps) => {
       }}
     >
       <Typography
-        variant="body1"
         sx={{
           width: 1,
           overflow: 'hidden',

@@ -486,7 +486,6 @@ const TimelineDoc = () => {
         title="Color"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -545,7 +544,6 @@ const TimelineDoc = () => {
         title="Alignment"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 2,
             }}

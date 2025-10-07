@@ -37,7 +37,6 @@ const ContainerDoc = () => {
         title="Fluid"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -52,7 +51,6 @@ const ContainerDoc = () => {
         title="Fixed"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

@@ -571,7 +571,7 @@ const CheckboxListComparison = () => {
       <Grid container spacing={2} sx={{ justifyContent: 'center', flexGrow: 1 }} >
         {/* Checkbox as Primary Action */}
         <Grid size={{ xs: 12, lg: 5 }}>
-          <Typography sx={{ mb: 2, fontWeight: 500, whiteSpace: 'noWrap' }} variant="body1" >
+          <Typography sx={{ mb: 2, fontWeight: 500, whiteSpace: 'noWrap' }}  >
             Checkbox as Primary Action
           </Typography>
           <>
@@ -616,7 +616,7 @@ const CheckboxListComparison = () => {
 
         {/* Checkbox as Secondary Action */}
         <Grid size={{ xs: 12, lg: 5 }}>
-          <Typography sx={{ mb: 2, fontWeight: 500, whiteSpace: 'noWrap' }} variant="body1" >
+          <Typography sx={{ mb: 2, fontWeight: 500, whiteSpace: 'noWrap' }}  >
             Checkbox as Secondary Action
           </Typography>
           <>
@@ -860,7 +860,6 @@ const ListDoc = () => {
         title="Align List Items"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -877,7 +876,6 @@ const ListDoc = () => {
       <DocSection title="List Controls">
         <DocNestedSection id="checkbox" title="Checkbox">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -893,7 +891,6 @@ const ListDoc = () => {
         </DocNestedSection>
         <DocNestedSection id="switch" title="Switch">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -913,7 +910,6 @@ const ListDoc = () => {
         title="Inset List"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -930,7 +926,6 @@ const ListDoc = () => {
         title="Guttered List"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

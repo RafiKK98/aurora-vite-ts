@@ -212,7 +212,6 @@ const AvatarDoc = () => {
         title="Variants"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -229,7 +228,6 @@ const AvatarDoc = () => {
         title="Sizes"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -246,7 +244,7 @@ const AvatarDoc = () => {
         title="Fallbacks"
         descriptionEl={
           <>
-            <Typography variant="body1">
+            <Typography>
               If there is an error loading the avatar image, the component falls back to an
               alternative in the following order:
             </Typography>
@@ -288,7 +286,6 @@ const AvatarDoc = () => {
         title="Grouped Avatar"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -305,7 +302,6 @@ const AvatarDoc = () => {
         />
         <DocNestedSection id="total-avatar" title="Total Avatar">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -321,7 +317,6 @@ const AvatarDoc = () => {
         </DocNestedSection>
         <DocNestedSection id="custom-surplus" title="Custom Surplus">
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -336,7 +331,6 @@ const AvatarDoc = () => {
         title="With Badge"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

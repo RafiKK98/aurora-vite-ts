@@ -62,15 +62,15 @@ export const emails: Email[] = [
       'Hi, just wanted to confirm our meeting scheduled for tomorrow at 10 AM. I’ve prepared a detailed summary of the project updates we can review together during the discussion.',
     details: (
       <>
-        <Typography variant="body1">Hello Merchant Captain</Typography>
-        <Typography variant="body1" sx={{ my: 3 }}>
+        <Typography>Hello Merchant Captain</Typography>
+        <Typography sx={{ my: 3 }}>
           Hi, just wanted to confirm our meeting scheduled for tomorrow at 10 AM. I’ve prepared a
           detailed summary of the project updates we can review together during the discussion. If
           there’s anything specific you’d like to add to the agenda, feel free to let me know in
           advance so we can allocate time accordingly. Looking forward to a productive conversation
           and making meaningful progress on the project!
         </Typography>
-        <Typography variant="body1">Best regards, {users[1].name}</Typography>
+        <Typography>Best regards, {users[1].name}</Typography>
       </>
     ),
     time: dayjs().subtract(1, 'm').toDate(),
@@ -106,15 +106,15 @@ export const emails: Email[] = [
       'I’ve completed editing the photos from last week’s shoot, and I’m thrilled with how they’ve turned out! I’ve attached a preview for your review, with particular attention to the lighting and composition aspects.',
     details: (
       <>
-        <Typography variant="body1">Hello Merchant Captain</Typography>
-        <Typography variant="body1" sx={{ my: 3 }}>
+        <Typography>Hello Merchant Captain</Typography>
+        <Typography sx={{ my: 3 }}>
           I’ve completed editing the photos from last week’s shoot, and I’m thrilled with how
           they’ve turned out! I’ve attached a preview for your review, with particular attention to
           the lighting and composition aspects. Please take a look when you get a chance, and let me
           know if there are any further adjustments or specific edits you’d like me to make. I hope
           you’re as excited about these as I am!
         </Typography>
-        <Typography variant="body1">Best regards, {users[2].name}</Typography>
+        <Typography>Best regards, {users[2].name}</Typography>
       </>
     ),
     time: dayjs().subtract(2, 'h').toDate(),
@@ -133,15 +133,15 @@ export const emails: Email[] = [
       'Following up on our recent conversation regarding the proposal, I truly believe this presents a strong opportunity with significant potential for success.',
     details: (
       <>
-        <Typography variant="body1">Hello Merchant Captain</Typography>
-        <Typography variant="body1" sx={{ my: 3 }}>
+        <Typography>Hello Merchant Captain</Typography>
+        <Typography sx={{ my: 3 }}>
           Following up on our recent conversation regarding the proposal, I truly believe this
           presents a strong opportunity with significant potential for success. To help move things
           forward, I’ve conducted additional research and compiled some key points for us to discuss
           in detail. Please let me know your availability this week so we can connect and finalize
           our approach. Looking forward to collaborating on this!
         </Typography>
-        <Typography variant="body1">Best regards, {users[3].name}</Typography>
+        <Typography>Best regards, {users[3].name}</Typography>
       </>
     ),
     time: dayjs().subtract(5, 'h').toDate(),
@@ -160,15 +160,15 @@ export const emails: Email[] = [
       'I’ve addressed the bugs in the codebase, including the issue with the login functionality. The system has been tested across various environments, and everything should now be running smoothly.',
     details: (
       <>
-        <Typography variant="body1">Hello Merchant Captain</Typography>
-        <Typography variant="body1" sx={{ my: 3 }}>
+        <Typography>Hello Merchant Captain</Typography>
+        <Typography sx={{ my: 3 }}>
           I’ve addressed the bugs in the codebase, including the issue with the login functionality.
           The system has been tested across various environments, and everything should now be
           running smoothly. Please check on your end and let me know if there are any remaining
           issues or additional features you’d like implemented. I’m here to help ensure everything
           is working perfectly!
         </Typography>
-        <Typography variant="body1">Best regards, {users[4].name}</Typography>
+        <Typography>Best regards, {users[4].name}</Typography>
       </>
     ),
     time: dayjs().subtract(8, 'h').toDate(),
@@ -187,15 +187,15 @@ export const emails: Email[] = [
       'Greetings from Bali! The trip has been incredible so far, and I couldn’t resist sharing some moments with you. The beaches are absolutely stunning, and the sunsets here are beyond breathtaking.',
     details: (
       <>
-        <Typography variant="body1">Hello Merchant Captain</Typography>
-        <Typography variant="body1" sx={{ my: 3 }}>
+        <Typography>Hello Merchant Captain</Typography>
+        <Typography sx={{ my: 3 }}>
           Greetings from Bali! The trip has been incredible so far, and I couldn’t resist sharing
           some moments with you. The beaches are absolutely stunning, and the sunsets here are
           beyond breathtaking. I’ve also been immersing myself in the local culture by exploring
           vibrant markets and indulging in the most delicious food. I hope all is going well back
           home and can’t wait to share more stories and catch up when I return!
         </Typography>
-        <Typography variant="body1">Best regards, {users[5].name}</Typography>
+        <Typography>Best regards, {users[5].name}</Typography>
       </>
     ),
     time: dayjs().subtract(1, 'd').toDate(),
@@ -214,15 +214,15 @@ export const emails: Email[] = [
       'The financial report you requested is now complete and attached for your review. It includes a comprehensive breakdown of expenses, revenue streams, and projections for the upcoming period.',
     details: (
       <>
-        <Typography variant="body1">Hello Merchant Captain</Typography>
-        <Typography variant="body1" sx={{ my: 3 }}>
+        <Typography>Hello Merchant Captain</Typography>
+        <Typography sx={{ my: 3 }}>
           The financial report you requested is now complete and attached for your review. It
           includes a comprehensive breakdown of expenses, revenue streams, and projections for the
           upcoming period. Please take a look when you have a moment, and let me know if you’d like
           further analysis or have specific questions. I’m happy to assist with any additional
           insights you may need.
         </Typography>
-        <Typography variant="body1">Best regards, {users[6].name}</Typography>
+        <Typography>Best regards, {users[6].name}</Typography>
       </>
     ),
     time: dayjs().subtract(1, 'd').toDate(),
@@ -241,15 +241,15 @@ export const emails: Email[] = [
       'Thank you for sharing the documents! I’ve carefully reviewed them, and I must say they look excellent. The structure is clear and well-organized, and I can see the effort that went into creating them.',
     details: (
       <>
-        <Typography variant="body1">Hello Merchant Captain</Typography>
-        <Typography variant="body1" sx={{ my: 3 }}>
+        <Typography>Hello Merchant Captain</Typography>
+        <Typography sx={{ my: 3 }}>
           Thank you for sharing the documents! I’ve carefully reviewed them, and I must say they
           look excellent. The structure is clear and well-organized, and I can see the effort that
           went into creating them. If there’s anything specific you’d like to adjust or add before
           moving forward, feel free to let me know. I’m happy to collaborate and assist in any way
           to ensure everything aligns perfectly.
         </Typography>
-        <Typography variant="body1">Best regards, {users[7].name}</Typography>
+        <Typography>Best regards, {users[7].name}</Typography>
       </>
     ),
     time: dayjs().subtract(1, 'd').hour(3).minute(11).second(0).toDate(),
@@ -268,8 +268,8 @@ export const emails: Email[] = [
       'Hope this message finds you well! I recently discovered a new yoga class, and I immediately thought of you because it’s something I think you’d really enjoy.',
     details: (
       <>
-        <Typography variant="body1">Hello Merchant Captain</Typography>
-        <Typography variant="body1" sx={{ my: 3 }}>
+        <Typography>Hello Merchant Captain</Typography>
+        <Typography sx={{ my: 3 }}>
           Hope this message finds you well! I recently discovered a new yoga class, and I
           immediately thought of you because it’s something I think you’d really enjoy. The
           instructor is highly skilled, and the sessions are designed to be incredibly calming,
@@ -278,7 +278,7 @@ export const emails: Email[] = [
           spend some quality time together. Let me know if this sounds like something you’d be
           interested in. I’d love to share this experience with you!
         </Typography>
-        <Typography variant="body1">Best regards, {users[8].name}</Typography>
+        <Typography>Best regards, {users[8].name}</Typography>
       </>
     ),
     time: dayjs().subtract(2, 'd').hour(3).minute(33).second(0).toDate(),
@@ -297,15 +297,15 @@ export const emails: Email[] = [
       'This is a friendly reminder about the upcoming team meeting scheduled for Friday at 3 PM. During the meeting, we’ll be discussing the newly proposed policies and reviewing our team goals for the next quarter.',
     details: (
       <>
-        <Typography variant="body1">Hello Merchant Captain</Typography>
-        <Typography variant="body1" sx={{ my: 3 }}>
+        <Typography>Hello Merchant Captain</Typography>
+        <Typography sx={{ my: 3 }}>
           This is a friendly reminder about the upcoming team meeting scheduled for Friday at 3 PM.
           During the meeting, we’ll be discussing the newly proposed policies and reviewing our team
           goals for the next quarter. If there’s anything specific you’d like added to the agenda,
           please don’t hesitate to let me know by Thursday. Your input is highly valued, and I’m
           looking forward to a productive discussion!
         </Typography>
-        <Typography variant="body1">Best regards, {users[9].name}</Typography>
+        <Typography>Best regards, {users[9].name}</Typography>
       </>
     ),
     time: dayjs().subtract(2, 'd').hour(6).minute(11).second(0).toDate(),
@@ -324,15 +324,15 @@ export const emails: Email[] = [
       'Thank you so much for your insightful feedback on my artwork—it was incredibly helpful! I’ve made a few updates based on your suggestions,',
     details: (
       <>
-        <Typography variant="body1">Hello Merchant Captain</Typography>
-        <Typography variant="body1" sx={{ my: 3 }}>
+        <Typography>Hello Merchant Captain</Typography>
+        <Typography sx={{ my: 3 }}>
           Thank you so much for your insightful feedback on my artwork—it was incredibly helpful!
           I’ve made a few updates based on your suggestions, with a focus on refining the color
           palette and enhancing the composition. Attached are the revised versions for your review.
           Please take a look and let me know if there’s anything else you’d like me to adjust. I’m
           excited to hear your thoughts!
         </Typography>
-        <Typography variant="body1">Best regards, {users[10].name}</Typography>
+        <Typography>Best regards, {users[10].name}</Typography>
       </>
     ),
     time: dayjs().subtract(3, 'd').hour(7).minute(5).second(0).toDate(),
@@ -351,8 +351,8 @@ export const emails: Email[] = [
       'Thank you for expressing interest in our course offerings—it’s wonderful to hear from you! To make things easier, I’ve attached a detailed brochure that includes everything you need to know, such as enrollment requirements',
     details: (
       <>
-        <Typography variant="body1">Hello Merchant Captain</Typography>
-        <Typography variant="body1" sx={{ my: 3 }}>
+        <Typography>Hello Merchant Captain</Typography>
+        <Typography sx={{ my: 3 }}>
           Thank you for expressing interest in our course offerings—it’s wonderful to hear from you!
           To make things easier, I’ve attached a detailed brochure that includes everything you need
           to know, such as enrollment requirements, class schedules, course fees, and other
@@ -361,7 +361,7 @@ export const emails: Email[] = [
           is as smooth as possible for you. Looking forward to helping you get started and hearing
           what you think about our courses!
         </Typography>
-        <Typography variant="body1">Best regards, {users[11].name}</Typography>
+        <Typography>Best regards, {users[11].name}</Typography>
       </>
     ),
     time: dayjs().subtract(5, 'd').hour(10).minute(43).second(0).toDate(),
@@ -380,8 +380,8 @@ export const emails: Email[] = [
       'I’m excited to share that I’ve started drafting the next chapter of the novel, and I’d love to get your feedback on the direction it’s taking. The story has reached an exciting turning point,',
     details: (
       <>
-        <Typography variant="body1">Hello Merchant Captain</Typography>
-        <Typography variant="body1" sx={{ my: 3 }}>
+        <Typography>Hello Merchant Captain</Typography>
+        <Typography sx={{ my: 3 }}>
           I’m excited to share that I’ve started drafting the next chapter of the novel, and I’d
           love to get your feedback on the direction it’s taking. The story has reached an exciting
           turning point, and I’ve introduced a new character who plays a pivotal role in the
@@ -390,7 +390,7 @@ export const emails: Email[] = [
           review, and I’d appreciate any suggestions or critiques you have. Your perspective always
           helps bring out the best in my writing, so I’m looking forward to your input!
         </Typography>
-        <Typography variant="body1">Best regards, {users[12].name}</Typography>
+        <Typography>Best regards, {users[12].name}</Typography>
       </>
     ),
     time: dayjs().subtract(3, 'day').hour(15).minute(10).second(0).toDate(),
@@ -409,15 +409,15 @@ export const emails: Email[] = [
       'The event planning is nearing completion, and I’m excited to share the updated itinerary with you! I’ve incorporated some new activities that I believe will make the event even more engaging.',
     details: (
       <>
-        <Typography variant="body1">Hello Merchant Captain</Typography>
-        <Typography variant="body1" sx={{ my: 3 }}>
+        <Typography>Hello Merchant Captain</Typography>
+        <Typography sx={{ my: 3 }}>
           The event planning is nearing completion, and I’m excited to share the updated itinerary
           with you! I’ve incorporated some new activities that I believe will make the event even
           more engaging. Attached is the latest version for your review and approval. Please take a
           moment to look it over, and let me know if you have any additional suggestions or changes.
           I’d be happy to incorporate your feedback!
         </Typography>
-        <Typography variant="body1">Best regards, {users[13].name}</Typography>
+        <Typography>Best regards, {users[13].name}</Typography>
       </>
     ),
     time: dayjs().subtract(3, 'h').toDate(),
@@ -436,15 +436,15 @@ export const emails: Email[] = [
       'I hope you’re doing well. It feels like it’s been ages since we last caught up, and I’d love to spend some quality time together. How about dinner this Saturday?',
     details: (
       <>
-        <Typography variant="body1">Hello Merchant Captain</Typography>
-        <Typography variant="body1" sx={{ my: 3 }}>
+        <Typography>Hello Merchant Captain</Typography>
+        <Typography sx={{ my: 3 }}>
           I hope you’re doing well. It feels like it’s been ages since we last caught up, and I’d
           love to spend some quality time together. How about dinner this Saturday? I recently
           discovered a cozy restaurant downtown that serves fantastic Mediterranean cuisine. I think
           you’d really enjoy it! Let me know if you’re available, and we can finalize the time.
           Looking forward to catching up and sharing some laughs!
         </Typography>
-        <Typography variant="body1">Best regards, {users[14].name}</Typography>
+        <Typography>Best regards, {users[14].name}</Typography>
       </>
     ),
     time: dayjs().subtract(1, 'd').hour(5).minute(10).second(0).toDate(),
@@ -463,8 +463,8 @@ export const emails: Email[] = [
       'Just a quick reminder about the workshop happening this Thursday at 10 AM in the conference room. The session will focus on enhancing productivity and time management skills, facilitated by a highly recommended expert.',
     details: (
       <>
-        <Typography variant="body1">Hello Merchant Captain</Typography>
-        <Typography variant="body1" sx={{ my: 3 }}>
+        <Typography>Hello Merchant Captain</Typography>
+        <Typography sx={{ my: 3 }}>
           Just a quick reminder about the workshop happening this Thursday at 10 AM in the
           conference room. The session will focus on enhancing productivity and time management
           skills, facilitated by a highly recommended expert. Please bring a notebook and any
@@ -472,7 +472,7 @@ export const emails: Email[] = [
           assist with the final arrangements. Let me know if you have any questions. Looking forward
           to seeing you all there!
         </Typography>
-        <Typography variant="body1">Best regards, {users[15].name}</Typography>
+        <Typography>Best regards, {users[15].name}</Typography>
       </>
     ),
     time: dayjs().subtract(10, 'h').toDate(),
@@ -491,8 +491,8 @@ export const emails: Email[] = [
       'I’ve attached the draft of the presentation I’m preparing for next week’s meeting. It outlines the main points we discussed, including proposed strategies and expected outcomes.',
     details: (
       <>
-        <Typography variant="body1">Hello Merchant Captain</Typography>
-        <Typography variant="body1" sx={{ my: 3 }}>
+        <Typography>Hello Merchant Captain</Typography>
+        <Typography sx={{ my: 3 }}>
           I’ve attached the draft of the presentation I’m preparing for next week’s meeting. It
           outlines the main points we discussed, including proposed strategies and expected
           outcomes. Could you review it and share your feedback? Let me know if there are any areas
@@ -500,7 +500,7 @@ export const emails: Email[] = [
           are always valuable, and I’d greatly appreciate your input. Thanks in advance for your
           help!
         </Typography>
-        <Typography variant="body1">Best regards, {users[11].name}</Typography>
+        <Typography>Best regards, {users[11].name}</Typography>
       </>
     ),
     time: dayjs().subtract(12, 'h').toDate(),
@@ -519,14 +519,14 @@ export const emails: Email[] = [
       'Thank you for taking the time to meet today. I appreciate your insights on [Topic], and I’m excited to move forward with the next steps we discussed.',
     details: (
       <>
-        <Typography variant="body1">Hello Merchant Captain</Typography>
-        <Typography variant="body1" sx={{ my: 3 }}>
+        <Typography>Hello Merchant Captain</Typography>
+        <Typography sx={{ my: 3 }}>
           Thank you for taking the time to meet today. I appreciate your insights on [Topic], and
           I’m excited to move forward with the next steps we discussed. Please let me know if
           there’s anything else you’d like me to prioritize. Looking forward to collaborating
           further!
         </Typography>
-        <Typography variant="body1">Best regards, {users[10].name}</Typography>
+        <Typography>Best regards, {users[10].name}</Typography>
       </>
     ),
     time: dayjs().subtract(7, 'd').hour(3).minute(20).second(0).toDate(),
@@ -545,15 +545,15 @@ export const emails: Email[] = [
       'I hope everything’s going well on your end! I just wanted to check in and see how things are progressing with [specific task or topic].',
     details: (
       <>
-        <Typography variant="body1">Hello Merchant Captain</Typography>
-        <Typography variant="body1" sx={{ my: 3 }}>
+        <Typography>Hello Merchant Captain</Typography>
+        <Typography sx={{ my: 3 }}>
           I hope everything’s going well on your end! I just wanted to check in and see how things
           are progressing with [specific task or topic]. If there are any updates, challenges, or
           areas where you need support, please don’t hesitate to let me know. I’m here to help
           ensure everything goes smoothly and would be happy to discuss anything further if needed.
           Looking forward to hearing from you!
         </Typography>
-        <Typography variant="body1">Best regards, {users[9].name}</Typography>
+        <Typography>Best regards, {users[9].name}</Typography>
       </>
     ),
     time: dayjs().subtract(15, 'd').hour(5).minute(30).second(0).toDate(),

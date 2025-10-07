@@ -82,7 +82,6 @@ const EditorDoc = () => {
         title: 'Editor',
         descriptionEl: (
           <Typography
-            variant="body1"
             sx={{
               color: 'text.secondary',
             }}

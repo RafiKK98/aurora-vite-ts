@@ -197,7 +197,6 @@ const DividerDoc = () => {
         title="Variants"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -213,7 +212,6 @@ const DividerDoc = () => {
         title="Orientation"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -229,7 +227,6 @@ const DividerDoc = () => {
         title="Flex Item"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -245,7 +242,6 @@ const DividerDoc = () => {
         title="With Children"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}
@@ -261,7 +257,6 @@ const DividerDoc = () => {
         title="Icon Grouping"
         descriptionEl={
           <Typography
-            variant="body1"
             sx={{
               mb: 5,
             }}

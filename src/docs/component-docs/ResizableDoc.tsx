@@ -80,7 +80,6 @@ const ResizableDoc = () => {
         title: 'Resizable',
         descriptionEl: (
           <Typography
-            variant="body1"
             sx={{
               color: 'text.secondary',
             }}

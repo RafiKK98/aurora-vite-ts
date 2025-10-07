@@ -224,7 +224,6 @@ const CheckboxField = ({ title, subtitle, price, name, sx }: CheckboxFieldProps)
             </Box>
           </Typography>
           <Typography
-            variant="body1"
             sx={{
               color: 'text.secondary',
             }}
